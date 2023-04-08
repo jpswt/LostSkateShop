@@ -6,6 +6,7 @@ const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/user');
 const productsRoute = require('./routes/product');
 const cartRoute = require('./routes/shoppingCart');
+const orderRoute = require('./routes/order');
 const app = express();
 let PORT = process.env.PORT || 6000;
 
@@ -20,7 +21,8 @@ app.use(cors());
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/products', productsRoute);
-app.use('/api/cart', cartRoute);
+app.use('/api/carts', cartRoute);
+app.use('/api/orders', orderRoute);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);

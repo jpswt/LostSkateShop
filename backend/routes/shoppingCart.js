@@ -6,34 +6,19 @@ const {
 } = require('../middleware/verifyToken');
 const Cart = require('../models/ShoppingCart');
 
-router.get('/', async (req, res) => {
-	const newQuery = req.query.new;
-	const catQuery = req.query.category;
+router.get('/', verifyAdmin, async (req, res) => {
 	try {
-		let products;
-
-		if (newQuery) {
-			products = await Product.find().sort({ createdAt: -1 }).limit(1);
-		} else if (catQuery) {
-			products = await Product.find({
-				categories: {
-					$in: [catQuery],
-				},
-			});
-		} else {
-			products = await Product.find();
-		}
-
-		res.status(200).json(products);
+		const carts = await Cart.find();
+		res.status(200).json(carts);
 	} catch (err) {
 		res.status(500).json(err);
 	}
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:userId', verifyJWT, async (req, res) => {
 	try {
-		const product = await Product.findById(req.params.id);
-		res.status(200).json(product);
+		const cart = await Cart.findOne({ userId: req.params.userId });
+		res.status(200).json(cart);
 	} catch (err) {
 		res.status(500).json(err);
 	}
