@@ -1,0 +1,18 @@
+@import '../variables//variables.scss';
+
+.trending {
+	background-color: $bgColor;
+	padding-left: 16px;
+	font-size: 30px;
+	color: $secondaryColor;
+	font-family: $bodyFont;
+	font-weight: bold;
+}
+
+.products-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 16px;
+	gap: 10px;
+	background-color: $bgColor;
+}

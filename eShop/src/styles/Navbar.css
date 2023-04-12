@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: hsl(223, 10%, 41%);
+  color: hsl(0, 0%, 96%);
+  font-family: "Open Sans", sans-serif;
+}
+.navbar .navbar-container {
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-container .navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.navbar .navbar-container .navbar-left input {
+  padding: 8px 16px;
+  margin-left: 0.5rem;
+  outline: none;
+}
+.navbar .navbar-container .navbar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+.navbar .navbar-container .navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.navbar .navbar-container .navbar-right .navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-container .navbar-right .navbar-links .navbar-button {
+  width: 60px;
+  padding: 8px 25px;
+  margin-right: 14px;
+  text-align: center;
+  border: hsl(0, 0%, 96%) solid 1px;
+  transition: 0.3s ease-in-out;
+}
+.navbar .navbar-container .navbar-right .navbar-links .navbar-button:hover {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(223, 10%, 41%);
+  cursor: pointer;
+}/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,32 @@
+$titleFont: 'Raleway', sans-serif;
+$bodyFont: 'Open Sans', sans-serif;
+
+$primaryColor: hsl(0, 0%, 96%);
+$secondaryColor: hsl(223, 10%, 41%);
+$accentColor: hsl(145, 46%, 77%);
+$bgColor: #edf0f6;
+
+$fontColor: hsl(0, 0%, 96%);
+$fontDarkColor: hsl(0, 0%, 7%);
+
+$bg1: url('https://images.unsplash.com/photo-1551205648-1f8a635098ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+$bg2: url('https://images.unsplash.com/photo-1554080353-321e452ccf19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+$bg3: url('https://images.unsplash.com/photo-1625373608753-0c670d80a8b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+
+@mixin buttonStyle($backgroundColor, $color) {
+	min-width: 140px;
+	height: 40px;
+	background-color: $backgroundColor;
+	border: none;
+	color: $color;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 90%;
+		cursor: pointer;
+	}
+}
+
+$breakpoint-lg: 1000px;
+$breakpoint-sm: 500px;

@@ -1,0 +1,13 @@
+@import '../variables/variables.scss';
+
+.message-container {
+	height: 30px;
+	background-color: $accentColor;
+	color: $fontDarkColor;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $bodyFont;
+	font-size: 16px;
+	font-weight: bold;
+}

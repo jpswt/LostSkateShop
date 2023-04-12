@@ -1,0 +1,50 @@
+.product-container {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf0f6;
+}
+.product-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: hsla(0, 0%, 50%, 0.6) solid 1px;
+}
+.product-container .btn-container {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(223, 10%, 41%, 0.4);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.product-container .btn-container:hover {
+  opacity: 1;
+}
+.product-container i {
+  background-color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 1rem;
+  display: grid;
+  place-items: center;
+  color: hsl(223, 10%, 41%);
+  font-weight: bold;
+}
+.product-container i:hover {
+  background-color: hsl(145, 46%, 77%);
+  color: white;
+}/*# sourceMappingURL=ProductItems.css.map */

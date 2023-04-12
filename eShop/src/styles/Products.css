@@ -1,0 +1,16 @@
+.trending {
+  background-color: #edf0f6;
+  padding-left: 16px;
+  font-size: 30px;
+  color: hsl(223, 10%, 41%);
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 10px;
+  background-color: #edf0f6;
+}/*# sourceMappingURL=Products.css.map */
