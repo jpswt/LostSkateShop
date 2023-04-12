@@ -1,10 +1,13 @@
 .trending {
   background-color: #edf0f6;
   padding-left: 16px;
-  font-size: 30px;
-  color: hsl(223, 10%, 41%);
+  font-size: 24px;
+  color: hsl(0, 0%, 7%);
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
+}
+.trending h2 {
+  margin: 0;
 }
 
 .products-container {

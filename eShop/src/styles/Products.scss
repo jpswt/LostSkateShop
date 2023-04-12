@@ -3,10 +3,18 @@
 .trending {
 	background-color: $bgColor;
 	padding-left: 16px;
-	font-size: 30px;
-	color: $secondaryColor;
+	font-size: 24px;
+	color: $fontDarkColor;
 	font-family: $bodyFont;
 	font-weight: bold;
+
+	h2 {
+		margin: 0;
+		// width: fit-content;
+		// padding: 0 6rem 0 2rem;
+		// background-color: $accentColor;
+		// clip-path: polygon(75% 0%, 85% 50%, 75% 100%, 0% 100%, 4% 50%, 0% 0%);
+	}
 }
 
 .products-container {
