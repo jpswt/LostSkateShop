@@ -1,4 +1,22 @@
+.filter {
+  background-color: #edf0f6;
+  padding: 18px;
+  font-family: "Open Sans", sans-serif;
+}
 .filter h2 {
-	font-family: 'Raleway', sans-serif;
-	margin-bottom: 1rem;
-} /*# sourceMappingURL=Filter.css.map */
+  margin-bottom: 1rem;
+}
+.filter .filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+.filter .filter-container .filter-item {
+  font-size: 18px;
+}
+.filter .filter-container .filter-item label {
+  margin-right: 1rem;
+}
+.filter .filter-container .filter-item select {
+  padding: 0 8px;
+  outline: hsl(145, 46%, 77%);
+}/*# sourceMappingURL=Filter.css.map */
