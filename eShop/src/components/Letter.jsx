@@ -12,7 +12,7 @@ const Letter = () => {
 			</div>
 			<div className="input-container">
 				<input type="text" placeholder="Email" />
-				<i class="fa-regular fa-paper-plane"></i>
+				<i className="fa-regular fa-paper-plane"></i>
 			</div>
 		</div>
 	);

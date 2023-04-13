@@ -10,7 +10,7 @@ const Products = () => {
 			</div>
 			<div className="products-container">
 				{popProducts.map((product) => (
-					<ProductItems product={product} />
+					<ProductItems product={product} key={product.id} />
 				))}
 			</div>
 		</>

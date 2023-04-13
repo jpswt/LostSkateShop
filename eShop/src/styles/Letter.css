@@ -31,4 +31,15 @@
   color: white;
   padding: 0.52rem 1.5rem;
   margin-left: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.letter-container .input-container i:hover {
+  color: hsl(223, 10%, 41%);
+  background-color: white;
+}
+
+@media (max-width: 1000px) {
+  .letter-container {
+    padding-bottom: 2rem;
+  }
 }/*# sourceMappingURL=Letter.css.map */

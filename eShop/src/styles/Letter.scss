@@ -35,10 +35,23 @@
 
 		i {
 			height: 100%;
+			// border: 1px solid white;
 			background-color: $secondaryColor;
 			color: white;
 			padding: 0.52rem 1.5rem;
 			margin-left: 0.5rem;
+			transition: 0.3s ease-in-out;
+
+			&:hover {
+				color: $secondaryColor;
+				background-color: white;
+			}
 		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.letter-container {
+		padding-bottom: 2rem;
 	}
 }
