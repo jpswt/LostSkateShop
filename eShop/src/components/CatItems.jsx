@@ -1,4 +1,4 @@
-import '../styles/CatItems.css';
+import '../scss/styles/CatItems.css';
 
 const CatItems = ({ category }) => {
 	return (

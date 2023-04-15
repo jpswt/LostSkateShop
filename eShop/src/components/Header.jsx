@@ -1,4 +1,4 @@
-import '../styles/Header.css';
+import '../scss/styles/Header.css';
 import camera from '../assets/camera2.png';
 import headphones from '../assets/headphones.png';
 import { useRef, useEffect, useState } from 'react';

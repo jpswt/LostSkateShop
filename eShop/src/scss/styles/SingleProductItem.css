@@ -1,0 +1,151 @@
+.products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+}
+.products .product-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 40px;
+}
+.products .product-container .image-container {
+  flex: 1;
+}
+.products .product-container .image-container img {
+  width: 100%;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.products .product-container .description-container {
+  flex: 1;
+  height: 100vh;
+  padding-left: 60px;
+  margin-bottom: 0px;
+}
+.products .product-container .description-container .description {
+  padding-top: 80px;
+  padding-bottom: 10px;
+}
+.products .product-container .description-container .description .details {
+  width: 80%;
+  line-height: 1.4rem;
+}
+.products .product-container .filter-container {
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+.products .product-container .filter-container .color-container {
+  display: flex;
+  gap: 5px;
+}
+.products .product-container .filter-container .color-container .colors {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.products .product-container .filter-container .color-container #black {
+  background-color: black;
+}
+.products .product-container .filter-container .color-container #white {
+  background-color: white;
+}
+.products .product-container .filter-container .color-container #gray {
+  background-color: rgb(103, 103, 103);
+}
+.products .product-container .quantity-container {
+  font-size: 12px;
+  padding-bottom: 40px;
+}
+.products .product-container .quantity-container .checkout {
+  display: flex;
+  gap: 4rem;
+}
+.products .product-container .quantity-container .checkout .counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+}
+.products .product-container .quantity-container .checkout .minus {
+  font-size: 30px;
+  cursor: pointer;
+}
+.products .product-container .quantity-container .checkout .count {
+  font-size: 24px;
+  border: hsl(223, 10%, 41%) solid 1px;
+  background-color: #fcfcfc;
+  padding: 2px 10px;
+  border-radius: 8px;
+}
+.products .product-container .quantity-container .checkout .plus {
+  font-size: 30px;
+  cursor: pointer;
+}
+.products .product-container .quantity-container .checkout button {
+  min-width: 140px;
+  height: 40px;
+  background-color: hsl(152, 28%, 53%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 18px;
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.products .product-container .quantity-container .checkout button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.products .product-container .quantity-container .checkout button:hover {
+  opacity: 100%;
+  background-color: white;
+  color: hsl(145, 46%, 77%);
+}
+
+@media (max-width: 1000px) {
+  .product-container {
+    padding: 0;
+    padding-top: 50px;
+    flex-direction: column;
+  }
+  .product-container .image-container {
+    flex: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888 img;
+    color-width: 450px;
+    color-height: 450px;
+  }
+  .product-container .description-container {
+    padding: 0 24px;
+  }
+  .product-container .description-container .description {
+    padding: 0;
+  }
+  .product-container .description-container .description .details {
+    width: 100%;
+  }
+  .product-container .filter-container {
+    padding-left: 0px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .product-container .filter-container .color-container {
+    margin-left: 10px;
+  }
+  .product-container .filter-container .color-container .colors {
+    width: 30px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=SingleProductItem.css.map */

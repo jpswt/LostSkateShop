@@ -1,0 +1,14 @@
+@mixin buttonStyle($backgroundColor, $color) {
+	min-width: 140px;
+	height: 40px;
+	background-color: $backgroundColor;
+	border: none;
+	color: $color;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 90%;
+		cursor: pointer;
+	}
+}

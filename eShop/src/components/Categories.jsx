@@ -1,4 +1,4 @@
-import '../styles/Categories.css';
+import '../scss/styles/Categories.css';
 import { categories } from '../assets/data/data';
 import CatItems from './CatItems';
 

@@ -1,4 +1,4 @@
-import '../styles/Filter.css';
+import '../scss/styles/Filter.css';
 
 const Filter = () => {
 	return (

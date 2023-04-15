@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/Navbar.css';
+import Badge from '@mui/material/Badge';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import '../scss/styles/Navbar.css';
 
 const Navbar = () => {
 	return (
@@ -13,11 +15,22 @@ const Navbar = () => {
 				</div>
 				<div className="navbar-center">eSHOP</div>
 				<div className="navbar-right">
+					<div className="hamburger"></div>
 					<ol className="navbar-links">
 						<li className="navbar-button">Sign Up</li>
 						<li className="navbar-button">Sign In</li>
 						<li>
-							<i className="fa-solid fa-cart-shopping fa-lg"></i>
+							<Badge
+								badgeContent={1}
+								sx={{
+									'& .MuiBadge-badge': {
+										backgroundColor: 'hsl(152, 28%, 53%)',
+									},
+								}}
+								className="badge"
+							>
+								<ShoppingCartIcon color="action" className="cart" />
+							</Badge>
 						</li>
 					</ol>
 				</div>

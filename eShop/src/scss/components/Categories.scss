@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.categories-container {
+	background-color: $bgColor;
+	display: flex;
+	padding: 10px;
+}
+
+@media (max-width: $breakpoint-lg) {
+	.categories-container {
+		flex-direction: column;
+	}
+}

@@ -1,4 +1,4 @@
-import '../styles/Products.css';
+import '../scss/styles/Products.css';
 import { popProducts } from '../assets/data/data';
 import ProductItems from './ProductItems';
 
