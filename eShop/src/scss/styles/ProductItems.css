@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #edf0f6;
+  background-color: #ffffff;
 }
 .product-container img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border: hsla(0, 0%, 50%, 0.6) solid 1px;
 }
 .product-container .btn-container {

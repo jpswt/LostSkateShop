@@ -1,6 +1,4 @@
 import '../scss/styles/Header.css';
-import camera from '../assets/camera2.png';
-import headphones from '../assets/headphones.png';
 import { useRef, useEffect, useState } from 'react';
 import { headerContent } from '../assets/data/data';
 
@@ -40,11 +38,11 @@ const Header = () => {
 			>
 				{headerContent.map((item) => (
 					<div className="slide-container">
-						<div className="image-container">
+						{/* <div className="image-container">
 							<div className="slide-image">
 								<img src={item.img} alt="" />
 							</div>
-						</div>
+						</div> */}
 						<div className="text-container" id="bg1">
 							<h2>{item.title}</h2>
 							<p>{item.description}</p>

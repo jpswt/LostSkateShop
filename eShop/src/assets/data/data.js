@@ -1,7 +1,7 @@
 export const headerContent = [
 	{
 		id: 1,
-		img: 'https://images.unsplash.com/photo-1677172954692-90cf8bdc91e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/889846256983-1_1280x.jpg?v=1677895594',
 		title: 'EASTER SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
@@ -68,6 +68,6 @@ export const popProducts = [
 	},
 	{
 		id: 8,
-		img: 'https://images.unsplash.com/photo-1610935158477-dbb30cbf5566?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+		img: 'https://m.media-amazon.com/images/I/617sGSjmC1L._AC_SL1500_.jpg',
 	},
 ];
