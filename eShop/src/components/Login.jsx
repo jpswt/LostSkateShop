@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import '../scss/styles/Register.css';
+import '../scss/styles/Login.css';
 
-const Register = () => {
+const Login = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1000;
 
@@ -12,13 +12,13 @@ const Register = () => {
 	}, []);
 
 	return (
-		<div className="register">
-			<div className="register-container">
+		<div className="login">
+			<div className="login-container">
 				{width > breakpoint ? (
 					<>
 						<div className="image-container">
 							<div className="overlay">
-								<h2>New Customers</h2>
+								<h2></h2>
 								<p>
 									Ready to Join? Becoming a member allows you to checkout
 									faster, view/track orders and more.
@@ -26,10 +26,9 @@ const Register = () => {
 							</div>
 						</div>
 						<div className="input-container">
-							<form className="register-fields">
-								<div className="title">REGISTER</div>
-								<input type="text" placeholder="Username" autoFocus />
-								<input type="text" placeholder="Email" />
+							<form className="input-fields">
+								<div className="title">Login</div>
+								<input type="text" placeholder="Email" autoFocus />
 								<input type="password" placeholder="Password" />
 								<button className="submit-btn">Sign Up</button>
 							</form>
@@ -38,10 +37,9 @@ const Register = () => {
 				) : (
 					<>
 						<div className="input-container">
-							<form className="register-fields">
-								<div className="title">REGISTER</div>
-								<input type="text" placeholder="Username" autoFocus />
-								<input type="text" placeholder="Email" />
+							<form className="input-fields">
+								<div className="title">Login</div>
+								<input type="text" placeholder="Email" autoFocus />
 								<input type="password" placeholder="Password" />
 								<button className="submit-btn">Sign Up</button>
 							</form>
@@ -60,4 +58,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default Login;

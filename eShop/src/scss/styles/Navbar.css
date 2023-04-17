@@ -33,9 +33,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.navbar .navbar-container .navbar-center .title {
   font-weight: bold;
-  font-size: 30px;
-  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-family: "Philly Sans", sans-serif;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 0 hsl(168, 99%, 24%), -1px -1px 0 hsl(168, 99%, 24%), 1px -1px 0 hsl(168, 99%, 24%), -1px 1px 0 hsl(168, 99%, 24%), 1px 1px 0 hsl(168, 99%, 24%);
 }
 .navbar .navbar-container .navbar-right {
   flex: 1;

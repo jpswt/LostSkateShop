@@ -36,9 +36,17 @@ body {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-weight: bold;
-			font-size: 30px;
-			font-family: $titleFont;
+
+			.title {
+				font-weight: bold;
+				font-size: 40px;
+				font-family: $logoFont;
+				letter-spacing: 6px;
+				// -webkit-text-stroke: 1px hsla(0, 0%, 27%, 0.7);
+				text-shadow: 4px 4px 0 $accentColor, -1px -1px 0 $accentColor,
+					1px -1px 0 $accentColor, -1px 1px 0 $accentColor,
+					1px 1px 0 $accentColor;
+			}
 		}
 		.navbar-right {
 			flex: 1;

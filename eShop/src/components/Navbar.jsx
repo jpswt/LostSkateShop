@@ -13,7 +13,9 @@ const Navbar = () => {
 						<input type="text" placeholder="Search" autoFocus />
 					</div>
 				</div>
-				<div className="navbar-center">eSHOP</div>
+				<div className="navbar-center">
+					<div className="title">lost skateboards</div>
+				</div>
 				<div className="navbar-right">
 					<div className="hamburger"></div>
 					<ol className="navbar-links">
