@@ -6,7 +6,7 @@ const Products = () => {
 	return (
 		<>
 			<div className="trending">
-				<h2>TRENDING</h2>
+				<h2>NEW ARRIVALS</h2>
 			</div>
 			<div className="products-container">
 				{popProducts.map((product) => (

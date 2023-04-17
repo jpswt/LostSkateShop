@@ -23,6 +23,7 @@
 		object-fit: cover;
 		opacity: 90%;
 		z-index: 10;
+		filter: grayscale(100%);
 	}
 
 	.info {
@@ -46,7 +47,7 @@
 		}
 
 		button {
-			@include buttonStyle(hsl(152, 28%, 53%), white);
+			@include buttonStyle($accentColor, white);
 			padding: 0.5rem 1rem;
 			font-weight: 700;
 			letter-spacing: 1px;

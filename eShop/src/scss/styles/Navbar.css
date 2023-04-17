@@ -6,7 +6,7 @@ body {
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: hsl(223, 10%, 41%);
+  background-color: hsl(0, 0%, 42%);
   color: hsl(0, 0%, 96%);
   font-family: "Open Sans", sans-serif;
 }
@@ -58,7 +58,7 @@ body {
 }
 .navbar .navbar-container .navbar-right .navbar-links .navbar-button:hover {
   background-color: hsl(0, 0%, 96%);
-  color: hsl(223, 10%, 41%);
+  color: hsl(0, 0%, 42%);
   cursor: pointer;
 }
 .navbar .navbar-container .navbar-right .navbar-links .badge .cart {

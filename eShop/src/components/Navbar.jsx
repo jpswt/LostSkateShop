@@ -24,7 +24,7 @@ const Navbar = () => {
 								badgeContent={1}
 								sx={{
 									'& .MuiBadge-badge': {
-										backgroundColor: 'hsl(152, 28%, 53%)',
+										backgroundColor: ' hsl(168, 99%, 28%)',
 									},
 								}}
 								className="badge"

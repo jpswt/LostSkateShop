@@ -1,19 +1,19 @@
 export const headerContent = [
 	{
 		id: 1,
-		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/889846256983-1_1280x.jpg?v=1677895594',
+		bg: 'https://images.unsplash.com/photo-1624069037382-0d6d4eaf7a31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1456&q=80',
 		title: 'EASTER SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
 	{
 		id: 2,
-		img: 'https://plus.unsplash.com/premium_photo-1677838847804-4054143fb91a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+		bg: 'https://images.unsplash.com/photo-1659462247710-11687c527acf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
 		title: 'SUMMER SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
 	{
 		id: 3,
-		img: 'https://images.unsplash.com/photo-1564466809058-bf4114d55352?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80',
+		bg: 'https://images.unsplash.com/photo-1574627562722-84254ee47c15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHNrYXRlYm9hcmQlMjB0cmlja3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60',
 		title: 'LABOR DAY SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
@@ -22,52 +22,52 @@ export const headerContent = [
 export const categories = [
 	{
 		id: 1,
-		img: 'https://images.pexels.com/photos/2253917/pexels-photo-2253917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-		title: 'CAPTURE MOMENTS',
+		img: 'https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2thdGVib2FyZGluZ3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60',
+		title: 'THRASHIN',
 	},
 	{
 		id: 2,
-		img: 'https://images.unsplash.com/photo-1599855129764-f4cc28295202?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-		title: 'FEEL THE BEAT',
+		img: 'https://images.pexels.com/photos/13694031/pexels-photo-13694031.jpeg?auto=compress&cs=tinysrgb&w=800',
+		title: 'TRUCKIN',
 	},
 	{
 		id: 3,
-		img: 'https://images.unsplash.com/photo-1532877590696-69a157b92b78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-		title: 'ADVENTURE AWAITS',
+		img: 'https://images.pexels.com/photos/163909/pexels-photo-163909.jpeg?auto=compress&cs=tinysrgb&w=800',
+		title: 'ROLLIN',
 	},
 ];
 
 export const popProducts = [
 	{
 		id: 1,
-		img: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172413522-1_1280x.jpg?v=1675474496',
 	},
 	{
 		id: 2,
-		img: 'https://images.unsplash.com/photo-1517282079187-899edd773b0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172416387-1_1280x.jpg?v=1679705064',
 	},
 	{
 		id: 3,
-		img: 'https://images.unsplash.com/photo-1607064788981-37cc9851bace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlnaXRhbCUyMGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560296817-1_1280x.jpg?v=1680654667',
 	},
 	{
 		id: 4,
-		img: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3088&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560294325-2_1280x.jpg?v=1675215655',
 	},
 	{
 		id: 5,
-		img: 'https://images.unsplash.com/photo-1607950689008-58cfcdde6da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560147362-1_1280x.jpg?v=1615012899',
 	},
 	{
 		id: 6,
-		img: 'https://images.unsplash.com/photo-1580236176063-bea7f16aec30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=672&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560294448-1_1280x.jpg?v=1674872196',
 	},
 	{
 		id: 7,
-		img: 'https://images.unsplash.com/photo-1601305522520-0a63f0bef102?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068',
 	},
-	{
-		id: 8,
-		img: 'https://m.media-amazon.com/images/I/617sGSjmC1L._AC_SL1500_.jpg',
-	},
+	// {
+	// 	id: 8,
+	// 	img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/stage-11-hollow-breana-geering-black-red-standard-skateboard-trucks-independent-1_1280x.jpg?v=1670972286',
+	// },
 ];

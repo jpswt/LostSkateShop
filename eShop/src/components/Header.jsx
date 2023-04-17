@@ -21,7 +21,7 @@ const Header = () => {
 		}
 		setSlideIndex(newIndex);
 	};
-	console.log(slideIndex);
+
 	return (
 		<div className="header">
 			<div className="arrow" id="left">
@@ -31,19 +31,20 @@ const Header = () => {
 				></i>
 			</div>
 			<div
-				className="header-container id"
+				className="header-container"
 				id="slidesCount"
 				ref={ElementRef}
 				style={{ transform: `translateX(-${slideIndex * 100}vw)` }}
 			>
 				{headerContent.map((item) => (
-					<div className="slide-container">
-						{/* <div className="image-container">
-							<div className="slide-image">
-								<img src={item.img} alt="" />
-							</div>
-						</div> */}
-						<div className="text-container" id="bg1">
+					<div
+						className="slide-container"
+						style={{
+							background: `url(${item.bg}) no-repeat center center `,
+							backgroundSize: 'cover',
+						}}
+					>
+						<div className="text-container">
 							<h2>{item.title}</h2>
 							<p>{item.description}</p>
 							<button>Show Me</button>

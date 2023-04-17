@@ -8,7 +8,9 @@ const Letter = () => {
 				<h2>Newsletter</h2>
 			</div>
 			<div className="description">
-				<h3>Catch the latest updates of your favorite gear.</h3>
+				<h3>
+					Catch the latest updates and shopping tips on your favorite gear.
+				</h3>
 			</div>
 			<div className="input-container">
 				<input type="text" placeholder="Email" />
