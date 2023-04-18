@@ -1,0 +1,139 @@
+.shopping-container {
+  padding: 20px;
+  height: 80%;
+}
+.shopping-container h1 {
+  font-weight: 600;
+  font-size: 34px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.shopping-container .top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.shopping-container .top-container .shopping-btn {
+  padding: 8px 16px;
+  font-size: "Raleway", sans-serif;
+}
+.shopping-container .top-container .list-info {
+  display: flex;
+}
+.shopping-container .top-container .list-info .list-text {
+  text-decoration: underline;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 8px;
+}
+.shopping-container .bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping-container .bottom-container .cart-info {
+  flex: 2;
+}
+.shopping-container .bottom-container .cart-info .product-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: 1px solid hsla(0, 0%, 50%, 0.4);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail {
+  flex: 1;
+  display: flex;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .product-image {
+  width: 200px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-keys {
+  font-weight: 600;
+  margin-right: 8px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .price-amount {
+  padding-top: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .price-amount .icons {
+  height: 26px;
+  width: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  color: hsl(0, 0%, 42%);
+  background-color: rgb(176, 175, 175);
+  background-color: hsl(168, 99%, 24%);
+  color: hsl(0, 0%, 96%);
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .price-amount .icons:hover {
+  color: black;
+  background-color: rgb(156, 156, 156);
+  cursor: pointer;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .price-amount .product-quantity {
+  border: 1px solid rgb(153, 153, 153);
+  padding: 4px 12px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+.shopping-container .bottom-container .cart-info .product-container .price-detail {
+  flex: 1;
+  height: 90%;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+.shopping-container .bottom-container .cart-info .product-container .price-detail .product-price {
+  padding: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.shopping-container .bottom-container .summary-container {
+  flex: 1;
+  border-radius: 20px;
+  padding: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+.shopping-container .bottom-container .summary-container .summary-title {
+  font-weight: 600;
+  text-align: center;
+}
+.shopping-container .bottom-container .summary-container .summary-section {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.shopping-container .bottom-container .summary-container .summary-section .item-key {
+  font-weight: 600;
+}
+.shopping-container .bottom-container .summary-container .summary-section .item-total {
+  font-weight: 700;
+}
+.shopping-container .bottom-container .summary-container .check-now-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: hsl(168, 99%, 24%);
+  color: hsl(0, 0%, 96%);
+  border: none;
+}/*# sourceMappingURL=ShoppingCart.css.map */
