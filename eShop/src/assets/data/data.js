@@ -40,30 +40,44 @@ export const categories = [
 export const popProducts = [
 	{
 		id: 1,
-		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172413522-1_1280x.jpg?v=1675474496',
+		manufacturer: 'Santa Cruz',
+		desc: 'McCoy Donut Dog VX',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172413669-1_1280x.jpg?v=1679705068',
 	},
 	{
 		id: 2,
+		manufacturer: 'Independent',
+		desc: 'Stage 11 Hollow',
 		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172416387-1_1280x.jpg?v=1679705064',
 	},
 	{
 		id: 3,
-		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560296817-1_1280x.jpg?v=1680654667',
+		manufacturer: 'Anti-Hero',
+		desc: 'Trujillo Travel Bureau',
+		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560296961-1_1280x.jpg?v=1680654655',
 	},
 	{
 		id: 4,
+		manufacturer: 'Spitfire',
+		desc: 'Big Head Deathmask',
 		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560294325-2_1280x.jpg?v=1675215655',
 	},
 	{
 		id: 5,
+		manufacturer: 'Venture',
+		desc: 'All Polished Hi',
 		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560147362-1_1280x.jpg?v=1615012899',
 	},
 	{
 		id: 6,
+		manufacturer: 'Real',
+		desc: 'Lintell By Kathy Ager',
 		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/888560294448-1_1280x.jpg?v=1674872196',
 	},
 	{
 		id: 7,
+		manufacturer: 'Slime Balls',
+		desc: 'Flame OG Slime 78a',
 		img: 'https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068',
 	},
 	// {
