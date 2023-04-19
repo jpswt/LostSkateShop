@@ -102,20 +102,4 @@
     padding: 1rem 0;
     text-align: center;
   }
-  .category-container .info button {
-    min-width: 140px;
-    height: 40px;
-    background-color: hsl(152, 28%, 53%);
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-  .category-container .info button:hover {
-    opacity: 90%;
-    cursor: pointer;
-  }
 }/*# sourceMappingURL=CatItems.css.map */

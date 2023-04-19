@@ -38,6 +38,7 @@ const Header = () => {
 			>
 				{headerContent.map((item) => (
 					<div
+						key={item.id}
 						className="slide-container"
 						style={{
 							background: `url(${item.bg}) no-repeat center center `,

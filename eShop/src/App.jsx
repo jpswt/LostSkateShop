@@ -10,10 +10,10 @@ function App() {
 		<div>
 			<Home />
 			{/* <ProductList /> */}
-			<SingleProduct />
-			<Register />
-			<Login />
-			<Cart />
+			{/* <SingleProduct /> */}
+			{/* <Register /> */}
+			{/* <Login /> */}
+			{/* <Cart /> */}
 		</div>
 	);
 }

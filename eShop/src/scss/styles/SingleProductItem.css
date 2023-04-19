@@ -80,7 +80,7 @@
 }
 .products .product-container .quantity-container .checkout .count {
   font-size: 24px;
-  border: hsl(0, 0%, 42%) solid 1px;
+  border: hsl(0, 0%, 58%) solid 1px;
   background-color: #fcfcfc;
   padding: 2px 10px;
   border-radius: 8px;
@@ -178,7 +178,7 @@
   }
   .products .product-container .mobile .quantity-container .checkout .count {
     font-size: 24px;
-    border: hsl(0, 0%, 42%) solid 1px;
+    border: hsl(0, 0%, 58%) solid 1px;
     background-color: #fcfcfc;
     padding: 2px 10px;
     border-radius: 8px;

@@ -41,7 +41,7 @@
   margin-right: 1rem;
   display: grid;
   place-items: center;
-  color: hsl(0, 0%, 42%);
+  color: hsl(0, 0%, 58%);
   font-weight: bold;
 }
 .product-container i:hover {
