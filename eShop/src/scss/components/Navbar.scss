@@ -29,7 +29,7 @@ body {
 
 			.title {
 				font-weight: bold;
-				font-size: 28px;
+				font-size: 26px;
 				font-family: $logoFont;
 				letter-spacing: 6px;
 				// -webkit-text-stroke: 1px hsla(0, 0%, 27%, 0.7);
@@ -103,6 +103,10 @@ body {
 				display: none;
 			}
 
+			.mobile-cart {
+				display: none;
+			}
+
 			.toggle-btn {
 				display: none;
 			}
@@ -121,7 +125,9 @@ body {
 	.navbar {
 		.navbar-container {
 			.navbar-left {
+				position: absolute;
 				.title {
+					position: relative;
 					display: block;
 					z-index: 1000;
 				}
@@ -177,6 +183,17 @@ body {
 
 				.active {
 					height: 100vh;
+				}
+
+				.mobile-cart {
+					display: flex;
+					margin-right: 20px;
+					.badge {
+						.cart {
+							color: $fontColor;
+							font-size: 26px;
+						}
+					}
 				}
 
 				.toggle-btn {

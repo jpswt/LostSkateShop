@@ -27,7 +27,7 @@ body {
 }
 .navbar .navbar-container .navbar-left .title {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 26px;
   font-family: "Philly Sans", sans-serif;
   letter-spacing: 6px;
   text-shadow: 4px 4px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
@@ -86,12 +86,19 @@ body {
 .navbar .navbar-container .navbar-right .mobile-links {
   display: none;
 }
+.navbar .navbar-container .navbar-right .mobile-cart {
+  display: none;
+}
 .navbar .navbar-container .navbar-right .toggle-btn {
   display: none;
 }
 
 @media (max-width: 1000px) {
+  .navbar .navbar-container .navbar-left {
+    position: absolute;
+  }
   .navbar .navbar-container .navbar-left .title {
+    position: relative;
     display: block;
     z-index: 1000;
   }
@@ -139,6 +146,14 @@ body {
   }
   .navbar .navbar-container .navbar-right .active {
     height: 100vh;
+  }
+  .navbar .navbar-container .navbar-right .mobile-cart {
+    display: flex;
+    margin-right: 20px;
+  }
+  .navbar .navbar-container .navbar-right .mobile-cart .badge .cart {
+    color: hsl(0, 0%, 96%);
+    font-size: 26px;
   }
   .navbar .navbar-container .navbar-right .toggle-btn {
     display: block;

@@ -10,4 +10,10 @@
 	font-family: $bodyFont;
 	font-size: 14px;
 	font-weight: bold;
+	z-index: 1100;
+}
+
+@media (max-width: $breakpoint-lg) {
+	.message-container {
+	}
 }

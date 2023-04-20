@@ -60,6 +60,7 @@ const Navbar = () => {
 							</Badge>
 						</li>
 					</ul>
+
 					<ul className={toggle ? 'mobile-links active' : 'mobile-links'}>
 						<li className="mobile-link-items">
 							<input type="text" placeholder="Search..." />
@@ -70,6 +71,19 @@ const Navbar = () => {
 						<li className="mobile-link-items">Hardware</li>
 						<li className="mobile-link-items login">Sign In/Sign Out</li>
 					</ul>
+					<div className="mobile-cart">
+						<Badge
+							badgeContent={1}
+							sx={{
+								'& .MuiBadge-badge': {
+									backgroundColor: ' hsl(168, 99%, 28%)',
+								},
+							}}
+							className="badge"
+						>
+							<ShoppingCartIcon color="action" className="cart" />
+						</Badge>
+					</div>
 					<div className="toggle-btn" onClick={handleToggle}>
 						{toggle ? (
 							<i className="fa-solid fa-xmark fa-2xl"></i>
