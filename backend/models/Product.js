@@ -6,6 +6,10 @@ const ProductSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		manufacturer: {
+			type: String,
+			required: true,
+		},
 		description: {
 			type: String,
 			required: true,
@@ -13,17 +17,25 @@ const ProductSchema = new mongoose.Schema(
 		categories: {
 			type: Array,
 		},
+		width: {
+			type: String,
+		},
+		length: {
+			type: String,
+		},
+		wheelbase: {
+			type: String,
+		},
 		size: {
 			type: String,
-			required: true,
-		},
-		color: {
-			type: String,
-			required: true,
 		},
 		price: {
 			type: Number,
 			required: true,
+		},
+		inStock: {
+			type: Boolean,
+			default: true,
 		},
 		img: {
 			type: String,

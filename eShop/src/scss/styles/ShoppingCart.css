@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .shopping-container .top-container .shopping-btn {
   padding: 8px 16px;
@@ -47,6 +47,7 @@
 }
 .shopping-container .bottom-container .cart-info .product-container .product-detail .product-image {
   width: 200px;
+  padding: 8px;
 }
 .shopping-container .bottom-container .cart-info .product-container .product-detail .details-container {
   padding: 22px;
@@ -112,7 +113,7 @@
 .shopping-container .bottom-container .summary-container {
   flex: 1;
   border-radius: 20px;
-  padding: 24px;
+  padding: 0 24px 24px;
   font-family: "Open Sans", sans-serif;
 }
 .shopping-container .bottom-container .summary-container .summary-title {
