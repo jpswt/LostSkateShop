@@ -4,11 +4,16 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import SingleProduct from './pages/SingleProduct';
 import Cart from './pages/Cart';
+import Router from './Router';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 	return (
 		<div>
-			<Home />
+			<BrowserRouter>
+				<Router />
+			</BrowserRouter>
+			{/* <Home /> */}
 			{/* <ProductList /> */}
 			{/* <SingleProduct /> */}
 			{/* <Register /> */}
