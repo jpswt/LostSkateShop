@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .footer-container {
-	height: 120px;
+	height: 160px;
 	width: 100%;
 	background-color: $secondaryColor;
 	color: $fontColor;
@@ -10,26 +10,39 @@
 	align-items: center;
 	justify-content: center;
 
-	.footer-left {
+	.footer-social {
+		min-height: 130px;
 		flex: 1;
-		padding: 1rem;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		gap: 10px;
+
+		.social-container {
+			padding: 20px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+		}
 
 		i {
 			cursor: pointer;
+			font-size: 40px;
 		}
 	}
 
-	.footer-center {
-		flex: 1;
+	.links-title {
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+		font-weight: 600;
+	}
 
-		.links-title {
-			font-size: 20px;
-			margin-bottom: 10px;
-			text-align: center;
-		}
+	.footer-navlinks {
+		min-height: 130px;
+		flex: 1;
+		letter-spacing: 1px;
+		padding-left: 20px;
 
 		.footer-links {
 			margin: 0;
@@ -41,18 +54,21 @@
 			flex-wrap: wrap;
 
 			.footer-link {
-				width: 25%;
+				width: 33%;
 				margin-bottom: 8px;
 			}
 		}
 	}
 
-	.footer-right {
+	.footer-contact-info {
+		min-height: 130px;
+		// height: 100%;
 		flex: 1;
 		display: flex;
-		justify-content: flex-end;
-		padding: 1rem;
-		margin-top: 4px;
+		flex-direction: column;
+		align-items: end;
+		padding-right: 20px;
+		// justify-content: center;
 		.footer-contact {
 			margin: 0;
 			padding: 0;
@@ -73,15 +89,74 @@
 				}
 			}
 		}
+		.contact-title {
+			width: 208px;
+			text-align: center;
+		}
 	}
 }
 
 @media (max-width: $breakpoint-lg) {
-	.footer-center {
-		display: none;
-	}
+	.footer-container {
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+		padding: 20px 0;
 
-	.footer-right {
-		flex: 4;
+		.footer-social {
+			min-height: 60px;
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			align-items: center;
+
+			.social-container {
+				padding: 20px 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+			}
+
+			i {
+				cursor: pointer;
+				font-size: 40px;
+			}
+		}
+
+		.footer-navlinks {
+			width: 100%;
+			padding-left: 40px;
+			margin-bottom: 20px;
+
+			.links-title {
+				text-align: left;
+				// padding-left: 10px;
+			}
+
+			.footer-links {
+				// padding: 0 10px;
+				font-weight: 400;
+				width: min(90%, 1000px);
+				text-align: left;
+			}
+		}
+
+		.footer-contact-info {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			padding: 0;
+			padding-left: 40px;
+			margin-bottom: 20px;
+			.links-title {
+				font-size: 20px;
+				margin-bottom: 10px;
+				text-align: left;
+				font-weight: 600;
+			}
+		}
 	}
 }
