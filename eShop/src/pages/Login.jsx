@@ -45,11 +45,13 @@ const Login = () => {
 							</form>
 						</div>
 						<div className="image-container">
-							<h2>New Customers</h2>
-							<p>
-								Ready to Join? Becoming a member allows you to checkout faster,
-								view/track orders and more.
-							</p>
+							<div className="overlay">
+								<h2>New Customers</h2>
+								<p>
+									Ready to Join? Becoming a member allows you to checkout
+									faster, view/track orders and more.
+								</p>
+							</div>
 						</div>
 					</>
 				)}
