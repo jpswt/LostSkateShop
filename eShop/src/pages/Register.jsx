@@ -3,7 +3,7 @@ import '../scss/styles/Register.css';
 
 const Register = () => {
 	const [width, setWidth] = useState(window.innerWidth);
-	const breakpoint = 1000;
+	const breakpoint = 1045;
 
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
@@ -47,11 +47,13 @@ const Register = () => {
 							</form>
 						</div>
 						<div className="image-container">
-							<h2>New Customers</h2>
-							<p>
-								Ready to Join? Becoming a member allows you to checkout faster,
-								view/track orders and more.
-							</p>
+							<div className="overlay">
+								<h2>New Customers</h2>
+								<p>
+									Ready to Join? Becoming a member allows you to checkout
+									faster, view/track orders and more.
+								</p>
+							</div>
 						</div>
 					</>
 				)}

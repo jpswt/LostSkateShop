@@ -3,7 +3,7 @@ import '../scss/styles/Login.css';
 
 const Login = () => {
 	const [width, setWidth] = useState(window.innerWidth);
-	const breakpoint = 1000;
+	const breakpoint = 1045;
 
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
