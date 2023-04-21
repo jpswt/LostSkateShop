@@ -1,12 +1,14 @@
-import '../scss/styles/Products.css';
+import '../scss/styles/Trending.css';
 import { popProducts } from '../assets/data/data';
 import ProductItems from './ProductItems';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Products = ({ category, filters, sort }) => {
+const Trending = ({ category, filters, sort }) => {
 	const [products, setProducts] = useState([]);
 	const [filteredProducts, setFilteredProducts] = useState([]);
+	const shuffled = products.sort(() => 0.5 - Math.random());
+	const selected = shuffled.slice(0, 7);
 
 	useEffect(() => {
 		const getProducts = async () => {
@@ -36,8 +38,11 @@ const Products = ({ category, filters, sort }) => {
 	console.log(products);
 	return (
 		<>
+			<div className="trending">
+				<h2>TRENDING</h2>
+			</div>
 			<div className="products-container">
-				{filteredProducts.map((product) => (
+				{selected.map((product) => (
 					<ProductItems product={product} key={product.id} />
 				))}
 			</div>
@@ -45,4 +50,4 @@ const Products = ({ category, filters, sort }) => {
 	);
 };
 
-export default Products;
+export default Trending;

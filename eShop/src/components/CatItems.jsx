@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 const CatItems = ({ category }) => {
 	return (
 		<>
-			<Link to={`/products/${category.name}`}>
-				<div className="category-container">
+			<div className="category-container">
+				<Link to={`/products/${category.name}`}>
 					<div className="overlay"></div>
 					<img src={category.img} alt="" />
 					<div className="info">
 						<div className="title">{category.title}</div>
 						<button>SHOP NOW</button>
 					</div>
-				</div>
-			</Link>
+				</Link>
+			</div>
 		</>
 	);
 };

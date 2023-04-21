@@ -27,6 +27,7 @@ const ProductList = () => {
 			<Message />
 			<Navbar />
 			<Filter
+				category={category}
 				filter={filters}
 				setFilter={setFilters}
 				sort={sort}

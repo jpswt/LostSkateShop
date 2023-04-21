@@ -1,9 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../scss/styles/Filter.css';
+import axios from 'axios';
 
-const Filter = ({ filters, sort, setSort, handleFilter }) => {
+const Filter = ({ filters, sort, setSort, handleFilter, category }) => {
 	console.log(filters);
 	console.log(sort);
+
+	const [products, setProducts] = useState([]);
+	const [filteredProducts, setFilteredProducts] = useState([]);
+	const [options, setOptions] = useState([]);
+
+	useEffect(() => {
+		const getProducts = async () => {
+			try {
+				const response = await axios.get(
+					category
+						? `${import.meta.env.VITE_DB_URI}/products?category=${category}`
+						: `${import.meta.env.VITE_DB_URI}/products`
+				);
+				setProducts(response.data);
+				const results = [];
+				response.data.forEach((item, index) => {
+					results.push({
+						key: item.manufacturer,
+						value: item.manufacturer,
+					});
+
+					setOptions([{ key: 'Select Manufacturer', value: '' }, ...results]);
+				});
+			} catch (err) {}
+		};
+		getProducts();
+	}, [category]);
+	console.log(options);
 
 	return (
 		<div className="filter">
@@ -12,20 +41,21 @@ const Filter = ({ filters, sort, setSort, handleFilter }) => {
 				<div className="filter-item">
 					<label>Filter Products:</label>
 					<select name="manufacturer" id="cameras" onChange={handleFilter}>
-						<option value="" disabled>
-							Choose a Color
-						</option>
-						<option value="black">Black</option>
+						{filteredProducts.map((item) => {
+							<option value={`${item.manufacturer}`}>
+								${item.manufacturer}
+							</option>;
+						})}
+						{/* <option value="">Choose a Manufacturer</option>
+						<option value="Santa Cruz">Santa Cruz</option>
 						<option value="white">White</option>
-						<option value="gray">Gray</option>
+						<option value="gray">Gray</option> */}
 					</select>
 				</div>
 				<div className="filter-item">
 					<label>Filter Products:</label>
 					<select name="color" id="cameras" onChange={handleFilter}>
-						<option value="" disabled>
-							Choose a Color
-						</option>
+						<option value="">Choose a Color</option>
 						<option value="black">Black</option>
 						<option value="white">White</option>
 						<option value="gray">Gray</option>

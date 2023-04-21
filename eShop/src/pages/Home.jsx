@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Message from '../components/Message';
 import Header from '../components/Header';
 import Categories from '../components/Categories';
-import Products from '../components/Products';
+import Trending from '../components/Trending';
 import Letter from '../components/Letter';
 import Footer from '../components/Footer';
 import '../scss/styles/Mobile.css';
@@ -17,7 +17,7 @@ const Home = () => {
 			</div>
 			<Header />
 			<Categories />
-			<Products />
+			<Trending />
 			<Letter />
 			<Footer />
 		</div>

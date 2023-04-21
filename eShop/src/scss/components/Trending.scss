@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+.trending {
+	background-color: $bgColor;
+	padding-left: 16px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h2 {
+		margin: 0;
+		color: $fontDarkColor;
+		font-family: $bodyFont;
+		font-weight: bold;
+	}
+}
+
+.products-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 16px;
+	gap: 10px;
+	background-color: $bgColor;
+}
