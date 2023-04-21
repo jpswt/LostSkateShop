@@ -24,16 +24,19 @@ export const categories = [
 		id: 1,
 		img: 'https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2thdGVib2FyZGluZ3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60',
 		title: 'THRASHIN',
+		name: 'decks',
 	},
 	{
 		id: 2,
 		img: 'https://images.pexels.com/photos/13694031/pexels-photo-13694031.jpeg?auto=compress&cs=tinysrgb&w=800',
 		title: 'TRUCKIN',
+		name: 'trucks',
 	},
 	{
 		id: 3,
 		img: 'https://images.pexels.com/photos/163909/pexels-photo-163909.jpeg?auto=compress&cs=tinysrgb&w=800',
 		title: 'ROLLIN',
+		name: 'wheels',
 	},
 ];
 

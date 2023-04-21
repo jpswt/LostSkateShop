@@ -1,8 +1,14 @@
 import '../scss/styles/Products.css';
 import { popProducts } from '../assets/data/data';
 import ProductItems from './ProductItems';
+import { useEffect, useState } from 'react';
 
-const Products = () => {
+const Products = ({ category, filters, sort }) => {
+	const [products, setProducts] = useState([]);
+	const [filteredProducts, setFilteredProducts] = useState([]);
+
+	// useEffect(() => {}, [cat]);
+
 	return (
 		<>
 			<div className="trending">
