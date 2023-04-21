@@ -34,6 +34,7 @@ const Navbar = () => {
 							<li className="list-link-items">Decks</li>
 							<li className="list-link-items">Trucks</li>
 							<li className="list-link-items">Wheels</li>
+							<li className="list-link-items">Bearings</li>
 							<li className="list-link-items">Hardware</li>
 						</ul>
 					</div>
@@ -68,6 +69,7 @@ const Navbar = () => {
 						<li className="mobile-link-items">Decks</li>
 						<li className="mobile-link-items">Trucks</li>
 						<li className="mobile-link-items">Wheels</li>
+						<li className="mobile-link-items">Bearings</li>
 						<li className="mobile-link-items">Hardware</li>
 						<li className="mobile-link-items login">Sign In/Sign Out</li>
 					</ul>
