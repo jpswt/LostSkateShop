@@ -94,7 +94,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .header {
     height: 60vh;
     width: 100%;

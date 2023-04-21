@@ -80,7 +80,7 @@
   border: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .login-container {
     height: 100%;
     display: flex;

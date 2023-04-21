@@ -93,7 +93,7 @@ body {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .navbar .navbar-container .navbar-left {
     position: absolute;
   }

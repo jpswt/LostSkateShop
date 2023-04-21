@@ -54,6 +54,84 @@ const ShoppingCart = () => {
 							<div className="product-price">Item Cost: $70.00</div>
 						</div>
 					</div>
+					<div className="product-container">
+						<div className="product-detail">
+							<img
+								className="product-image"
+								src="https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068"
+								alt=""
+							/>
+							<div className="details-container">
+								<div className="product-info">
+									<span className="product-keys">Name:</span>
+									<span>Marc Gator Board</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Id:</span>
+									<span>12345</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Dimensions:</span>
+									<span>8.25in</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Manufacturer:</span>
+									<span>Thrasher</span>
+								</div>
+								<div className="price-amount">
+									<div className="icons">
+										<p>-</p>
+									</div>
+									<div className="product-quantity">2</div>
+									<div className="icons">
+										<p>+</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="price-detail">
+							<div className="product-price">Item Cost: $70.00</div>
+						</div>
+					</div>
+					<div className="product-container">
+						<div className="product-detail">
+							<img
+								className="product-image"
+								src="https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068"
+								alt=""
+							/>
+							<div className="details-container">
+								<div className="product-info">
+									<span className="product-keys">Name:</span>
+									<span>Marc Gator Board</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Id:</span>
+									<span>12345</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Dimensions:</span>
+									<span>8.25in</span>
+								</div>
+								<div className="product-info">
+									<span className="product-keys">Manufacturer:</span>
+									<span>Thrasher</span>
+								</div>
+								<div className="price-amount">
+									<div className="icons">
+										<p>-</p>
+									</div>
+									<div className="product-quantity">2</div>
+									<div className="icons">
+										<p>+</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="price-detail">
+							<div className="product-price">Item Cost: $70.00</div>
+						</div>
+					</div>
 				</div>
 				<div className="summary-container">
 					<div className="summary-title">SUMMARY</div>
@@ -69,7 +147,9 @@ const ShoppingCart = () => {
 						<div className="item-key">Total Cost</div>
 						<div className="item-total">$75.99</div>
 					</div>
-					<button className="check-now-btn">CHECKOUT NOW</button>
+					<div className="checkout">
+						<button className="check-now-btn">CHECKOUT NOW</button>
+					</div>
 				</div>
 			</div>
 		</div>

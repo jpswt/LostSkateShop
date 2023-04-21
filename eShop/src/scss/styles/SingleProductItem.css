@@ -4,11 +4,13 @@
   display: flex;
   font-family: "Open Sans", sans-serif;
   background-color: #ffffff;
+  padding: 20px;
 }
 .products .product-container {
   width: 100%;
   height: 100%;
   padding: 0 40px 40px;
+  display: flex;
 }
 .products .product-container .image-container {
   flex: 1;
@@ -92,7 +94,7 @@
 .products .product-container .quantity-container .checkout button {
   min-width: 140px;
   height: 40px;
-  background-color: hsl(152, 28%, 53%);
+  background-color: hsl(168, 99%, 24%);
   border: none;
   color: white;
   cursor: pointer;
@@ -115,25 +117,25 @@
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .products .product-container {
-    padding: 40px 40px 0 40px;
-    display: flex;
+    padding: 20px;
     flex-direction: column;
   }
   .products .product-container .image-container {
     flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .products .product-container .image-container .product-image {
     width: 420px;
     height: 420px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .products .product-container .description-container {
-    flex: 1;
-    height: 100vh;
-    width: 100%;
+    width: 90%;
     padding-left: 0px;
     margin-bottom: 0px;
   }
@@ -148,7 +150,6 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 40px;
-    gap: 7rem;
   }
   .products .product-container .mobile .filter-container {
     padding-bottom: 0px;
@@ -158,7 +159,6 @@
     height: 32px;
   }
   .products .product-container .mobile .quantity-container {
-    font-size: 12px;
     padding-bottom: 0px;
   }
   .products .product-container .mobile .quantity-container .checkout {
@@ -191,7 +191,7 @@
     display: none;
     min-width: 140px;
     height: 40px;
-    background-color: hsl(152, 28%, 53%);
+    background-color: hsl(168, 99%, 24%);
     border: none;
     color: white;
     cursor: pointer;
@@ -219,7 +219,7 @@
   .products .product-container .mobile-btn .cart-btn-mobile {
     min-width: 140px;
     height: 40px;
-    background-color: hsl(152, 28%, 53%);
+    background-color: hsl(168, 99%, 24%);
     border: none;
     color: white;
     cursor: pointer;

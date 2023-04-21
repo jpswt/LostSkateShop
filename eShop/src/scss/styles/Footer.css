@@ -81,7 +81,7 @@
   text-align: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .footer-container {
     height: 100%;
     width: 100%;

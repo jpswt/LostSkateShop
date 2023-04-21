@@ -28,12 +28,12 @@ const SingleProductItem = () => {
 					</div>
 					<div className="mobile">
 						<div className="filter-container">
-							<h2>Colors:</h2>
+							{/* <h2>Colors:</h2>
 							<div className="color-container">
 								<div className="colors" id="black"></div>
 								<div className="colors" id="white"></div>
 								<div className="colors" id="gray"></div>
-							</div>
+							</div> */}
 						</div>
 						<div className="quantity-container">
 							<h2>Quantity:</h2>

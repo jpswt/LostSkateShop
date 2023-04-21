@@ -59,7 +59,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
   .category-container {
     flex: none;
     height: 200px;
