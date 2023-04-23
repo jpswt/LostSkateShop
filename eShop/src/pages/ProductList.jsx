@@ -37,14 +37,21 @@ const ProductList = () => {
 				);
 				setProducts(response.data);
 				const results = [];
-				response.data.forEach((item, index) => {
+				response.data.map((item, index) => {
 					results.push({
 						key: item.manufacturer,
 						value: item.manufacturer,
 					});
-
-					setOptions([...results]);
 				});
+
+				let filteredCategories = results.reduce((unique, index) => {
+					if (!unique.some((obj) => obj.value === index.value)) {
+						unique.push(index);
+					}
+					return unique;
+				}, []);
+
+				setOptions(filteredCategories);
 			} catch (err) {}
 		};
 		getProducts();
@@ -58,7 +65,7 @@ const ProductList = () => {
 			setFilteredProducts(
 				products?.filter((item) =>
 					Object.entries(filters).every(([key, value]) =>
-						item[key].includes(value)
+						item[key]?.includes(value)
 					)
 				)
 			);
@@ -73,7 +80,7 @@ const ProductList = () => {
 			setFilteredProducts((products) =>
 				[...products].sort((a, b) => a.price - b.price)
 			);
-		} else {
+		} else if (sort === 'desc') {
 			setFilteredProducts((products) =>
 				[...products].sort((a, b) => b.price - a.price)
 			);

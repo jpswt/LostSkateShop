@@ -23,6 +23,17 @@ const Filter = ({
 						))}
 					</select>
 				</div>
+				{category === 'hardware' ? (
+					<div className="filter-item">
+						<label>Filter Hardware:</label>
+						<select name="categories" onChange={handleFilter}>
+							<option value="">All Hardware</option>
+							<option value="griptape">Griptape</option>
+							<option value="bolts">Bolts</option>
+							<option value="bushings">Bushings</option>
+						</select>
+					</div>
+				) : null}
 				<div className="filter-item">
 					<label>Sort Products:</label>
 					<select onChange={(e) => setSort(e.target.value)}>
