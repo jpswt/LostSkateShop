@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import '../scss/styles/ShoppingCart.css';
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
+import { useNavigate } from 'react-router';
+
+const KEY = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
 const ShoppingCart = () => {
 	const cart = useSelector((state) => state.cart);
+	const [stripeToken, setStripeToken] = useState(null);
+	const navigate = useNavigate();
+
+	const onToken = (token) => {
+		setStripeToken(token);
+	};
+
+	useEffect(() => {
+		const postRequest = async () => {
+			try {
+				const response = await axios.post(
+					`${import.meta.env.VITE_DB_URI}/checkout/payment`,
+					{
+						tokenID: stripeToken.id,
+						amount: cart.total * 100,
+					}
+				);
+				navigate('/success', { data: response.data });
+				console.log(response.data);
+			} catch (err) {
+				console.log(err);
+			}
+		};
+		stripeToken !== null && postRequest();
+	}, [stripeToken, cart.total, navigate]);
 
 	return (
 		<div className="shopping-container">
@@ -82,9 +112,21 @@ const ShoppingCart = () => {
 						<div className="item-key">Total Cost</div>
 						<div className="item-total">$ {cart.total.toFixed(2)}</div>
 					</div>
-					<div className="checkout">
+					<StripeCheckout
+						name="Lost Skate Shop"
+						image="https://cdn.icon-icons.com/icons2/1371/PNG/512/robot02_90810.png"
+						billingAddress
+						shippingAddress
+						description={`Your total is $${cart.total}.00 `}
+						amount={cart.total * 100}
+						token={onToken}
+						stripeKey={KEY}
+					>
+						<button>Pay Now</button>
+					</StripeCheckout>
+					{/* <div className="checkout">
 						<button className="check-now-btn">CHECKOUT NOW</button>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>
