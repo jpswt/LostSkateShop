@@ -27,7 +27,7 @@ const Filter = ({
 					<div className="filter-item">
 						<label>Filter Hardware:</label>
 						<select name="categories" onChange={handleFilter}>
-							<option value="">All Hardware</option>
+							<option value="hardware">All Hardware</option>
 							<option value="griptape">Griptape</option>
 							<option value="bolts">Bolts</option>
 							<option value="bushings">Bushings</option>

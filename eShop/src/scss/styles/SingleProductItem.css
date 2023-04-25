@@ -1,30 +1,86 @@
 .products {
   width: 100%;
-  height: 100%;
   display: flex;
   font-family: "Open Sans", sans-serif;
   background-color: #ffffff;
-  padding: 20px;
 }
 .products .product-container {
   width: 100%;
-  height: 100%;
-  padding: 0 40px 40px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px 40px 0 40px;
   display: flex;
 }
+.products .product-container .description-mobile {
+  display: none;
+}
 .products .product-container .image-container {
+  height: -moz-fit-content;
+  height: fit-content;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .products .product-container .image-container .product-image {
   width: 100%;
-  height: 80vh;
   -o-object-fit: contain;
      object-fit: contain;
   border: none;
 }
+.products .product-container .image-container .decks-image {
+  width: 275px;
+  height: 525px;
+  padding-bottom: 40px;
+}
+.products .product-container .image-container .trucks-image {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 60px;
+}
+.products .product-container .image-container .wheels-image {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.products .product-container .image-container .bearings-image {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.products .product-container .image-container .grip-image {
+  width: 300px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 40px;
+}
+.products .product-container .image-container .bolts-image {
+  width: 350px;
+  height: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 80px;
+}
+.products .product-container .image-container .bushings-image {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 80px;
+}
 .products .product-container .description-container {
   flex: 1;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-left: 60px;
   margin-bottom: 0px;
 }
@@ -32,9 +88,26 @@
   padding-top: 80px;
   padding-bottom: 10px;
 }
-.products .product-container .description-container .description .details {
-  width: 80%;
-  line-height: 1.4rem;
+.products .product-container .description-container .inactive {
+  display: none;
+}
+.products .product-container .description-container .dimensions {
+  width: 30%;
+  height: 70px;
+}
+.products .product-container .description-container .dimensions .dim-title {
+  width: 100%;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.products .product-container .description-container .outstock {
+  color: red;
+  font-weight: 600;
+  font-size: 20px;
+}
+.products .product-container .description-container .instock {
+  color: inherit;
+  font-size: 18px;
 }
 .products .product-container .filter-container {
   font-size: 12px;
@@ -86,6 +159,7 @@
   background-color: #fcfcfc;
   padding: 2px 10px;
   border-radius: 8px;
+  font-family: monospace;
 }
 .products .product-container .quantity-container .checkout .plus {
   font-size: 30px;
@@ -110,17 +184,48 @@
 }
 .products .product-container .quantity-container .checkout button:hover {
   opacity: 100%;
-  background-color: white;
-  color: hsl(168, 99%, 24%);
 }
 .products .product-container .mobile-btn {
   display: none;
+}
+
+.features-container {
+  width: 45%;
+  line-height: 1.4rem;
+  border: 1px solid rgb(151, 151, 151);
+  margin: 40px;
+  font-family: "Open Sans", sans-serif;
+}
+.features-container h3 {
+  background-color: lightgray;
+  margin-top: 0;
+  padding: 0.5rem 1rem;
+}
+.features-container .details-container {
+  margin: 0 20px;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+}
+.features-container .details-container .details {
+  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 1045px) {
   .products .product-container {
     padding: 20px;
     flex-direction: column;
+  }
+  .products .product-container .description-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .products .product-container .description-mobile h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  .products .product-container .description-mobile h3 {
+    margin-bottom: 8px;
   }
   .products .product-container .image-container {
     flex: none;
@@ -134,22 +239,82 @@
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .products .product-container .image-container .decks-image {
+    width: 125px;
+    height: 250px;
+    padding-bottom: 0px;
+  }
+  .products .product-container .image-container .trucks-image {
+    width: 400px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 0px;
+  }
+  .products .product-container .image-container .wheels-image {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .products .product-container .image-container .bearings-image {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 0px;
+    padding-bottom: 16px;
+  }
+  .products .product-container .image-container .grip-image {
+    width: 175px;
+    height: 275px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 0px;
+  }
+  .products .product-container .image-container .bolts-image {
+    width: 350px;
+    height: 350px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding-top: 0px;
+  }
+  .products .product-container .image-container .bushings-image {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 0px;
+  }
   .products .product-container .description-container {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 0px;
     margin-bottom: 0px;
   }
   .products .product-container .description-container .description {
+    display: none;
     padding-top: 20px;
   }
   .products .product-container .description-container .description .details {
     width: 100%;
   }
+  .products .product-container .description-container .dimensions {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
   .products .product-container .mobile {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 1.9rem;
   }
   .products .product-container .mobile .filter-container {
     padding-bottom: 0px;
@@ -159,6 +324,7 @@
     height: 32px;
   }
   .products .product-container .mobile .quantity-container {
+    margin-top: 0.5rem;
     padding-bottom: 0px;
   }
   .products .product-container .mobile .quantity-container .checkout {
@@ -189,32 +355,12 @@
   }
   .products .product-container .mobile .quantity-container .checkout .cart-btn {
     display: none;
-    min-width: 140px;
-    height: 40px;
-    background-color: hsl(168, 99%, 24%);
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-size: 18px;
-    padding: 0.5rem 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-  .products .product-container .mobile .quantity-container .checkout .cart-btn:hover {
-    opacity: 90%;
-    cursor: pointer;
-  }
-  .products .product-container .mobile .quantity-container .checkout .cart-btn:hover {
-    opacity: 100%;
-    background-color: white;
-    color: hsl(168, 99%, 24%);
   }
   .products .product-container .mobile-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 1.9rem;
   }
   .products .product-container .mobile-btn .cart-btn-mobile {
     min-width: 140px;
@@ -236,7 +382,10 @@
   }
   .products .product-container .mobile-btn .cart-btn-mobile:hover {
     opacity: 100%;
-    background-color: white;
-    color: hsl(168, 99%, 24%);
+  }
+  .features-container {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=SingleProductItem.css.map */

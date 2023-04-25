@@ -42,13 +42,15 @@
 			justify-content: center;
 			gap: 16px;
 			transition: all 0.5s ease;
-			cursor: pointer;
 
 			&:hover {
 				opacity: 1;
 			}
 		}
 
+		.i-links {
+			text-decoration: none;
+		}
 		i {
 			background-color: white;
 			border-radius: 50%;
@@ -59,10 +61,12 @@
 			place-items: center;
 			color: $secondaryColor;
 			font-weight: bold;
+			cursor: pointer;
 
 			&:hover {
 				background-color: $accentColor;
 				color: white;
+				text-decoration: none;
 			}
 		}
 	}

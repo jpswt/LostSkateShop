@@ -67,7 +67,7 @@ const ProductList = () => {
 					Object.entries(filters).every(([key, value]) =>
 						item[key]?.includes(value)
 					)
-				)
+				) || 'No item found'
 			);
 	}, [products, category, filters]);
 

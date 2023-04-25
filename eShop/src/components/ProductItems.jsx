@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../scss/styles/ProductItems.css';
 
 const ProductItems = ({ product }) => {
@@ -8,7 +9,9 @@ const ProductItems = ({ product }) => {
 				<div className="btn-container">
 					<i className="fa-solid fa-cart-plus fa-lg"></i>
 					<i className="fa-regular fa-heart fa-lg"></i>
-					<i className="fa-solid fa-magnifying-glass fa-lg"></i>
+					<Link to={`/product/${product._id}`} className="i-links">
+						<i className="fa-solid fa-magnifying-glass fa-lg"></i>
+					</Link>
 				</div>
 			</div>
 			<div className="details-container">

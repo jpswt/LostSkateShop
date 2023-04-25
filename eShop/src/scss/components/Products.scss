@@ -16,10 +16,14 @@
 	}
 }
 
-.products-container {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 16px;
-	gap: 10px;
-	background-color: $bgColor;
+.wrapper {
+	min-height: 100%;
+
+	.products-container {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 16px;
+		gap: 10px;
+		background-color: $bgColor;
+	}
 }

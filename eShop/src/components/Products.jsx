@@ -6,10 +6,16 @@ const Products = ({ category, filters, sort, products, filteredProducts }) => {
 	console.log(category, filters, sort);
 
 	return (
-		<div className="products-container">
-			{filteredProducts.map((product) => (
-				<ProductItems product={product} key={product.id} />
-			))}
+		<div className="wrapper">
+			<div className="products-container">
+				{filteredProducts?.length > 0 ? (
+					filteredProducts.map((product) => (
+						<ProductItems product={product} key={product.id} />
+					))
+				) : (
+					<h2>No Items found</h2>
+				)}
+			</div>
 		</div>
 	);
 };
