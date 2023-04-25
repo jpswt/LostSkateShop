@@ -92,7 +92,12 @@ body {
 					font-size: 30px;
 				}
 
+				.i-links {
+					text-decoration: none;
+				}
+
 				.badge {
+					color: $fontColor;
 					.cart {
 						color: $fontColor;
 						font-size: 26px;

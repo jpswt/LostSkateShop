@@ -80,6 +80,12 @@ body {
 .navbar .navbar-container .navbar-right .navbar-links .navbar-button {
   font-size: 30px;
 }
+.navbar .navbar-container .navbar-right .navbar-links .i-links {
+  text-decoration: none;
+}
+.navbar .navbar-container .navbar-right .navbar-links .badge {
+  color: hsl(0, 0%, 96%);
+}
 .navbar .navbar-container .navbar-right .navbar-links .badge .cart {
   color: hsl(0, 0%, 96%);
   font-size: 26px;

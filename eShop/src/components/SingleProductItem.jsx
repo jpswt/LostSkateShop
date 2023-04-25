@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { addProduct } from '../redux/cartRedux';
+import { useDispatch } from 'react-redux';
 import '../scss/styles/SingleProductItem.css';
 
 const SingleProductItem = ({ product }) => {
 	const input = product?.description?.split('.').filter(Boolean);
 	const [quantity, setQuantity] = useState(1);
+	const dispatch = useDispatch();
 
 	const handleQuantity = (val) => {
 		if (val === 'dec') {
@@ -13,7 +16,9 @@ const SingleProductItem = ({ product }) => {
 		}
 	};
 
-	const handleCart = () => {};
+	const handleCart = () => {
+		dispatch(addProduct({ ...product, quantity }));
+	};
 
 	return (
 		<>

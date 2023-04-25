@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
@@ -8,6 +10,7 @@ import '../scss/styles/Navbar.css';
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [bodyScroll, setBodyScroll] = useState(true);
+	const quantity = useSelector((state) => state.cart.quantity);
 
 	const handleToggle = () => {
 		setToggle(!toggle);
@@ -47,19 +50,21 @@ const Navbar = () => {
 						<li>
 							<PersonIcon className="navbar-button" />
 						</li>
-						<li>
-							<Badge
-								badgeContent={1}
-								sx={{
-									'& .MuiBadge-badge': {
-										backgroundColor: ' hsl(168, 99%, 28%)',
-									},
-								}}
-								className="badge"
-							>
-								<ShoppingCartIcon color="action" className="cart" />
-							</Badge>
-						</li>
+						<Link to="/cart">
+							<li>
+								<Badge
+									badgeContent={quantity}
+									sx={{
+										'& .MuiBadge-badge': {
+											backgroundColor: ' hsl(168, 99%, 28%)',
+										},
+									}}
+									className="badge"
+								>
+									<ShoppingCartIcon color="action" className="cart" />
+								</Badge>
+							</li>
+						</Link>
 					</ul>
 
 					<ul className={toggle ? 'mobile-links active' : 'mobile-links'}>
@@ -75,7 +80,7 @@ const Navbar = () => {
 					</ul>
 					<div className="mobile-cart">
 						<Badge
-							badgeContent={1}
+							badgeContent={quantity}
 							sx={{
 								'& .MuiBadge-badge': {
 									backgroundColor: ' hsl(168, 99%, 28%)',
