@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import '../scss/styles/ShoppingCart.css';
 
 const ShoppingCart = () => {
+	const cart = useSelector((state) => state.cart);
+
 	return (
 		<div className="shopping-container">
 			<h1>SHOPPING CART</h1>
@@ -15,129 +18,61 @@ const ShoppingCart = () => {
 			</div>
 			<div className="bottom-container">
 				<div className="cart-info">
-					<div className="product-container">
-						<div className="product-detail">
-							<img
-								className="product-image"
-								src="https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068"
-								alt=""
-							/>
-							<div className="details-container">
-								<div className="product-info">
-									<span className="product-keys">Name:</span>
-									<span>Marc Gator Board</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Id:</span>
-									<span>12345</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Dimensions:</span>
-									<span>8.25in</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Manufacturer:</span>
-									<span>Thrasher</span>
-								</div>
-								<div className="price-amount">
-									<div className="icons">
-										<p>-</p>
+					{cart.products.map((product) => (
+						<div className="product-container">
+							<div className="product-detail">
+								<img className="product-image" src={product.img} alt="" />
+								<div className="details-container">
+									<div className="product-info">
+										<span className="product-keys">Name:</span>
+										<span>{product.title}</span>
 									</div>
-									<div className="product-quantity">2</div>
-									<div className="icons">
-										<p>+</p>
+									<div className="product-info">
+										<span className="product-keys">Manufacturer:</span>
+										<span>{product.manufacturer}</span>
 									</div>
-								</div>
-							</div>
-						</div>
-						<div className="price-detail">
-							<div className="product-price">Item Cost: $70.00</div>
-						</div>
-					</div>
-					<div className="product-container">
-						<div className="product-detail">
-							<img
-								className="product-image"
-								src="https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068"
-								alt=""
-							/>
-							<div className="details-container">
-								<div className="product-info">
-									<span className="product-keys">Name:</span>
-									<span>Marc Gator Board</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Id:</span>
-									<span>12345</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Dimensions:</span>
-									<span>8.25in</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Manufacturer:</span>
-									<span>Thrasher</span>
-								</div>
-								<div className="price-amount">
-									<div className="icons">
-										<p>-</p>
+									<div className="product-info">
+										<span className="product-keys">Dimensions:</span>
+										{product.width ? (
+											<span>
+												{product.width}" Width x {product.length}" Length
+											</span>
+										) : null}
+										{product.length && product.categories[1] === 'bushings' ? (
+											<span>{product.length}" Length</span>
+										) : null}
+
+										{product.wheelbase ? (
+											<span>
+												<span>Wheelbase: {product.wheelbase}"</span>
+											</span>
+										) : null}
+										{product.size ? <span>{product.size}mm</span> : null}
 									</div>
-									<div className="product-quantity">2</div>
-									<div className="icons">
-										<p>+</p>
+									<div className="price-amount">
+										<div className="icons">
+											<p>-</p>
+										</div>
+										<div className="product-quantity">{product.quantity}</div>
+										<div className="icons">
+											<p>+</p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className="price-detail">
-							<div className="product-price">Item Cost: $70.00</div>
-						</div>
-					</div>
-					<div className="product-container">
-						<div className="product-detail">
-							<img
-								className="product-image"
-								src="https://cdn.shopify.com/s/files/1/0519/1388/3831/products/193172410231-2_1280x.jpg?v=1679705068"
-								alt=""
-							/>
-							<div className="details-container">
-								<div className="product-info">
-									<span className="product-keys">Name:</span>
-									<span>Marc Gator Board</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Id:</span>
-									<span>12345</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Dimensions:</span>
-									<span>8.25in</span>
-								</div>
-								<div className="product-info">
-									<span className="product-keys">Manufacturer:</span>
-									<span>Thrasher</span>
-								</div>
-								<div className="price-amount">
-									<div className="icons">
-										<p>-</p>
-									</div>
-									<div className="product-quantity">2</div>
-									<div className="icons">
-										<p>+</p>
-									</div>
+							<div className="price-detail">
+								<div className="product-price">
+									Item Cost: ${product.price * product.quantity}.00
 								</div>
 							</div>
 						</div>
-						<div className="price-detail">
-							<div className="product-price">Item Cost: $70.00</div>
-						</div>
-					</div>
+					))}
 				</div>
 				<div className="summary-container">
 					<div className="summary-title">SUMMARY</div>
 					<div className="summary-section">
 						<div className="item-key">Subtotal</div>
-						<div className="item-price">$70.00</div>
+						<div className="item-price">${cart.total.toFixed(2)}</div>
 					</div>
 					<div className="summary-section">
 						<div className="item-key">Estimated Shipping</div>
@@ -145,7 +80,7 @@ const ShoppingCart = () => {
 					</div>
 					<div className="summary-section">
 						<div className="item-key">Total Cost</div>
-						<div className="item-total">$75.99</div>
+						<div className="item-total">$ {cart.total.toFixed(2)}</div>
 					</div>
 					<div className="checkout">
 						<button className="check-now-btn">CHECKOUT NOW</button>
