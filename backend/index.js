@@ -8,6 +8,7 @@ const usersRoute = require('./routes/user');
 const productsRoute = require('./routes/product');
 const cartRoute = require('./routes/shoppingCart');
 const orderRoute = require('./routes/order');
+const stripeRoute = require('./routes/stripe');
 const app = express();
 let PORT = process.env.PORT || 6000;
 
@@ -24,6 +25,7 @@ app.use('/api/users', usersRoute);
 app.use('/api/products', productsRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/orders', orderRoute);
+app.use('/api/checkout', stripeRoute);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);
