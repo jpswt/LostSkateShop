@@ -18,7 +18,7 @@ const ShoppingCart = () => {
 
 	const handleShipping = () => {
 		let shippingFee = 0;
-		if (cart.quantity === 0) {
+		if (cart.products.length !== 0) {
 			return 5.99;
 		} else {
 			return shippingFee.toFixed(2);
@@ -27,21 +27,9 @@ const ShoppingCart = () => {
 
 	console.log(cart.products);
 
-	// const increaseCart = () => {
-	// 	dispatch(increaseCart({ ...carts.proquantity }));
-	// };
-
-	const handleQuantity = (val) => {
-		if (val === 'dec') {
-			quantity > 1 && setQuantity(quantity - 1);
-		} else {
-			setQuantity(quantity + 1);
-		}
-	};
-
 	const subTotalPrice = () => {
 		let subtotal = 0;
-		if (cart.quantity === 0) {
+		if (cart.products.length === 0) {
 			return subtotal.toFixed(2);
 		} else {
 			cart.products.forEach((item) => {
