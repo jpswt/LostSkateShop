@@ -76,77 +76,84 @@ const ShoppingCart = () => {
 				<button className="shopping-btn">CHECKOUT</button>
 			</div>
 			<div className="bottom-container">
-				<div className="cart-info">
-					{cart.products.map((product) => (
-						<div className="product-container">
-							<div className="product-detail">
-								<img className="product-image" src={product.img} alt="" />
-								<div className="details-container">
-									<div className="product-info">
-										<span className="product-keys">Name:</span>
-										<span>{product.title}</span>
-									</div>
-									<div className="product-info">
-										<span className="product-keys">Manufacturer:</span>
-										<span>{product.manufacturer}</span>
-									</div>
-									<div className="product-info">
-										<span className="product-keys">Dimensions:</span>
-										{product.width ? (
-											<span>
-												{product.width}" Width x {product.length}" Length
-											</span>
-										) : null}
-										{product.length && product.categories[1] === 'bushings' ? (
-											<span>{product.length}" Length</span>
-										) : null}
+				{cart.products.length === 0 ? (
+					<div className="no-cart">No Items in Cart</div>
+				) : (
+					<div className="cart-info">
+						{cart.products.map((product) => (
+							<div className="product-container">
+								<div className="product-detail">
+									<img className="product-image" src={product.img} alt="" />
+									<div className="details-container">
+										<div className="product-info">
+											<span className="product-keys">Name:</span>
+											<span>{product.title}</span>
+										</div>
+										<div className="product-info">
+											<span className="product-keys">Manufacturer:</span>
+											<span>{product.manufacturer}</span>
+										</div>
+										<div className="product-info">
+											<span className="product-keys">Dimensions:</span>
+											{product.width ? (
+												<span>
+													{product.width}" Width x {product.length}" Length
+												</span>
+											) : null}
+											{product.length &&
+											product.categories[1] === 'bushings' ? (
+												<span>{product.length}" Length</span>
+											) : null}
 
-										{product.wheelbase ? (
-											<span>
-												<span>Wheelbase: {product.wheelbase}"</span>
-											</span>
-										) : null}
-										{product.size ? <span>{product.size}mm</span> : null}
-									</div>
-									<div className="quantity-container">
-										<div className="price-amount">
-											<div
-												className="icons"
-												onClick={() =>
-													dispatch(decreaseCart({ ...product, quantity }))
-												}
-											>
-												<p>-</p>
-											</div>
-											<div className="product-quantity">{product.quantity}</div>
-											<div
-												className="icons"
-												onClick={() =>
-													dispatch(increaseCart({ ...product, quantity }))
-												}
-											>
-												<p>+</p>
-											</div>
+											{product.wheelbase ? (
+												<span>
+													<span>Wheelbase: {product.wheelbase}"</span>
+												</span>
+											) : null}
+											{product.size ? <span>{product.size}mm</span> : null}
 										</div>
-										<div
-											className="remove"
-											onClick={() =>
-												dispatch(removeProduct(product._id, product.quantity))
-											}
-										>
-											<i class="fa-regular fa-trash-can fa-xl"> </i>
+										<div className="quantity-container">
+											<div className="price-amount">
+												<div
+													className="icons"
+													onClick={() =>
+														dispatch(decreaseCart({ ...product, quantity }))
+													}
+												>
+													<p>-</p>
+												</div>
+												<div className="product-quantity">
+													{product.quantity}
+												</div>
+												<div
+													className="icons"
+													onClick={() =>
+														dispatch(increaseCart({ ...product, quantity }))
+													}
+												>
+													<p>+</p>
+												</div>
+											</div>
+											<div
+												className="remove"
+												onClick={() =>
+													dispatch(removeProduct(product._id, product.quantity))
+												}
+											>
+												<i class="fa-regular fa-trash-can fa-xl"> </i>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div className="price-detail">
-								<div className="product-price">
-									Item Cost: ${product.price * product.quantity}.00
+								<div className="price-detail">
+									<div className="product-price">
+										Item Cost: ${product.price * product.quantity}.00
+									</div>
 								</div>
 							</div>
-						</div>
-					))}
-				</div>
+						))}
+					</div>
+				)}
 				<div className="summary-container">
 					<div className="summary-title">SUMMARY</div>
 					<div className="summary-section">

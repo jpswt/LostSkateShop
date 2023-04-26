@@ -37,6 +37,15 @@
 		display: flex;
 		justify-content: space-between;
 
+		.no-cart {
+			flex: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: $bodyFont;
+			font-size: 24px;
+		}
+
 		.cart-info {
 			flex: 2;
 
@@ -206,6 +215,9 @@
 
 		.bottom-container {
 			flex-direction: column;
+			.no-cart {
+				margin: 25px 0 60px;
+			}
 			.cart-info {
 				.product-container {
 					margin-right: 0px;
@@ -238,7 +250,7 @@
 				}
 			}
 			.summary-container {
-				width: 80%;
+				width: 90%;
 				.summary-title {
 				}
 
@@ -259,58 +271,60 @@
 }
 
 @media (max-width: $breakpoint-md) {
-	.bottom-container {
-		// flex-direction: column;
-		.cart-info {
-			.product-container {
-				flex-direction: column;
-				.product-detail {
-					.product-image {
-					}
-
-					.details-container {
-						min-width: none;
-						width: 50%;
-						.product-keys {
+	.shopping-container {
+		.bottom-container {
+			// flex-direction: column;
+			.cart-info {
+				.product-container {
+					flex-direction: column;
+					.product-detail {
+						.product-image {
 						}
 
-						.price-amount {
-							.icons {
-								&:hover {
+						.details-container {
+							min-width: none;
+							width: 50%;
+							.product-keys {
+							}
+
+							.price-amount {
+								.icons {
+									&:hover {
+									}
+								}
+								.product-quantity {
 								}
 							}
-							.product-quantity {
-							}
+						}
+					}
+
+					.price-detail {
+						align-items: start;
+						border-top: 1px solid hsla(0, 0%, 83%, 0.4);
+						box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+							rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+						border-bottom-left-radius: 8px;
+						border-bottom-right-radius: 8px;
+						.product-price {
 						}
 					}
 				}
+			}
+			.summary-container {
+				.summary-title {
+				}
 
-				.price-detail {
-					align-items: start;
-					border-top: 1px solid hsla(0, 0%, 83%, 0.4);
-					box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-						rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-					border-bottom-left-radius: 8px;
-					border-bottom-right-radius: 8px;
-					.product-price {
+				.summary-section {
+					.item-key {
+					}
+
+					.item-total {
 					}
 				}
-			}
-		}
-		.summary-container {
-			.summary-title {
-			}
 
-			.summary-section {
-				.item-key {
+				.check-now-btn {
+					width: 80%;
 				}
-
-				.item-total {
-				}
-			}
-
-			.check-now-btn {
-				width: 80%;
 			}
 		}
 	}
