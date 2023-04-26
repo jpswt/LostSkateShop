@@ -6,7 +6,9 @@ const cartSlice = createSlice({
 		products: localStorage.getItem('products')
 			? JSON.parse(localStorage.getItem('products'))
 			: [],
-		quantity: 0,
+		quantity: localStorage.getItem('quantity')
+			? JSON.parse(localStorage.getItem('quantity'))
+			: null,
 	},
 	reducers: {
 		addProduct: (state, action) => {
@@ -20,6 +22,7 @@ const cartSlice = createSlice({
 				state.quantity += 1;
 			}
 			localStorage.setItem('products', JSON.stringify(state.products));
+			localStorage.setItem('quantity', JSON.stringify(state.quantity));
 		},
 		removeProduct: (state, action) => {
 			state.products = state.products.filter(
@@ -27,6 +30,7 @@ const cartSlice = createSlice({
 			);
 			state.quantity -= 1;
 			localStorage.setItem('products', JSON.stringify(state.products));
+			localStorage.setItem('quantity', JSON.stringify(state.quantity));
 		},
 		increaseCart: (state, action) => {
 			const item = state.products.find(
