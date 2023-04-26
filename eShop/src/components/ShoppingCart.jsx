@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { addProduct, increaseCart, decreaseCart } from '../redux/cartRedux';
 import { useNavigate } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
@@ -23,6 +24,12 @@ const ShoppingCart = () => {
 			return shippingFee.toFixed(2);
 		}
 	};
+
+	console.log(cart.products);
+
+	// const increaseCart = () => {
+	// 	dispatch(increaseCart({ ...carts.proquantity }));
+	// };
 
 	const handleQuantity = (val) => {
 		if (val === 'dec') {
@@ -114,11 +121,21 @@ const ShoppingCart = () => {
 										{product.size ? <span>{product.size}mm</span> : null}
 									</div>
 									<div className="price-amount">
-										<div className="icons">
+										<div
+											className="icons"
+											onClick={() =>
+												dispatch(decreaseCart({ ...product, quantity }))
+											}
+										>
 											<p>-</p>
 										</div>
 										<div className="product-quantity">{product.quantity}</div>
-										<div className="icons">
+										<div
+											className="icons"
+											onClick={() =>
+												dispatch(increaseCart({ ...product, quantity }))
+											}
+										>
 											<p>+</p>
 										</div>
 									</div>
