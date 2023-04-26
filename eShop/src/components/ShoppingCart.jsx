@@ -1,16 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import '../scss/styles/ShoppingCart.css';
-import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import { useSelector, useDispatch } from 'react-redux';
+import StripeCheckout from 'react-stripe-checkout';
+import '../scss/styles/ShoppingCart.css';
+import { removeProduct } from '../redux/cartRedux';
 
 const KEY = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
 const ShoppingCart = () => {
 	const cart = useSelector((state) => state.cart);
+	const [quantity, setQuantity] = useState(1);
 	const [stripeToken, setStripeToken] = useState(null);
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
+	const handleShipping = () => {
+		let shippingFee = 0;
+		if (cart.quantity !== 0) {
+			return 5.99;
+		} else {
+			return shippingFee.toFixed(2);
+		}
+	};
+
+	const handleQuantity = (val) => {
+		if (val === 'dec') {
+			quantity > 1 && setQuantity(quantity - 1);
+		} else {
+			setQuantity(quantity + 1);
+		}
+	};
+
+	const subTotalPrice = () => {
+		let subtotal = 0;
+		if (cart.quantity === 0) {
+			return subtotal.toFixed(2);
+		} else {
+			cart.products.forEach((item) => {
+				subtotal += item.quantity * item.price;
+			});
+			return subtotal.toFixed(2);
+		}
+	};
+
+	const totalPrice = Number(handleShipping()) + Number(subTotalPrice());
 
 	const onToken = (token) => {
 		setStripeToken(token);
@@ -88,6 +122,15 @@ const ShoppingCart = () => {
 											<p>+</p>
 										</div>
 									</div>
+									<div className="remove">
+										<button
+											onClick={() =>
+												dispatch(removeProduct(product._id, product.quantity))
+											}
+										>
+											delete
+										</button>
+									</div>
 								</div>
 							</div>
 							<div className="price-detail">
@@ -102,22 +145,22 @@ const ShoppingCart = () => {
 					<div className="summary-title">SUMMARY</div>
 					<div className="summary-section">
 						<div className="item-key">Subtotal</div>
-						<div className="item-price">${cart.total.toFixed(2)}</div>
+						<div className="item-price">${subTotalPrice()}</div>
 					</div>
 					<div className="summary-section">
 						<div className="item-key">Estimated Shipping</div>
-						<div className="item-price">$5.99</div>
+						<div className="item-price">${handleShipping()}</div>
 					</div>
 					<div className="summary-section">
 						<div className="item-key">Total Cost</div>
-						<div className="item-total">$ {cart.total.toFixed(2)}</div>
+						<div className="item-total">$ {totalPrice.toFixed(2)}</div>
 					</div>
 					<StripeCheckout
 						name="Lost Skate Shop"
 						image="https://cdn.icon-icons.com/icons2/1371/PNG/512/robot02_90810.png"
 						billingAddress
 						shippingAddress
-						description={`Your total is $${cart.total}.00 `}
+						description={`Your total is $${subTotalPrice()}.00 `}
 						amount={cart.total * 100}
 						token={onToken}
 						stripeKey={KEY}
