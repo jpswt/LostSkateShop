@@ -18,7 +18,7 @@ const ShoppingCart = () => {
 
 	const handleShipping = () => {
 		let shippingFee = 0;
-		if (cart.quantity !== 0) {
+		if (cart.quantity === 0) {
 			return 5.99;
 		} else {
 			return shippingFee.toFixed(2);
@@ -170,7 +170,7 @@ const ShoppingCart = () => {
 					</div>
 					<div className="summary-section">
 						<div className="item-key">Total Cost</div>
-						<div className="item-total">$ {totalPrice.toFixed(2)}</div>
+						<div className="item-total"> ${totalPrice.toFixed(2)}</div>
 					</div>
 					<StripeCheckout
 						name="Lost Skate Shop"
