@@ -28,7 +28,11 @@ const cartSlice = createSlice({
 			state.products = state.products.filter(
 				(item) => item._id !== action.payload
 			);
-			state.quantity -= 1;
+			if (state.products.length > 1) {
+				state.quantity -= 1;
+			} else {
+				state.quantity = 0;
+			}
 			localStorage.setItem('products', JSON.stringify(state.products));
 			localStorage.setItem('quantity', JSON.stringify(state.quantity));
 		},
