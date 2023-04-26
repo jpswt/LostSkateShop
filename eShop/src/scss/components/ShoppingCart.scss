@@ -2,6 +2,7 @@
 
 .shopping-container {
 	padding: 20px;
+	min-height: calc(100vh - 260px);
 
 	h1 {
 		font-weight: 600;
@@ -50,7 +51,7 @@
 					rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 				.product-detail {
-					flex: 1;
+					flex: 2;
 					display: flex;
 					// align-items: center;
 
@@ -65,7 +66,7 @@
 						display: flex;
 						flex-direction: column;
 						gap: 8px;
-						min-width: 100%;
+						width: 100%;
 
 						font-family: $bodyFont;
 
@@ -74,40 +75,52 @@
 							margin-right: 8px;
 						}
 
-						.price-amount {
-							padding-top: 20px;
-							width: fit-content;
+						.quantity-container {
 							display: flex;
-							gap: 10px;
 							align-items: center;
-							margin-bottom: 22px;
-							// font-size: px;
+							gap: 24px;
 
-							.icons {
-								height: 26px;
-								width: 26px;
+							.price-amount {
+								padding-top: 20px;
+								width: fit-content;
 								display: flex;
+								gap: 10px;
 								align-items: center;
-								justify-content: center;
-								border-radius: 50%;
-								padding: 0;
-								margin: 0;
-								color: $secondaryColor;
-								background-color: rgb(176, 175, 175);
-								background-color: $accentColor;
-								color: $fontColor;
+								margin-bottom: 22px;
+								// font-size: px;
 
-								&:hover {
-									color: black;
-									background-color: rgb(156, 156, 156);
-									cursor: pointer;
+								.icons {
+									height: 26px;
+									width: 26px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border-radius: 50%;
+									padding: 0;
+									margin: 0;
+									color: $secondaryColor;
+									background-color: rgb(176, 175, 175);
+									background-color: $accentColor;
+									color: $fontColor;
+
+									&:hover {
+										color: black;
+										background-color: rgb(156, 156, 156);
+										cursor: pointer;
+									}
+								}
+								.product-quantity {
+									border: 1px solid rgb(153, 153, 153);
+									padding: 4px 12px;
+									font-size: 16px;
+									border-radius: 3px;
 								}
 							}
-							.product-quantity {
-								border: 1px solid rgb(153, 153, 153);
-								padding: 4px 12px;
-								font-size: 16px;
-								border-radius: 3px;
+							.remove {
+								i {
+									color: hsla(0, 82%, 38%, 0.9);
+									cursor: pointer;
+								}
 							}
 						}
 					}
@@ -116,6 +129,7 @@
 				.price-detail {
 					flex: 1;
 					height: 90%;
+					width: 40%;
 					display: flex;
 					align-items: end;
 					flex-direction: column;
@@ -217,6 +231,7 @@
 					}
 
 					.price-detail {
+						width: 100%;
 						.product-price {
 						}
 					}
@@ -255,7 +270,7 @@
 
 					.details-container {
 						min-width: none;
-						width: 100%;
+						width: 50%;
 						.product-keys {
 						}
 

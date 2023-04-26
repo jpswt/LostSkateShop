@@ -108,33 +108,34 @@ const ShoppingCart = () => {
 										) : null}
 										{product.size ? <span>{product.size}mm</span> : null}
 									</div>
-									<div className="price-amount">
-										<div
-											className="icons"
-											onClick={() =>
-												dispatch(decreaseCart({ ...product, quantity }))
-											}
-										>
-											<p>-</p>
+									<div className="quantity-container">
+										<div className="price-amount">
+											<div
+												className="icons"
+												onClick={() =>
+													dispatch(decreaseCart({ ...product, quantity }))
+												}
+											>
+												<p>-</p>
+											</div>
+											<div className="product-quantity">{product.quantity}</div>
+											<div
+												className="icons"
+												onClick={() =>
+													dispatch(increaseCart({ ...product, quantity }))
+												}
+											>
+												<p>+</p>
+											</div>
 										</div>
-										<div className="product-quantity">{product.quantity}</div>
 										<div
-											className="icons"
-											onClick={() =>
-												dispatch(increaseCart({ ...product, quantity }))
-											}
-										>
-											<p>+</p>
-										</div>
-									</div>
-									<div className="remove">
-										<button
+											className="remove"
 											onClick={() =>
 												dispatch(removeProduct(product._id, product.quantity))
 											}
 										>
-											delete
-										</button>
+											<i class="fa-regular fa-trash-can fa-xl"> </i>
+										</div>
 									</div>
 								</div>
 							</div>
