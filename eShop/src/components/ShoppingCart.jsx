@@ -3,9 +3,10 @@ import axios from 'axios';
 import { addProduct, increaseCart, decreaseCart } from '../redux/cartRedux';
 import { useNavigate } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
+import PayButton from './PayButton';
 import StripeCheckout from 'react-stripe-checkout';
-import '../scss/styles/ShoppingCart.css';
 import { removeProduct } from '../redux/cartRedux';
+import '../scss/styles/ShoppingCart.css';
 
 const KEY = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
@@ -107,7 +108,7 @@ const ShoppingCart = () => {
 
 											{product.wheelbase ? (
 												<span>
-													<span>Wheelbase: {product.wheelbase}"</span>
+													<span> Wheelbase: {product.wheelbase}"</span>
 												</span>
 											) : null}
 											{product.size ? <span>{product.size}mm</span> : null}
@@ -168,21 +169,17 @@ const ShoppingCart = () => {
 						<div className="item-key">Total Cost</div>
 						<div className="item-total"> ${totalPrice.toFixed(2)}</div>
 					</div>
-					<StripeCheckout
-						name="Lost Skate Shop"
-						image="https://cdn.icon-icons.com/icons2/1371/PNG/512/robot02_90810.png"
-						billingAddress
-						shippingAddress
-						description={`Your total is $${subTotalPrice()}.00 `}
-						amount={cart.total * 100}
-						token={onToken}
-						stripeKey={KEY}
-					>
-						<button>Pay Now</button>
-					</StripeCheckout>
+					{/* <form
+						action={`${import.meta.env.VITE_DB_URI}/checkout/payment`}
+						method="POST"
+					> */}
+					<PayButton products={cart.products} />
 					{/* <div className="checkout">
-						<button className="check-now-btn">CHECKOUT NOW</button>
-					</div> */}
+							<button className="check-now-btn" type="submit">
+								CHECKOUT NOW
+							</button>
+						</div> */}
+					{/* </form> */}
 				</div>
 			</div>
 		</div>
