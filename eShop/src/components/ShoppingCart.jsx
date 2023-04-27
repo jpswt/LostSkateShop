@@ -169,17 +169,13 @@ const ShoppingCart = () => {
 						<div className="item-key">Total Cost</div>
 						<div className="item-total"> ${totalPrice.toFixed(2)}</div>
 					</div>
-					{/* <form
-						action={`${import.meta.env.VITE_DB_URI}/checkout/payment`}
-						method="POST"
-					> */}
+
 					<PayButton products={cart.products} />
 					{/* <div className="checkout">
 							<button className="check-now-btn" type="submit">
 								CHECKOUT NOW
 							</button>
 						</div> */}
-					{/* </form> */}
 				</div>
 			</div>
 		</div>
