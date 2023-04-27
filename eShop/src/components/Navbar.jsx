@@ -29,16 +29,28 @@ const Navbar = () => {
 		<div className="navbar">
 			<div className="navbar-container">
 				<div className="navbar-left">
-					<div className="title">lost skate shop</div>
+					<Link to="/">
+						<div className="title">lost skate shop</div>
+					</Link>
 				</div>
 				<div className="navbar-center">
 					<div className="product-links">
 						<ul className="list-links">
-							<li className="list-link-items">Decks</li>
-							<li className="list-link-items">Trucks</li>
-							<li className="list-link-items">Wheels</li>
-							<li className="list-link-items">Bearings</li>
-							<li className="list-link-items">Hardware</li>
+							<Link to="/products/decks">
+								<li className="list-link-items">Decks</li>
+							</Link>
+							<Link to="/products/trucks">
+								<li className="list-link-items">Trucks</li>
+							</Link>
+							<Link to="/products/wheels">
+								<li className="list-link-items">Wheels</li>
+							</Link>
+							<Link to="/products/bearings">
+								<li className="list-link-items">Bearings</li>
+							</Link>
+							<Link to="/products/hardware">
+								<li className="list-link-items">Hardware</li>
+							</Link>
 						</ul>
 					</div>
 				</div>
@@ -71,25 +83,37 @@ const Navbar = () => {
 						<li className="mobile-link-items">
 							<input type="text" placeholder="Search..." />
 						</li>
-						<li className="mobile-link-items">Decks</li>
-						<li className="mobile-link-items">Trucks</li>
-						<li className="mobile-link-items">Wheels</li>
-						<li className="mobile-link-items">Bearings</li>
-						<li className="mobile-link-items">Hardware</li>
+						<Link to="/products/decks">
+							<li className="mobile-link-items">Decks</li>
+						</Link>
+						<Link to="/products/trucks">
+							<li className="mobile-link-items">Trucks</li>
+						</Link>
+						<Link to="/products/wheels">
+							<li className="mobile-link-items">Wheels</li>
+						</Link>
+						<Link to="/products/bearings">
+							<li className="mobile-link-items">Bearings</li>
+						</Link>
+						<Link to="/products/hardware">
+							<li className="mobile-link-items">Hardware</li>
+						</Link>
 						<li className="mobile-link-items login">Sign In/Sign Out</li>
 					</ul>
 					<div className="mobile-cart">
-						<Badge
-							badgeContent={quantity}
-							sx={{
-								'& .MuiBadge-badge': {
-									backgroundColor: ' hsl(168, 99%, 28%)',
-								},
-							}}
-							className="badge"
-						>
-							<ShoppingCartIcon color="action" className="cart" />
-						</Badge>
+						<Link to="/cart">
+							<Badge
+								badgeContent={quantity}
+								sx={{
+									'& .MuiBadge-badge': {
+										backgroundColor: ' hsl(168, 99%, 28%)',
+									},
+								}}
+								className="badge"
+							>
+								<ShoppingCartIcon color="action" className="cart" />
+							</Badge>
+						</Link>
 					</div>
 					<div className="toggle-btn" onClick={handleToggle}>
 						{toggle ? (

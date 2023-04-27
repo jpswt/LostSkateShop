@@ -25,6 +25,10 @@ body {
   align-items: center;
   font-size: 16px;
 }
+.navbar .navbar-container .navbar-left a {
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
+}
 .navbar .navbar-container .navbar-left .title {
   font-weight: bold;
   font-size: 26px;
@@ -42,6 +46,10 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.navbar .navbar-container .navbar-center .product-links .list-links a {
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
 }
 .navbar .navbar-container .navbar-center .product-links .list-links .list-link-items {
   position: relative;
