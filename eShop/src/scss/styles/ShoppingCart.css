@@ -154,18 +154,6 @@
 .shopping-container .bottom-container .summary-container .summary-section .item-total {
   font-weight: 700;
 }
-.shopping-container .bottom-container .summary-container .checkout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.shopping-container .bottom-container .summary-container .check-now-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: hsl(168, 99%, 24%);
-  color: hsl(0, 0%, 96%);
-  border: none;
-}
 
 @media (max-width: 1045px) {
   .shopping-container .bottom-container {

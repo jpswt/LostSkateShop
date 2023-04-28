@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import '../scss/styles/PayButton.css';
 
 const PayButton = ({ products }) => {
 	const handleCheckOut = () => {
@@ -17,7 +17,9 @@ const PayButton = ({ products }) => {
 	};
 	return (
 		<>
-			<button onClick={() => handleCheckOut()}>PayButton</button>
+			<button className="checkout-btn" onClick={() => handleCheckOut()}>
+				Checkout
+			</button>
 		</>
 	);
 };

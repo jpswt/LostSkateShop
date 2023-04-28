@@ -10,7 +10,7 @@ const Products = ({ category, filters, sort, products, filteredProducts }) => {
 			<div className="products-container">
 				{filteredProducts?.length > 0 ? (
 					filteredProducts.map((product) => (
-						<ProductItems product={product} key={product.id} />
+						<ProductItems product={product} key={product._id} />
 					))
 				) : (
 					<h2>No Items found</h2>

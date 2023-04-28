@@ -43,7 +43,7 @@ const Trending = ({ category, filters, sort }) => {
 			</div>
 			<div className="products-container">
 				{selected.map((product) => (
-					<ProductItems product={product} key={product.id} />
+					<ProductItems product={product} key={product._id} />
 				))}
 			</div>
 		</>
