@@ -72,7 +72,7 @@
 
 				input {
 					width: 325px;
-					padding: 0.5rem 1rem;
+					padding: 0.75rem 1rem;
 					margin-bottom: 1rem;
 					outline: $accentColor;
 				}
@@ -84,6 +84,7 @@
 					color: $fontColor;
 					font-size: 20px;
 					border: none;
+					cursor: pointer;
 				}
 			}
 		}

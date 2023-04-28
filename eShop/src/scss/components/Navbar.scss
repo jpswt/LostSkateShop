@@ -98,6 +98,11 @@ body {
 				align-items: center;
 				gap: 16px;
 
+				a {
+					color: $fontColor;
+					text-decoration: none;
+				}
+
 				.navbar-button {
 					font-size: 30px;
 				}

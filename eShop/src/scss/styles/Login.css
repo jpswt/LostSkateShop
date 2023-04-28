@@ -52,6 +52,11 @@
   align-items: center;
   justify-content: center;
 }
+.login .login-container .input-container a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
 .login .login-container .input-container .input-fields {
   width: 90%;
   display: flex;
@@ -67,7 +72,7 @@
 }
 .login .login-container .input-container .input-fields input {
   width: 325px;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   outline: hsl(168, 99%, 24%);
 }
@@ -78,6 +83,16 @@
   color: hsl(0, 0%, 96%);
   font-size: 20px;
   border: none;
+  cursor: pointer;
+}
+.login .login-container .input-container .register {
+  text-align: center;
+  padding: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.login .login-container .input-container .register .reg-link {
+  font-size: 17px;
 }
 
 @media (max-width: 1045px) {

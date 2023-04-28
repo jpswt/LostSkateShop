@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const multer = require('multer');
 const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/user');
 const productsRoute = require('./routes/product');
@@ -19,13 +18,13 @@ mongoose
 
 app.use(express.json());
 app.use(cors());
+app.use('/api/checkout', stripeRoute);
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/products', productsRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/orders', orderRoute);
-app.use('/api/checkout', stripeRoute);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);

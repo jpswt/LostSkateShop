@@ -59,9 +59,11 @@ const Navbar = () => {
 						<li>
 							<SearchIcon className="navbar-button" />
 						</li>
-						<li>
-							<PersonIcon className="navbar-button" />
-						</li>
+						<Link to="/login">
+							<li>
+								<PersonIcon className="navbar-button" />
+							</li>
+						</Link>
 						<Link to="/cart">
 							<li>
 								<Badge

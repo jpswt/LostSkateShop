@@ -85,6 +85,10 @@ body {
   align-items: center;
   gap: 16px;
 }
+.navbar .navbar-container .navbar-right .navbar-links a {
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
+}
 .navbar .navbar-container .navbar-right .navbar-links .navbar-button {
   font-size: 30px;
 }
