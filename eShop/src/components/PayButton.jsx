@@ -2,18 +2,22 @@ import axios from 'axios';
 import '../scss/styles/PayButton.css';
 
 const PayButton = ({ products }) => {
+	let cart = JSON.parse(localStorage.getItem('products')).length;
+
 	const handleCheckOut = () => {
-		axios
-			.post(`${import.meta.env.VITE_DB_URI}/checkout/payment`, {
-				products,
-			})
-			.then((res) => {
-				if (res.data.url) {
-					window.location.href = res.data.url;
-				}
-			})
-			.catch((err) => console.log(err.message));
-		// console.log(products);
+		if (cart > 0) {
+			axios
+				.post(`${import.meta.env.VITE_DB_URI}/checkout/payment`, {
+					products,
+				})
+				.then((res) => {
+					if (res.data.url) {
+						window.location.href = res.data.url;
+					}
+				})
+				.catch((err) => console.log(err.message));
+		}
+		console.log(JSON.parse(localStorage.getItem('products')).length);
 	};
 	return (
 		<>
