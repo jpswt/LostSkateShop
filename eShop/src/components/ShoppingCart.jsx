@@ -82,7 +82,7 @@ const ShoppingCart = () => {
 				) : (
 					<div className="cart-info">
 						{cart.products.map((product) => (
-							<div className="product-container">
+							<div className="product-container" key={product._id}>
 								<div className="product-detail">
 									<img className="product-image" src={product.img} alt="" />
 									<div className="details-container">
@@ -141,7 +141,7 @@ const ShoppingCart = () => {
 													dispatch(removeProduct(product._id, product.quantity))
 												}
 											>
-												<i class="fa-regular fa-trash-can fa-xl"> </i>
+												<i className="fa-regular fa-trash-can fa-xl"> </i>
 											</div>
 										</div>
 									</div>
