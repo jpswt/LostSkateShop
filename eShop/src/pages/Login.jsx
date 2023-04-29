@@ -1,18 +1,30 @@
 import { useState, useEffect } from 'react';
-import { login } from '../redux/api';
+import { loginUser } from '../redux/userRedux';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../scss/styles/Login.css';
 
 const Login = () => {
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
+	// const [email, setEmail] = useState('');
+	// const [password, setPassword] = useState('');
+	const [user, setUser] = useState({
+		email: '',
+		password: '',
+	});
 	const dispatch = useDispatch();
-	const { isFetching, error, user } = useSelector((state) => state.user);
+	const navigate = useNavigate();
+	const auth = useSelector((state) => state.user);
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1045;
 
 	console.log(user);
+	console.log(auth);
+
+	useEffect(() => {
+		if (auth.currentUser) {
+			navigate('/cart');
+		}
+	}, [auth]);
 
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
@@ -22,7 +34,7 @@ const Login = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		login(dispatch, { email, password });
+		dispatch(loginUser(user));
 	};
 
 	return (
@@ -46,12 +58,14 @@ const Login = () => {
 									type="text"
 									placeholder="Email"
 									autoFocus
-									onChange={(e) => setEmail(e.target.value)}
+									onChange={(e) => setUser({ ...user, email: e.target.value })}
 								/>
 								<input
 									type="password"
 									placeholder="Password"
-									onChange={(e) => setPassword(e.target.value)}
+									onChange={(e) =>
+										setUser({ ...user, password: e.target.value })
+									}
 								/>
 								<button className="submit-btn" onClick={handleSubmit}>
 									Sign In
@@ -62,7 +76,7 @@ const Login = () => {
 										<span className="reg-link">Sign up now!</span>
 									</Link>
 								</div>
-								{error ? (
+								{auth?.error ? (
 									<div className="error">
 										Email or Password are incorrect. Please try again.
 									</div>

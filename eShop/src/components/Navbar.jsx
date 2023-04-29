@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import SearchIcon from '@mui/icons-material/Search';
 import '../scss/styles/Navbar.css';
+import { logoutUser } from '../redux/userRedux';
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [bodyScroll, setBodyScroll] = useState(true);
+	const auth = useSelector((state) => state.user);
 	const quantity = useSelector((state) => state.cart.quantity);
+	const dispatch = useDispatch();
 
 	const handleToggle = () => {
 		setToggle(!toggle);
@@ -59,11 +62,29 @@ const Navbar = () => {
 						<li>
 							<SearchIcon className="navbar-button" />
 						</li>
-						<Link to="/login">
-							<li>
-								<PersonIcon className="navbar-button" />
-							</li>
-						</Link>
+						{auth.currentUser ? (
+							<Link
+								to="/"
+								onClick={() => {
+									dispatch(logoutUser(null));
+								}}
+							>
+								<li>LOGOUT</li>
+							</Link>
+						) : (
+							<>
+								<Link to="/register">
+									<li>REGISTER</li>
+								</Link>
+								<Link to="/login">
+									<li>LOGIN</li>
+								</Link>
+							</>
+						)}
+
+						<li>
+							<PersonIcon className="navbar-button" />
+						</li>
 						<Link to="/cart">
 							<li>
 								<Badge

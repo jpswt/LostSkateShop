@@ -1,26 +1,112 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {
+	createSlice,
+	createAsyncThunk,
+	isRejectedWithValue,
+} from '@reduxjs/toolkit';
+import axios from 'axios';
+import jwtDecode from 'jwt-decode';
+import { publicRequest, userRequest } from '../request';
+
+const initialState = {
+	token: localStorage.getItem('token'),
+	currentUser: null,
+	isFetching: false,
+	error: false,
+};
+
+export const registerUser = createAsyncThunk(
+	'user/registerUser',
+	async (user) => {
+		try {
+			const token = await publicRequest.post('/auth/register', user);
+			localStorage.setItem('token', token.data);
+			return token.data;
+		} catch (error) {
+			console.log(error.response.data);
+		}
+	}
+);
+
+export const loginUser = createAsyncThunk(
+	'user/loginUser',
+	async (user, { rejectWithValue }) => {
+		try {
+			const token = await publicRequest.post(`/auth/login`, user);
+			localStorage.setItem('token', token.data);
+			return token.data;
+		} catch (error) {
+			console.log(error.response);
+			return rejectWithValue(error.response.data);
+		}
+	}
+);
 
 const userSlice = createSlice({
-	name: 'cart',
-	initialState: {
-		currentUser: null,
-		isFetching: false,
-		error: false,
-	},
+	name: 'user',
+	initialState,
 	reducers: {
-		loginStart: (state) => {
-			state.isFetching = true;
+		loadUser(state, action) {
+			const token = state.token;
+			if (token) {
+				const user = jwtDecode(token);
+				return {
+					...state,
+					token,
+					currentUser: user,
+					isFetching: false,
+				};
+			}
 		},
-		loginSuccess: (state, action) => {
-			state.isFetching = false;
-			state.currentUser = action.payload;
+		logoutUser(state, action) {
+			localStorage.removeItem('token');
+			return {
+				...state,
+				currentUser: null,
+				isFetching: false,
+				error: false,
+			};
 		},
-		loginFail: (state) => {
-			state.isFetching = false;
-			state.error = true;
-		},
+	},
+	extraReducers: (builder) => {
+		builder.addCase(registerUser.pending, (state, action) => {
+			return { ...state, isFetching: true, error: false };
+		});
+		builder.addCase(registerUser.fulfilled, (state, action) => {
+			if (action.payload) {
+				const user = jwtDecode(action.payload);
+				return {
+					...state,
+					token: '',
+					isFetching: false,
+					token: action.payload,
+					currentUser: user,
+				};
+			} else return state;
+		});
+		builder.addCase(registerUser.rejected, (state, action) => {
+			return { ...state, isFetching: false, error: true };
+		});
+
+		builder.addCase(loginUser.pending, (state, action) => {
+			return { ...state, isFetching: true, error: false };
+		});
+		builder.addCase(loginUser.fulfilled, (state, action) => {
+			if (action.payload) {
+				const user = jwtDecode(action.payload);
+				return {
+					...state,
+					token: '',
+					isFetching: false,
+					token: action.payload,
+					currentUser: user,
+				};
+			} else return state;
+		});
+		builder.addCase(loginUser.rejected, (state, action) => {
+			return { ...state, isFetching: false, error: true };
+		});
 	},
 });
 
-export const { loginStart, loginSuccess, loginFail } = userSlice.actions;
+export const { loadUser, logoutUser } = userSlice.actions;
 export default userSlice.reducer;

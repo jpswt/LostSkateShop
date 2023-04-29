@@ -1,10 +1,35 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import '../scss/styles/Register.css';
+import { registerUser } from '../redux/userRedux';
 
 const Register = () => {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const auth = useSelector((state) => state.user);
 	const [width, setWidth] = useState(window.innerWidth);
-	const breakpoint = 1045;
+	const [user, setUser] = useState({
+		username: '',
+		email: '',
+		password: '',
+	});
 
+	console.log(auth);
+	console.log(user);
+
+	useEffect(() => {
+		if (auth.currentUser) {
+			navigate('/');
+		}
+	}, [auth]);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		dispatch(registerUser(user));
+	};
+
+	const breakpoint = 1045;
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
 		window.addEventListener('resize', handleResize);
@@ -26,11 +51,28 @@ const Register = () => {
 							</div>
 						</div>
 						<div className="input-container">
-							<form className="register-fields">
+							<form className="register-fields" onSubmit={handleSubmit}>
 								<div className="title">REGISTER</div>
-								<input type="text" placeholder="Username" autoFocus />
-								<input type="text" placeholder="Email" />
-								<input type="password" placeholder="Password" />
+								<input
+									type="text"
+									placeholder="Username"
+									onChange={(e) =>
+										setUser({ ...user, username: e.target.value })
+									}
+									autoFocus
+								/>
+								<input
+									type="text"
+									placeholder="Email"
+									onChange={(e) => setUser({ ...user, email: e.target.value })}
+								/>
+								<input
+									type="password"
+									placeholder="Password"
+									onChange={(e) =>
+										setUser({ ...user, password: e.target.value })
+									}
+								/>
 								<button className="submit-btn">Sign Up</button>
 							</form>
 						</div>
