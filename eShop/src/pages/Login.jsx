@@ -93,15 +93,16 @@ const Login = () => {
 									type="text"
 									placeholder="Email"
 									autoFocus
-									onChange={(e) => setEmail(e.target.value)}
+									onChange={(e) => setUser({ ...user, email: e.target.value })}
 								/>
 								<input
 									type="password"
 									placeholder="Password"
-									onChange={(e) => setPassword(e.target.value)}
+									onChange={(e) =>
+										setUser({ ...user, password: e.target.value })
+									}
 								/>
 								<button className="submit-btn" onClick={handleSubmit}>
-									{' '}
 									Sign In
 								</button>
 								<div className="register">
@@ -110,7 +111,7 @@ const Login = () => {
 										<span className="reg-link">Sign up now!</span>
 									</Link>
 								</div>
-								{error ? (
+								{auth?.error ? (
 									<div className="error">
 										Email or Password are incorrect. Please try again.
 									</div>

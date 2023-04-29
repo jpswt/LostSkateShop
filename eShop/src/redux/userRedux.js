@@ -1,8 +1,4 @@
-import {
-	createSlice,
-	createAsyncThunk,
-	isRejectedWithValue,
-} from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { publicRequest, userRequest } from '../request';
@@ -27,19 +23,15 @@ export const registerUser = createAsyncThunk(
 	}
 );
 
-export const loginUser = createAsyncThunk(
-	'user/loginUser',
-	async (user, { rejectWithValue }) => {
-		try {
-			const token = await publicRequest.post(`/auth/login`, user);
-			localStorage.setItem('token', token.data);
-			return token.data;
-		} catch (error) {
-			console.log(error.response);
-			return rejectWithValue(error.response.data);
-		}
+export const loginUser = createAsyncThunk('user/loginUser', async (user) => {
+	try {
+		const token = await publicRequest.post(`/auth/login`, user);
+		localStorage.setItem('token', token.data);
+		return token.data;
+	} catch (error) {
+		console.log(error.response);
 	}
-);
+});
 
 const userSlice = createSlice({
 	name: 'user',

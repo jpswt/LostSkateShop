@@ -73,9 +73,9 @@ const Navbar = () => {
 							</Link>
 						) : (
 							<>
-								<Link to="/register">
+								{/* <Link to="/register">
 									<li>REGISTER</li>
-								</Link>
+								</Link> */}
 								<Link to="/login">
 									<li>LOGIN</li>
 								</Link>
@@ -121,7 +121,25 @@ const Navbar = () => {
 						<Link to="/products/hardware">
 							<li className="mobile-link-items">Hardware</li>
 						</Link>
-						<li className="mobile-link-items login">Sign In/Sign Out</li>
+						{auth.currentUser ? (
+							<Link
+								to="/"
+								onClick={() => {
+									dispatch(logoutUser(null));
+								}}
+							>
+								<li className="mobile-link-items">LOGOUT</li>
+							</Link>
+						) : (
+							<>
+								{/* <Link to="/register">
+									<li>REGISTER</li>
+								</Link> */}
+								<Link to="/login">
+									<li className="mobile-link-items">LOGIN</li>
+								</Link>
+							</>
+						)}
 					</ul>
 					<div className="mobile-cart">
 						<Link to="/cart">
