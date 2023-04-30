@@ -1,0 +1,40 @@
+@use '../abstracts/index' as *;
+
+.success-container {
+	padding: 24px;
+	min-height: calc(100vh - 280px);
+	font-family: $bodyFont;
+
+	.success-msg-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.success-icon {
+			font-size: 90px;
+			color: $accentColor;
+		}
+
+		.success-msg {
+			margin-top: 16px;
+			font-size: 40px;
+			text-align: center;
+			span {
+				font-weight: 600;
+				color: $accentColor;
+			}
+		}
+
+		.checkout-btn-container {
+			margin-top: 3rem;
+			button {
+				@include buttonStyle($accentColor, white);
+				padding: 0.5rem 1rem;
+				font-weight: 700;
+				letter-spacing: 1px;
+				cursor: pointer;
+			}
+		}
+	}
+}

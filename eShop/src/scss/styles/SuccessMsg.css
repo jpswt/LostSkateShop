@@ -1,0 +1,44 @@
+.success-container {
+  padding: 24px;
+  min-height: calc(100vh - 280px);
+  font-family: "Open Sans", sans-serif;
+}
+.success-container .success-msg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.success-container .success-msg-container .success-icon {
+  font-size: 90px;
+  color: hsl(168, 99%, 24%);
+}
+.success-container .success-msg-container .success-msg {
+  margin-top: 16px;
+  font-size: 40px;
+  text-align: center;
+}
+.success-container .success-msg-container .success-msg span {
+  font-weight: 600;
+  color: hsl(168, 99%, 24%);
+}
+.success-container .success-msg-container .checkout-btn-container {
+  margin-top: 3rem;
+}
+.success-container .success-msg-container .checkout-btn-container button {
+  min-width: 140px;
+  height: 40px;
+  background-color: hsl(168, 99%, 24%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.success-container .success-msg-container .checkout-btn-container button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}/*# sourceMappingURL=SuccessMsg.css.map */

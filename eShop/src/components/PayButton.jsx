@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 const PayButton = ({ products }) => {
-	let cart = JSON.parse(localStorage.getItem('products')).length;
+	let cart = JSON.parse(localStorage.getItem('products'));
 	const auth = useSelector((state) => state.user);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const handleCheckOut = () => {
-		if (cart > 0) {
+		if (cart) {
 			axios
 				.post(`${import.meta.env.VITE_DB_URI}/checkout/payment`, {
 					products,
