@@ -13,6 +13,7 @@ const PayButton = ({ products }) => {
 		if (cart) {
 			axios
 				.post(`${import.meta.env.VITE_DB_URI}/checkout/payment`, {
+					userId: auth.currentUser.id,
 					products,
 				})
 				.then((res) => {

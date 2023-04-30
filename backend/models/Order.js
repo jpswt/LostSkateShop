@@ -6,17 +6,11 @@ const OrderSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		products: [
-			{
-				productId: {
-					type: String,
-				},
-				quantity: {
-					type: Number,
-					default: 1,
-				},
-			},
-		],
+		customerId: {
+			type: String,
+		},
+		paymentIntentId: { type: String },
+		products: [],
 		amount: {
 			type: Number,
 			required: true,
