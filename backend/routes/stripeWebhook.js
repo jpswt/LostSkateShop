@@ -16,7 +16,7 @@ const createOrder = async (customer, data, lineItems) => {
 		customerId: data.customer,
 		paymentIntentId: data.payment_intent,
 		products: lineItems.data,
-		amount: Number(data.amount_subtotal) + Number(data.amount_total),
+		amount: data.amount_total,
 		address: data.customer_details,
 		payment_status: data.payment_status,
 	});
@@ -74,17 +74,7 @@ router.post(
 				})
 				.catch((err) => console.log(err.message));
 		}
-		//   switch (event.type) {
-		//     case 'payment_intent.succeeded':
-		//       const paymentIntentSucceeded = event.data.object;
-		//       // Then define and call a function to handle the event payment_intent.succeeded
-		//       break;
-		//     // ... handle other event types
-		//     default:
-		//       console.log(`Unhandled event type ${event.type}`);
-		//   }
 
-		// Return a 200 response to acknowledge receipt of the event
 		response.send().end();
 	}
 );

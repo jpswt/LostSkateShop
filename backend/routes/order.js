@@ -43,8 +43,17 @@ router.get('/', verifyAdmin, async (req, res) => {
 });
 
 router.get('/:userId', verifyJWT, async (req, res) => {
+	const query = req.query.latest;
 	try {
-		const orders = await Order.findOne({ userId: req.params.userId });
+		const orders = query
+			? await Order.findOne({ userId: req.params.userId })
+					.sort({
+						_id: -1,
+					})
+					.limit(1)
+			: await Order.findOne({ userId: req.params.userId }).sort({
+					_id: -1,
+			  });
 		res.status(200).json(orders);
 	} catch (err) {
 		res.status(500).json(err);

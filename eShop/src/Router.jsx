@@ -23,7 +23,7 @@ const Router = () => {
 			<Route path="/product/:category" element={<SingleProduct />}></Route>
 			<Route path="/cart" element={<Cart />}></Route>
 			<Route path="/pay" element={<Pay />}></Route>
-			<Route path="/success" element={<Success />}></Route>
+			<Route path="/success/:orderId" element={<Success />}></Route>
 			<Route path="*" element={<NotFound />}></Route>
 		</Routes>
 	);
