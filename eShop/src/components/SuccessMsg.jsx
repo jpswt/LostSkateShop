@@ -29,6 +29,7 @@ const SuccessMsg = () => {
 	const displayAmt = order?.amount / 100;
 	const shippingRate = 5.99;
 	const phone = order?.address?.phone;
+	const date = new Date(order?.createdAt);
 
 	return (
 		<>
@@ -53,9 +54,12 @@ const SuccessMsg = () => {
 
 						<div className="order-container">
 							<h2>Order Summary</h2>
-							<p>Order #: {order?._id?.slice(-10).toUpperCase()}</p>
+							<div className="order-num-date">
+								<p>Order #: {order?._id?.slice(-10).toUpperCase()}</p>
+								<p>Order date: {date.toLocaleDateString()} </p>
+							</div>
 							{order?.products?.map((product) => (
-								<div className="order-wrapper">
+								<div className="order-wrapper" key={product.id}>
 									<div className="order-summary">
 										<div className="order-info">
 											<h3>{product.description}</h3>

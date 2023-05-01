@@ -1,12 +1,11 @@
 import axios from 'axios';
 import '../scss/styles/PayButton.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 const PayButton = ({ products }) => {
 	let cart = JSON.parse(localStorage.getItem('products'));
 	const auth = useSelector((state) => state.user);
-	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const handleCheckOut = () => {
@@ -29,11 +28,11 @@ const PayButton = ({ products }) => {
 		<>
 			{auth.currentUser ? (
 				<button className="checkout-btn" onClick={() => handleCheckOut()}>
-					Checkout
+					CHECKOUT
 				</button>
 			) : (
 				<button className="checkout-btn" onClick={() => navigate('/login')}>
-					Login to Checkout
+					LOGIN TO CHECKOUT
 				</button>
 			)}
 		</>

@@ -19,6 +19,12 @@
 		margin: 8px 0;
 	}
 
+	.order-num-date {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	.success-msg-container {
 		display: flex;
 		flex-direction: column;

@@ -70,10 +70,10 @@ const ShoppingCart = () => {
 			<h1>SHOPPING CART</h1>
 			<div className="top-container">
 				<button className="shopping-btn">BACK TO SHOPPING</button>
-				<div className="list-info">
+				{/* <div className="list-info">
 					<p className="list-text"> Shopping Cart (0)</p>
 					<p className="list-text"> Wishlist</p>
-				</div>
+				</div> */}
 				<button className="shopping-btn">CHECKOUT</button>
 			</div>
 			<div className="bottom-container">
