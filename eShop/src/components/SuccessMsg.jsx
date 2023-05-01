@@ -101,7 +101,7 @@ const SuccessMsg = () => {
 									<h3 className="title">Contact Information</h3>
 									<p>{order?.address?.email}</p>
 									<p>
-										{phone.slice(2, 5)}-{phone.slice(5, 8)}-{phone.slice(8)}
+										{phone?.slice(2, 5)}-{phone?.slice(5, 8)}-{phone?.slice(8)}
 									</p>
 								</div>
 							</div>
