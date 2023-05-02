@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from './components/NotFound';
 import { useSelector } from 'react-redux';
+import Account from './pages/Account';
 
 const Router = () => {
 	const user = useSelector((state) => state.user.currentUser);
@@ -21,6 +22,7 @@ const Router = () => {
 			<Route path="/login" element={<Login />}></Route>
 			<Route path="/products/:category" element={<ProductList />}></Route>
 			<Route path="/product/:category" element={<SingleProduct />}></Route>
+			<Route path="/account/:userId" element={<Account />}></Route>
 			<Route path="/cart" element={<Cart />}></Route>
 			<Route path="/pay" element={<Pay />}></Route>
 			<Route path="/success/:orderId" element={<Success />}></Route>

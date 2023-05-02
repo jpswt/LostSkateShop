@@ -15,6 +15,8 @@ const Navbar = () => {
 	const quantity = useSelector((state) => state.cart.quantity);
 	const dispatch = useDispatch();
 
+	console.log('navbar', auth);
+
 	const handleToggle = () => {
 		setToggle(!toggle);
 	};
@@ -82,9 +84,11 @@ const Navbar = () => {
 							</>
 						)}
 
-						<li>
-							<PersonIcon className="navbar-button" />
-						</li>
+						<Link to={`/account/${auth?.currentUser?.id}`}>
+							<li>
+								<PersonIcon className="navbar-button" />
+							</li>
+						</Link>
 						<Link to="/cart">
 							<li>
 								<Badge
