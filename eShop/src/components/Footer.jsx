@@ -21,12 +21,12 @@ const Footer = () => {
 							<li className="footer-link">Home</li>
 							<li className="footer-link">My Account</li>
 							<li className="footer-link">Cart</li>
-							<li className="footer-link">Orders</li>
-							<li className="footer-link">Wishlist</li>
 							<li className="footer-link">Decks</li>
 							<li className="footer-link">Trucks</li>
 							<li className="footer-link">Wheels</li>
+							<li className="footer-link">Bearings</li>
 							<li className="footer-link">Hardware</li>
+							<li className="footer-link"></li>
 						</ul>
 					</div>
 					<div className="footer-social">

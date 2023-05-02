@@ -9,25 +9,20 @@
   text-align: center;
 }
 .shopping-container .top-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   margin-bottom: 30px;
 }
 .shopping-container .top-container .shopping-btn {
-  padding: 8px 16px;
-  font-size: "Raleway", sans-serif;
-}
-.shopping-container .top-container .list-info {
-  display: flex;
-}
-.shopping-container .top-container .list-info .list-text {
-  text-decoration: underline;
+  padding: 8px 20px 8px 16px;
   font-family: "Open Sans", sans-serif;
-  margin: 0 8px;
 }
 .shopping-container .bottom-container {
   display: flex;
+  align-items: center;
+  height: 400px;
   justify-content: space-between;
 }
 .shopping-container .bottom-container .no-cart {
@@ -153,6 +148,26 @@
 }
 .shopping-container .bottom-container .summary-container .summary-section .item-total {
   font-weight: 700;
+}
+.shopping-container .bottom-container .summary-container .cont-shop-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.shopping-container .bottom-container .summary-container .cont-shop-container a {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.shopping-container .bottom-container .summary-container .cont-shop-container .shopping-btn {
+  width: 40%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: hsl(0, 0%, 58%);
+  color: hsl(0, 0%, 96%);
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1045px) {
