@@ -84,7 +84,13 @@ const Navbar = () => {
 							</>
 						)}
 
-						<Link to={`/account/${auth?.currentUser?.id}`}>
+						<Link
+							to={
+								auth.currentUser
+									? `/account/${auth?.currentUser?.id}`
+									: `/login`
+							}
+						>
 							<li>
 								<PersonIcon className="navbar-button" />
 							</li>
@@ -125,7 +131,7 @@ const Navbar = () => {
 						<Link to="/products/hardware">
 							<li className="mobile-link-items">Hardware</li>
 						</Link>
-						{auth.currentUser ? (
+						{auth?.currentUser ? (
 							<Link
 								to="/"
 								onClick={() => {
