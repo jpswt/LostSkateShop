@@ -21,8 +21,7 @@
 }
 .shopping-container .bottom-container {
   display: flex;
-  align-items: center;
-  height: 400px;
+  height: min(400px, 100%);
   justify-content: space-between;
 }
 .shopping-container .bottom-container .no-cart {

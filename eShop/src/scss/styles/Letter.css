@@ -1,15 +1,18 @@
 .letter-container {
   background: rgb(19, 182, 150);
   background: radial-gradient(circle, rgb(19, 182, 150) 0%, rgb(1, 142, 114) 55%);
-  height: 200px;
+  height: 270px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   color: hsl(0, 0%, 96%);
 }
 .letter-container .title h2 {
-  margin: 2rem 0 1rem 0;
+  margin: 0;
+  margin-bottom: 1rem;
   padding: 0;
   font-size: 44px;
 }
@@ -23,6 +26,7 @@
 }
 .letter-container .input-container input {
   height: 100%;
+  width: 300px;
   padding: 0.5rem 1rem;
   border: none;
 }
