@@ -1,0 +1,67 @@
+@use '../abstracts/index' as *;
+
+.box {
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400;
+	background-color: #f0f0f0;
+	border: 1px solid #000;
+	// boxShadow: 24,
+	padding: 20px;
+	width: min(80%, 480px);
+	min-height: 240px h2 {
+		font-size: 20px;
+	}
+
+	.line-item {
+		font-family: $bodyFont;
+		font-weight: 700;
+		background-color: $accentColor;
+		padding: 8px 8px;
+		color: #f1f1f1;
+	}
+
+	h2 {
+		font-size: 18px;
+		padding-left: 8px;
+		margin-top: 4px;
+
+		font-weight: 600;
+	}
+	p {
+		margin: 0;
+		margin-bottom: 8px;
+		padding: 0 8px;
+	}
+
+	.shipping {
+		margin: 0;
+		padding: 0;
+
+		.ship-item {
+			font-family: $bodyFont;
+			font-weight: 700;
+			background-color: $accentColor;
+			color: #f1f1f1;
+			padding: 6px 8px;
+		}
+
+		.costs {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 16px;
+			margin-top: 8px;
+
+			.ship-cost {
+				padding: 0 8px;
+			}
+		}
+	}
+
+	.price {
+		padding-left: 16px;
+	}
+}

@@ -1,0 +1,55 @@
+.box {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  padding: 20px;
+  width: min(80%, 480px);
+  min-height: 240px h2;
+  min-height-font-size: 20px;
+}
+.box .line-item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background-color: hsl(168, 99%, 24%);
+  padding: 8px 8px;
+  color: #f1f1f1;
+}
+.box h2 {
+  font-size: 18px;
+  padding-left: 8px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+.box p {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0 8px;
+}
+.box .shipping {
+  margin: 0;
+  padding: 0;
+}
+.box .shipping .ship-item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background-color: hsl(168, 99%, 24%);
+  color: #f1f1f1;
+  padding: 6px 8px;
+}
+.box .shipping .costs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.box .shipping .costs .ship-cost {
+  padding: 0 8px;
+}
+.box .price {
+  padding-left: 16px;
+}/*# sourceMappingURL=ItemsModal.css.map */

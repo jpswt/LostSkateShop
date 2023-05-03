@@ -1,4 +1,79 @@
 .order-container {
   padding: 20px;
   min-height: calc(100vh - 260px);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-container .order-history {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.order-container .order-history table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.order-container .order-history table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+.order-container .order-history table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+.order-container .order-history table th,
+.order-container .order-history table td {
+  padding: 0.625em;
+  text-align: center;
+}
+.order-container .order-history table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1045px) {
+  .order-container .order-history table {
+    border: 0;
+  }
+  .order-container .order-history table caption {
+    font-size: 1.3rem;
+  }
+  .order-container .order-history table thead {
+    border: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .order-container .order-history table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+  .order-container .order-history table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+  }
+  .order-container .order-history table td::before {
+    content: "";
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .order-container .order-history table td:last-child {
+    border-bottom: 0;
+  }
 }/*# sourceMappingURL=OrderHistory.css.map */
