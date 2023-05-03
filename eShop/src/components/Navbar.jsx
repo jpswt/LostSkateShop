@@ -7,12 +7,14 @@ import PersonIcon from '@mui/icons-material/Person';
 import SearchIcon from '@mui/icons-material/Search';
 import '../scss/styles/Navbar.css';
 import { logoutUser } from '../redux/userRedux';
+import { resetCart } from '../redux/cartRedux';
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [bodyScroll, setBodyScroll] = useState(true);
 	const auth = useSelector((state) => state.user);
 	const quantity = useSelector((state) => state.cart.quantity);
+	const cart = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 
 	console.log('navbar', auth);
@@ -69,6 +71,7 @@ const Navbar = () => {
 								to="/"
 								onClick={() => {
 									dispatch(logoutUser(null));
+									dispatch(resetCart(cart));
 								}}
 							>
 								<li>LOGOUT</li>
