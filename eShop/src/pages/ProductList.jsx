@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import { useLocation } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { publicRequest } from '../request';
 
 const ProductList = () => {
 	const location = useLocation();
@@ -15,6 +16,7 @@ const ProductList = () => {
 	const [filters, setFilters] = useState({});
 	const [sort, setSort] = useState('latest');
 
+	const [isLoading, setIsLoading] = useState(false);
 	const [products, setProducts] = useState([]);
 	const [filteredProducts, setFilteredProducts] = useState([]);
 	const [options, setOptions] = useState([]);
@@ -28,12 +30,11 @@ const ProductList = () => {
 	};
 
 	useEffect(() => {
+		setIsLoading(true);
 		const getProducts = async () => {
 			try {
-				const response = await axios.get(
-					category
-						? `${import.meta.env.VITE_DB_URI}/products?category=${category}`
-						: `${import.meta.env.VITE_DB_URI}/products`
+				const response = await publicRequest(
+					category ? `/products?category=${category}` : `/products`
 				);
 				setProducts(response.data);
 				const results = [];
@@ -53,6 +54,7 @@ const ProductList = () => {
 
 				setOptions(filteredCategories);
 			} catch (err) {}
+			setIsLoading(false);
 		};
 		getProducts();
 	}, [category]);
@@ -103,6 +105,7 @@ const ProductList = () => {
 				sort={sort}
 				products={products}
 				filteredProducts={filteredProducts}
+				isLoading={isLoading}
 			/>
 			<Letter />
 			<Footer />

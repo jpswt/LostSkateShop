@@ -17,6 +17,7 @@
   margin-right: 1rem;
 }
 .filter .filter-container .filter-item select {
+  width: 170px;
   padding: 0 8px;
   outline: hsl(168, 99%, 24%);
 }/*# sourceMappingURL=Filter.css.map */

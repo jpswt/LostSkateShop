@@ -1,5 +1,10 @@
 @use '../abstracts/' as *;
 
+.loading {
+	height: 100vh;
+	color: red;
+}
+
 .trending {
 	background-color: $bgColor;
 	padding-left: 16px;
@@ -17,7 +22,7 @@
 }
 
 .wrapper {
-	min-height: 100%;
+	min-height: 100vh;
 
 	.products-container {
 		display: flex;
