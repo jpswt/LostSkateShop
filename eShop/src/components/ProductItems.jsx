@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { addProduct } from '../redux/cartRedux';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../scss/styles/ProductItems.css';
 
 const ProductItems = ({ product }) => {
 	const [quantity, setQuantity] = useState(1);
+
 	const dispatch = useDispatch();
+
+	const handleLike = () => {
+		dispatch(addFavorite({ ...product }));
+	};
 
 	const handleCart = () => {
 		dispatch(addProduct({ ...product, quantity }));
@@ -18,7 +23,9 @@ const ProductItems = ({ product }) => {
 				<img src={product.img} alt="" />
 				<div className="btn-container">
 					<i className="fa-solid fa-cart-plus fa-lg" onClick={handleCart}></i>
-					<i className="fa-regular fa-heart fa-lg"></i>
+
+					<i class="fa-regular fa-heart fa-lg" onclick={handleLike}></i>
+
 					<Link to={`/product/${product._id}`} className="i-links">
 						<i className="fa-solid fa-magnifying-glass fa-lg"></i>
 					</Link>

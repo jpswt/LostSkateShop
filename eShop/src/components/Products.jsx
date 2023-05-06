@@ -1,15 +1,7 @@
 import '../scss/styles/Products.css';
-import { popProducts } from '../assets/data/data';
 import ProductItems from './ProductItems';
 
-const Products = ({
-	category,
-	filters,
-	sort,
-	products,
-	filteredProducts,
-	isLoading,
-}) => {
+const Products = ({ category, filters, sort, filteredProducts, isLoading }) => {
 	console.log(category, filters, sort);
 
 	return (

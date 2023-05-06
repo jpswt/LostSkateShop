@@ -24,6 +24,9 @@
   font-size: 1.5em;
   margin: 0.5em 0 0.75em;
 }
+.order-container .order-history table .mobile {
+  display: none;
+}
 .order-container .order-history table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
@@ -48,13 +51,29 @@
     font-size: 1.3rem;
   }
   .order-container .order-history table thead {
-    border: none;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+    display: none;
+  }
+  .order-container .order-history table .mobile {
+    display: block;
     position: absolute;
-    width: 1px;
+  }
+  .order-container .order-history table .mobile tr {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+  }
+  .order-container .order-history table .mobile tr:first-child {
+    margin-top: 4px;
+  }
+  .order-container .order-history table .mobile th {
+    text-align: left;
+  }
+  .order-container .order-history table .mobile th:last-child {
+    margin-top: 6px;
+    margin-bottom: 18px;
   }
   .order-container .order-history table tr {
     border-bottom: 3px solid #ddd;

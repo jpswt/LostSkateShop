@@ -47,10 +47,19 @@
 				opacity: 1;
 			}
 		}
+		.solid {
+			color: red;
+			background-color: white;
+			&:hover {
+				color: red;
+				background-color: white;
+			}
+		}
 
 		.i-links {
 			text-decoration: none;
 		}
+
 		i {
 			background-color: white;
 			border-radius: 50%;

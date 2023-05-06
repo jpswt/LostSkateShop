@@ -43,6 +43,14 @@
 .product .product-container .btn-container:hover {
   opacity: 1;
 }
+.product .product-container .solid {
+  color: red;
+  background-color: white;
+}
+.product .product-container .solid:hover {
+  color: red;
+  background-color: white;
+}
 .product .product-container .i-links {
   text-decoration: none;
 }

@@ -41,6 +41,16 @@ const OrderHistory = () => {
 							<th scope="col">Items</th>
 						</tr>
 					</thead>
+					<thead className="mobile">
+						{orders.map((item) => (
+							<tr>
+								<th scope="col">Order #</th>
+								<th scope="col">Order Date</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Items</th>
+							</tr>
+						))}
+					</thead>
 					<tbody>
 						{orders.map((item) => {
 							let date = new Date(item?.createdAt);
