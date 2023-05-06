@@ -44,6 +44,9 @@
 }
 
 @media (max-width: 1045px) {
+  .order-container .order-history {
+    width: 90%;
+  }
   .order-container .order-history table {
     border: 0;
   }
