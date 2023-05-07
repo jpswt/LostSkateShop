@@ -4,14 +4,17 @@ import Filter from '../components/Filter';
 import Products from '../components/Products';
 import Letter from '../components/Letter';
 import Footer from '../components/Footer';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { publicRequest } from '../request';
+import { createSearchParams } from 'react-router-dom';
 
 const ProductList = () => {
 	const location = useLocation();
 	const category = location.pathname.split('/')[2];
+
+	const navigate = useNavigate();
 
 	const [filters, setFilters] = useState({});
 	const [sort, setSort] = useState('latest');
@@ -20,13 +23,27 @@ const ProductList = () => {
 	const [products, setProducts] = useState([]);
 	const [filteredProducts, setFilteredProducts] = useState([]);
 	const [options, setOptions] = useState([]);
+	const [selected, setSelected] = useState('');
 
 	const handleFilter = (e) => {
 		const value = e.target.value;
+
 		setFilters({
 			...filters,
 			[e.target.name]: value,
 		});
+	};
+	useEffect(() => {
+		navigate({
+			pathname: `/products/${category}/`,
+			search: `?${createSearchParams(filters)}`,
+		});
+	}, [filters]);
+
+	window.onpopstate = (e) => {
+		navigate(`/products/${category}/`);
+		setFilters({});
+		// setSelected('');
 	};
 
 	useEffect(() => {
@@ -57,7 +74,7 @@ const ProductList = () => {
 			setIsLoading(false);
 		};
 		getProducts();
-	}, [category]);
+	}, [category, filters]);
 
 	console.log('Options', options);
 	console.log('Sort', sort);
@@ -98,6 +115,7 @@ const ProductList = () => {
 				handleFilter={handleFilter}
 				options={options}
 				category={category}
+				selected={selected}
 			/>
 			<Products
 				category={category}

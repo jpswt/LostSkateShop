@@ -63,9 +63,9 @@ const Navbar = () => {
 				</div>
 				<div className="navbar-right">
 					<ul className="navbar-links">
-						<li>
+						{/* <li>
 							<SearchIcon className="navbar-button" />
-						</li>
+						</li> */}
 						{auth.currentUser ? (
 							<Link
 								to="/"
@@ -116,9 +116,9 @@ const Navbar = () => {
 					</ul>
 
 					<ul className={toggle ? 'mobile-links active' : 'mobile-links'}>
-						<li className="mobile-link-items">
+						{/* <li className="mobile-link-items">
 							<input type="text" placeholder="Search..." />
-						</li>
+						</li> */}
 						<Link to="/products/decks">
 							<li className="mobile-link-items">Decks</li>
 						</Link>
@@ -134,6 +134,16 @@ const Navbar = () => {
 						<Link to="/products/hardware">
 							<li className="mobile-link-items">Hardware</li>
 						</Link>
+						<Link
+							to={
+								auth.currentUser
+									? `/account/${auth?.currentUser?.id}`
+									: `/login`
+							}
+						>
+							<li className="mobile-link-items">My Account</li>
+						</Link>
+
 						{auth?.currentUser ? (
 							<Link
 								to="/"

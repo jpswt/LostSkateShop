@@ -22,9 +22,9 @@
   min-height: 100vh;
 }
 .wrapper .products-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 288px));
   gap: 10px;
   background-color: #ffffff;
+  justify-content: center;
 }/*# sourceMappingURL=Products.css.map */

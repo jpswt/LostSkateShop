@@ -1,20 +1,18 @@
 import '../scss/styles/Filter.css';
 
-const Filter = ({
-	filters,
-	sort,
-	setSort,
-	handleFilter,
-	options,
-	category,
-}) => {
+const Filter = ({ setSort, handleFilter, options, category, selected }) => {
 	return (
 		<div className="filter">
 			<h2>{category.toUpperCase()}</h2>
 			<div className="filter-container">
 				<div className="filter-item">
 					<label>Filter Products:</label>
-					<select name="manufacturer" id="manufacturer" onChange={handleFilter}>
+					<select
+						name="manufacturer"
+						id="manufacturer"
+						onChange={handleFilter}
+						value={selected}
+					>
 						<option value="">All Brands</option>
 						{options.map((option, index) => (
 							<option key={index} value={option.value}>
