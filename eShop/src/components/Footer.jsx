@@ -47,13 +47,15 @@ const Footer = () => {
 								<i className="fa-solid fa-location-dot"></i>
 								<li className="contact-info">123 Main St Anyhere, USA</li>
 							</span>
-							<span className="contact-item">
-								<i className="fa-solid fa-square-phone"></i>
-								<li className="contact-info">555-867-5309</li>
-							</span>
+							<a href="tel:555-867-5309">
+								<span className="contact-item">
+									<i className="fa-solid fa-square-phone"></i>
+									<li className="contact-info">555-867-5309</li>
+								</span>
+							</a>
 							<span className="contact-item">
 								<i className="fa-solid fa-envelope"></i>
-								<li className="contact-info">eShop@eshop.com</li>
+								<li className="contact-info">lost@lostskateshop.com</li>
 							</span>
 						</ul>
 					</div>
@@ -82,13 +84,15 @@ const Footer = () => {
 								<i className="fa-solid fa-location-dot"></i>
 								<li className="contact-info">123 Main St Anyhere, USA</li>
 							</span>
-							<span className="contact-item">
-								<i className="fa-solid fa-square-phone"></i>
-								<li className="contact-info">555-867-5309</li>
-							</span>
+							<a href="tel:555-867-5309">
+								<span className="contact-item">
+									<i className="fa-solid fa-square-phone"></i>
+									<li className="contact-info">555-867-5309</li>
+								</span>
+							</a>
 							<span className="contact-item">
 								<i className="fa-solid fa-envelope"></i>
-								<li className="contact-info">eShop@eshop.com</li>
+								<li className="contact-info">lost@lostskateshop.com</li>
 							</span>
 						</ul>
 					</div>

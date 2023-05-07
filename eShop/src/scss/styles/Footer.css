@@ -26,6 +26,10 @@
   cursor: pointer;
   font-size: 40px;
 }
+.footer-container a {
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
+}
 .footer-container .links-title {
   font-size: 20px;
   margin-bottom: 10px;
