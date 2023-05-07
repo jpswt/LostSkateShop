@@ -85,9 +85,6 @@ const SingleProductItem = ({ product }) => {
 							) : null}
 							{product.size ? <div>{product.size}mm</div> : null}
 						</div>
-						<div className={product.inStock ? 'instock' : 'outstock'}>
-							{product.inStock ? 'Currently in stock!' : 'Out of Stock!'}
-						</div>
 						<div className="mobile">
 							<div className="quantity-container">
 								<h2>Quantity:</h2>

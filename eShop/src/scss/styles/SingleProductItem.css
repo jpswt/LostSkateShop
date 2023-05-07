@@ -100,15 +100,6 @@
   font-weight: 700;
   padding-bottom: 8px;
 }
-.products .product-container .description-container .outstock {
-  color: red;
-  font-weight: 600;
-  font-size: 20px;
-}
-.products .product-container .description-container .instock {
-  color: inherit;
-  font-size: 18px;
-}
 .products .product-container .filter-container {
   font-size: 12px;
   padding-bottom: 20px;
