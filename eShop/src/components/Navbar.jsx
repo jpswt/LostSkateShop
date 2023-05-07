@@ -63,9 +63,6 @@ const Navbar = () => {
 				</div>
 				<div className="navbar-right">
 					<ul className="navbar-links">
-						<li>
-							<SearchIcon className="navbar-button" />
-						</li>
 						{auth.currentUser ? (
 							<Link
 								to="/"
@@ -119,9 +116,6 @@ const Navbar = () => {
 						className={toggle ? 'mobile-links active' : 'mobile-links'}
 						onClick={handleToggle}
 					>
-						<li className="mobile-link-items">
-							<input type="text" placeholder="Search..." />
-						</li>
 						<Link to="/products/decks">
 							<li className="mobile-link-items">Decks</li>
 						</Link>
