@@ -36,24 +36,14 @@ const ProductItems = ({ product }) => {
 		<div className="product">
 			<div className="product-container">
 				<img src={product.img} alt="" />
-				<div className="btn-container">
-					<i className="fa-solid fa-cart-plus fa-lg" onClick={handleCart}></i>
-
-					<i
-						onClick={handleToggle}
-						class={
-							!isLiked ? 'fa-regular fa-heart fa-lg' : 'fa-regular fa-cat fa-lg'
-						}
-					></i>
-
-					<Link to={`/product/${product._id}`} className="i-links">
-						<i className="fa-solid fa-magnifying-glass fa-lg"></i>
-					</Link>
-				</div>
+				<Link to={`/product/${product._id}`}>
+					<div className="product-container">
+						<div className="product-title">{product.title}</div>
+					</div>
+				</Link>
 			</div>
 			<div className="details-container">
 				<div className="title">{product.manufacturer}</div>
-				<div>{product.desc}</div>
 			</div>
 		</div>
 	);

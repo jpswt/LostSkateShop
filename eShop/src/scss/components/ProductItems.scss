@@ -28,16 +28,17 @@
 			object-fit: contain;
 		}
 
-		.btn-container {
+		.product-container {
 			opacity: 0;
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: hsla(223, 10%, 41%, 0.4);
+			background-color: hsla(223, 10%, 41%, 0.7);
 			z-index: 3;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			gap: 16px;
@@ -46,36 +47,12 @@
 			&:hover {
 				opacity: 1;
 			}
-		}
-		.solid {
-			color: red;
-			background-color: white;
-			&:hover {
-				color: red;
-				background-color: white;
-			}
-		}
 
-		.i-links {
-			text-decoration: none;
-		}
-
-		i {
-			background-color: white;
-			border-radius: 50%;
-			height: 50px;
-			width: 50px;
-			display: grid;
-			gap: 10px;
-			place-items: center;
-			color: $secondaryColor;
-			font-weight: bold;
-			cursor: pointer;
-
-			&:hover {
-				background-color: $accentColor;
-				color: white;
-				text-decoration: none;
+			.product-title {
+				padding: 8px;
+				color: $primaryColor;
+				font-weight: 600;
+				text-align: center;
 			}
 		}
 	}
@@ -83,6 +60,7 @@
 	.details-container {
 		text-align: center;
 		.title {
+			margin: 8px;
 			font-weight: 600;
 		}
 	}
