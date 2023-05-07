@@ -23,7 +23,7 @@ const OrderHistory = () => {
 			setIsLoading(false);
 		};
 		getOrders();
-	}, []);
+	}, [auth]);
 
 	console.log('Here is the order', orders);
 

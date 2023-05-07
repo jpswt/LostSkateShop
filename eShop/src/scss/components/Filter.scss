@@ -27,3 +27,16 @@
 		}
 	}
 }
+
+@media (max-width: $breakpoint-md) {
+	.filter {
+		.filter-container {
+			.filter-item {
+				display: flex;
+				flex-direction: column;
+
+				align-items: left;
+			}
+		}
+	}
+}
