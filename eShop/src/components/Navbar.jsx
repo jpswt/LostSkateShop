@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
-import SearchIcon from '@mui/icons-material/Search';
-import '../scss/styles/Navbar.css';
 import { logoutUser } from '../redux/userRedux';
 import { resetCart } from '../redux/cartRedux';
+import '../scss/styles/Navbar.css';
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);

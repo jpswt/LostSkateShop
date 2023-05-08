@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Message from '../components/Message';
 import Header from '../components/Header';
@@ -9,6 +9,10 @@ import Footer from '../components/Footer';
 import '../scss/styles/Mobile.css';
 
 const Home = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<div>
 			<div className="mobile-nav">

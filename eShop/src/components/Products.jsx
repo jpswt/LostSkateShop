@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import '../scss/styles/Products.css';
 import ProductItems from './ProductItems';
 
 const Products = ({ category, filters, sort, filteredProducts, isLoading }) => {
 	console.log(category, filters, sort);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [category]);
 
 	return (
 		<div className="wrapper">

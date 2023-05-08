@@ -57,7 +57,7 @@
 			justify-content: center;
 			flex-wrap: wrap;
 
-			.footer-link {
+			a {
 				width: 33%;
 				margin-bottom: 8px;
 			}
@@ -144,6 +144,11 @@
 				font-weight: 400;
 				width: min(90%, 1000px);
 				text-align: left;
+
+				a {
+					width: 33%;
+					margin-bottom: 8px;
+				}
 			}
 		}
 

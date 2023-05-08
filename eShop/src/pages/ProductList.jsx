@@ -25,6 +25,10 @@ const ProductList = () => {
 	const [options, setOptions] = useState([]);
 	const [selected, setSelected] = useState('');
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	const handleFilter = (e) => {
 		const value = e.target.value;
 
@@ -33,6 +37,7 @@ const ProductList = () => {
 			[e.target.name]: value,
 		});
 	};
+
 	useEffect(() => {
 		navigate({
 			pathname: `/products/${category}/`,

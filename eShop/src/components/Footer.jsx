@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../scss/styles/Footer.css';
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
 	const [width, setWidth] = useState(window.innerWidth);
+	const auth = useSelector((state) => state.user);
 	const breakpoint = 1045;
 
 	useEffect(() => {
@@ -18,15 +21,39 @@ const Footer = () => {
 					<div className="footer-navlinks">
 						<div className="links-title">Helpful Links</div>
 						<ul className="footer-links">
-							<li className="footer-link">Home</li>
-							<li className="footer-link">My Account</li>
-							<li className="footer-link">Cart</li>
-							<li className="footer-link">Decks</li>
-							<li className="footer-link">Trucks</li>
-							<li className="footer-link">Wheels</li>
-							<li className="footer-link">Bearings</li>
-							<li className="footer-link">Hardware</li>
-							<li className="footer-link"></li>
+							<Link to="/">
+								<li className="footer-link">Home</li>
+							</Link>
+							<Link
+								to={
+									auth.currentUser
+										? `/account/${auth?.currentUser?.id}`
+										: `/login`
+								}
+							>
+								<li className="footer-link">My Account</li>
+							</Link>
+							<Link to="/cart">
+								<li className="footer-link">Cart</li>
+							</Link>
+							<Link to="/products/decks">
+								<li className="footer-link">Decks</li>
+							</Link>
+							<Link to="/products/trucks">
+								<li className="footer-link">Trucks</li>
+							</Link>
+							<Link to="/products/wheels">
+								<li className="footer-link">Wheels</li>
+							</Link>
+							<Link to="/products/bearings">
+								<li className="footer-link">Bearings</li>
+							</Link>
+							<Link to="/products/hardware">
+								<li className="footer-link">Hardware</li>
+							</Link>
+							<Link>
+								<li className="footer-link"></li>
+							</Link>
 						</ul>
 					</div>
 					<div className="footer-social">
@@ -66,15 +93,39 @@ const Footer = () => {
 						<div className="links-title">Helpful Links</div>
 
 						<ul className="footer-links">
-							<li className="footer-link">Home</li>
-							<li className="footer-link">My Account</li>
-							<li className="footer-link">Cart</li>
-							<li className="footer-link">Track Order</li>
-							<li className="footer-link">Wishlist</li>
-							<li className="footer-link">Decks</li>
-							<li className="footer-link">Trucks</li>
-							<li className="footer-link">Wheels</li>
-							<li className="footer-link">Hardware</li>
+							<Link to="/">
+								<li className="footer-link">Home</li>
+							</Link>
+							<Link
+								to={
+									auth.currentUser
+										? `/account/${auth?.currentUser?.id}`
+										: `/login`
+								}
+							>
+								<li className="footer-link">My Account</li>
+							</Link>
+							<Link to="/cart">
+								<li className="footer-link">Cart</li>
+							</Link>
+							<Link to="/products/decks">
+								<li className="footer-link">Decks</li>
+							</Link>
+							<Link to="/products/trucks">
+								<li className="footer-link">Trucks</li>
+							</Link>
+							<Link to="/products/wheels">
+								<li className="footer-link">Wheels</li>
+							</Link>
+							<Link to="/products/bearings">
+								<li className="footer-link">Bearings</li>
+							</Link>
+							<Link to="/products/hardware">
+								<li className="footer-link">Hardware</li>
+							</Link>
+							<Link>
+								<li className="footer-link"></li>
+							</Link>
 						</ul>
 					</div>
 					<div className="footer-contact-info">

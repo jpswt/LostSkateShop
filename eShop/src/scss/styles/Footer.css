@@ -51,7 +51,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.footer-container .footer-navlinks .footer-links .footer-link {
+.footer-container .footer-navlinks .footer-links a {
   width: 33%;
   margin-bottom: 8px;
 }
@@ -123,6 +123,10 @@
     font-weight: 400;
     width: min(90%, 1000px);
     text-align: left;
+  }
+  .footer-container .footer-navlinks .footer-links a {
+    width: 33%;
+    margin-bottom: 8px;
   }
   .footer-container .footer-contact-info {
     width: 100%;
