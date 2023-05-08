@@ -54,6 +54,9 @@ const ShoppingCart = () => {
 					{
 						tokenID: stripeToken.id,
 						amount: cart.total * 100,
+						headers: {
+							'Content-type': 'application/json',
+						},
 					}
 				);
 				navigate('/success', { data: response.data });
@@ -84,7 +87,30 @@ const ShoppingCart = () => {
 						{cart.products.map((product) => (
 							<div className="product-container" key={product._id}>
 								<div className="product-detail">
-									<img className="product-image" src={product.img} alt="" />
+									{/* <img className="product-image" src={product.img} alt="" /> */}
+									<div className="image-wrapper">
+										<img
+											className={
+												product?.categories?.[0] === 'decks'
+													? 'decks-image'
+													: product?.categories?.[0] === 'trucks'
+													? 'trucks-image'
+													: product?.categories?.[0] === 'wheels'
+													? 'wheels-image'
+													: product?.categories?.[0] === 'bearings'
+													? 'bearings-image'
+													: product?.categories?.[1] === 'griptape'
+													? 'grip-image'
+													: product?.categories?.[1] === 'bolts'
+													? 'bolts-image'
+													: product?.categories?.[1] === 'bushings'
+													? 'bushings-image'
+													: 'product-image'
+											}
+											src={product.img}
+											alt=""
+										/>
+									</div>
 									<div className="details-container">
 										<div className="product-info">
 											<span className="product-keys">Name:</span>
@@ -108,7 +134,8 @@ const ShoppingCart = () => {
 
 											{product.wheelbase ? (
 												<span>
-													<span> Wheelbase: {product.wheelbase}"</span>
+													<span className="product-keys"> Wheelbase:</span>{' '}
+													{product.wheelbase}"
 												</span>
 											) : null}
 											{product.size ? <span>{product.size}mm</span> : null}

@@ -9,6 +9,7 @@
 		font-size: 34px;
 		font-family: $bodyFont;
 		text-align: center;
+		margin-bottom: 4rem;
 	}
 
 	.top-container {
@@ -66,7 +67,51 @@
 				.product-detail {
 					flex: 2;
 					display: flex;
-					// align-items: center;
+					align-items: center;
+					min-width: 220px;
+					.image-wrapper {
+						min-width: 200px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+						.decks-image {
+							width: 100px;
+							height: 200px;
+							padding: 10px;
+						}
+						.trucks-image {
+							width: 175px;
+							height: 175px;
+							padding: 10px;
+						}
+						.wheels-image {
+							width: 175px;
+							height: 175px;
+							padding: 10px;
+						}
+						.bearings-image {
+							width: 175px;
+							height: 175px;
+							padding: 10px;
+						}
+						.grip-image {
+							width: 100px;
+							height: 175px;
+							padding: 10px;
+						}
+						.bolts-image {
+							width: 175px;
+							height: 175px;
+							padding: 10px;
+						}
+						.bushings-image {
+							width: 175px;
+							height: 175px;
+							padding: 10px;
+						}
+					}
 
 					.product-image {
 						width: 200px;
@@ -83,9 +128,11 @@
 
 						font-family: $bodyFont;
 
-						.product-keys {
-							font-weight: 600;
-							margin-right: 8px;
+						.product-info {
+							.product-keys {
+								font-weight: 600;
+								margin-right: 8px;
+							}
 						}
 
 						.quantity-container {

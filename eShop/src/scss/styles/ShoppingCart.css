@@ -7,6 +7,7 @@
   font-size: 34px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  margin-bottom: 4rem;
 }
 .shopping-container .top-container {
   width: 100%;
@@ -47,6 +48,50 @@
 .shopping-container .bottom-container .cart-info .product-container .product-detail {
   flex: 2;
   display: flex;
+  align-items: center;
+  min-width: 220px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper {
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .decks-image {
+  width: 100px;
+  height: 200px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .trucks-image {
+  width: 175px;
+  height: 175px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .wheels-image {
+  width: 175px;
+  height: 175px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bearings-image {
+  width: 175px;
+  height: 175px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .grip-image {
+  width: 100px;
+  height: 175px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bolts-image {
+  width: 175px;
+  height: 175px;
+  padding: 10px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bushings-image {
+  width: 175px;
+  height: 175px;
+  padding: 10px;
 }
 .shopping-container .bottom-container .cart-info .product-container .product-detail .product-image {
   width: 200px;
@@ -61,7 +106,7 @@
   width: 100%;
   font-family: "Open Sans", sans-serif;
 }
-.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-keys {
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-info .product-keys {
   font-weight: 600;
   margin-right: 8px;
 }

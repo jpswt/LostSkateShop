@@ -19,4 +19,14 @@
   padding: 16px;
   gap: 10px;
   background-color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .trending {
+    margin: 8px 0 16px;
+  }
+  .products-container {
+    padding: 0px 16px;
+    gap: 0px;
+  }
 }/*# sourceMappingURL=Trending.css.map */
