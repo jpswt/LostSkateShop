@@ -62,5 +62,11 @@
 @media (max-width: $breakpoint-lg) {
 	.letter-container {
 		padding-bottom: 2rem;
+
+		.input-container {
+			input {
+				width: 240px;
+			}
+		}
 	}
 }

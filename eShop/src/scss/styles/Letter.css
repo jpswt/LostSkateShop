@@ -47,4 +47,7 @@
   .letter-container {
     padding-bottom: 2rem;
   }
+  .letter-container .input-container input {
+    width: 240px;
+  }
 }/*# sourceMappingURL=Letter.css.map */
