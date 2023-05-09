@@ -14,11 +14,12 @@
 }
 
 .products-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   padding: 16px;
   gap: 10px;
   background-color: #ffffff;
+  justify-content: center;
 }
 
 @media (max-width: 500px) {
@@ -26,7 +27,11 @@
     margin: 8px 0 16px;
   }
   .products-container {
-    padding: 0px 16px;
-    gap: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    padding: 16px;
+    gap: 10px;
+    background-color: #ffffff;
+    justify-content: center;
   }
 }/*# sourceMappingURL=Trending.css.map */
