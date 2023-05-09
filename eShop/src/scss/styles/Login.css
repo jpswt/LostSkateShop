@@ -55,8 +55,12 @@
   justify-content: center;
 }
 .login .login-container .input-container a {
+  text-decoration: none;
   font-weight: 600;
   color: black;
+}
+.login .login-container .input-container a:hover {
+  text-decoration: underline;
 }
 .login .login-container .input-container .input-fields {
   width: 90%;

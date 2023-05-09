@@ -28,7 +28,7 @@
   }
   .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
     padding: 16px;
     gap: 10px;
     background-color: #ffffff;
