@@ -17,6 +17,7 @@
 }
 .register .register-container .image-container .overlay {
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -52,6 +53,10 @@
   align-items: center;
   justify-content: center;
 }
+.register .register-container .input-container a {
+  font-weight: 600;
+  color: black;
+}
 .register .register-container .input-container .register-fields {
   width: 90%;
   display: flex;
@@ -79,6 +84,16 @@
   font-size: 20px;
   border: none;
   cursor: pointer;
+}
+.register .register-container .input-container .register-fields .login {
+  text-align: center;
+  padding: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.register .register-container .input-container .register-fields .login .reg-link a {
+  font-size: 17px;
+  text-decoration: none;
 }
 
 @media (max-width: 1045px) {

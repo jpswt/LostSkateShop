@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import '../scss/styles/Register.css';
 import { registerUser } from '../redux/userRedux';
 
@@ -45,8 +46,8 @@ const Register = () => {
 							<div className="overlay">
 								<h2>New Customers</h2>
 								<p>
-									Ready to Join? Becoming a member allows you to checkout
-									faster, view/track orders and more.
+									Ready to Join? Become a member to purchase gear, view orders
+									and more.
 								</p>
 							</div>
 						</div>
@@ -74,6 +75,12 @@ const Register = () => {
 									}
 								/>
 								<button className="submit-btn">Sign Up</button>
+								<div className="login">
+									Already a member?{' '}
+									<Link to="/login">
+										<span className="reg-link">Sign in</span>
+									</Link>
+								</div>
 							</form>
 						</div>
 					</>
@@ -86,6 +93,12 @@ const Register = () => {
 								<input type="text" placeholder="Email" />
 								<input type="password" placeholder="Password" />
 								<button className="submit-btn">Sign Up</button>
+								<div className="login">
+									Already a member?{' '}
+									<Link to="/login">
+										<span className="reg-link">Sign in</span>
+									</Link>
+								</div>
 							</form>
 						</div>
 						<div className="image-container">

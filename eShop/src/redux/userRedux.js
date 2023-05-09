@@ -29,7 +29,7 @@ export const loginUser = createAsyncThunk('user/loginUser', async (user) => {
 		localStorage.setItem('token', token.data);
 		return token.data;
 	} catch (error) {
-		console.log(error.response);
+		console.log(error.response.data);
 	}
 });
 
@@ -80,7 +80,7 @@ const userSlice = createSlice({
 		});
 
 		builder.addCase(loginUser.pending, (state, action) => {
-			return { ...state, isFetching: true, error: false };
+			return { ...state, isFetching: true, error: true };
 		});
 		builder.addCase(loginUser.fulfilled, (state, action) => {
 			if (action.payload) {

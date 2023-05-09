@@ -14,16 +14,22 @@ const Login = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const auth = useSelector((state) => state.user);
+	const [error, setError] = useState('');
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1045;
 
 	console.log(user);
-	console.log(auth);
 
 	useEffect(() => {
 		if (auth.currentUser) {
 			navigate('/cart');
 		}
+		if (auth?.error === true) {
+			setError('Login Failed.  Incorrect Email or Password');
+		} else {
+			setError('');
+		}
+		console.log(auth.error);
 	}, [auth]);
 
 	useEffect(() => {
@@ -44,10 +50,9 @@ const Login = () => {
 					<>
 						<div className="image-container">
 							<div className="overlay">
-								<h2></h2>
+								<h2>Ready for Something New?</h2>
 								<p>
-									Ready to Join? Becoming a member allows you to checkout
-									faster, view/track orders and more.
+									Sign in to checkout and hit the streets with the newest gear.{' '}
 								</p>
 							</div>
 						</div>
@@ -76,11 +81,7 @@ const Login = () => {
 										<span className="reg-link">Sign up now!</span>
 									</Link>
 								</div>
-								{auth?.error ? (
-									<div className="error">
-										Email or Password are incorrect. Please try again.
-									</div>
-								) : null}
+								{error ? <div className="error">{error}</div> : null}
 							</form>
 						</div>
 					</>
@@ -111,20 +112,13 @@ const Login = () => {
 										<span className="reg-link">Sign up now!</span>
 									</Link>
 								</div>
-								{auth?.error ? (
-									<div className="error">
-										Email or Password are incorrect. Please try again.
-									</div>
-								) : null}
+								{error ? <div>{error}</div> : null}
 							</form>
 						</div>
 						<div className="image-container">
 							<div className="overlay">
-								<h2>New Customers</h2>
-								<p>
-									Ready to Join? Becoming a member allows you to checkout
-									faster, view/track orders and more.
-								</p>
+								<h2>Check it Out!</h2>
+								<p>Sign in to grab the latest gear!</p>
 							</div>
 						</div>
 					</>
