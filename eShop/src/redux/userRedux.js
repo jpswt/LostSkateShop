@@ -80,7 +80,7 @@ const userSlice = createSlice({
 		});
 
 		builder.addCase(loginUser.pending, (state, action) => {
-			return { ...state, isFetching: true, error: true };
+			return { ...state, isFetching: true, error: false };
 		});
 		builder.addCase(loginUser.fulfilled, (state, action) => {
 			if (action.payload) {
@@ -92,10 +92,14 @@ const userSlice = createSlice({
 					token: action.payload,
 					currentUser: user,
 				};
-			} else return state;
+			} else
+				return {
+					state,
+					error: true,
+				};
 		});
 		builder.addCase(loginUser.rejected, (state, action) => {
-			return { ...state, isFetching: false, error: true };
+			return { ...state, isFetching: true, error: true };
 		});
 	},
 });
