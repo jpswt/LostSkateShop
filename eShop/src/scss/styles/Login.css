@@ -99,6 +99,10 @@
 .login .login-container .input-container .register .reg-link {
   font-size: 17px;
 }
+.login .login-container .input-container .error {
+  color: rgb(199, 23, 23);
+  font-weight: 600;
+}
 
 @media (max-width: 1045px) {
   .login .login-container {

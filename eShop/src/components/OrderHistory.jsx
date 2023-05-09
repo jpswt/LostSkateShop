@@ -11,7 +11,7 @@ const OrderHistory = () => {
 	const userId = location.pathname.split('/')[2];
 	const [orders, setOrders] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	// console.log('order', auth);
+	console.log('order', auth);
 
 	useEffect(() => {
 		const getOrders = async () => {
@@ -29,10 +29,11 @@ const OrderHistory = () => {
 
 	return (
 		<div className="order-container">
-			<h2>welcome {auth.currentUser.username}</h2>
 			<div className="order-history">
 				<table>
-					<caption>Order History</caption>
+					<caption>
+						{auth?.currentUser?.username.toUpperCase()}'s Order History
+					</caption>
 					<thead>
 						<tr>
 							<th scope="col">Order #</th>
@@ -42,8 +43,8 @@ const OrderHistory = () => {
 						</tr>
 					</thead>
 					<thead className="mobile">
-						{orders.map((item) => (
-							<tr>
+						{orders.map((item, index) => (
+							<tr key={index}>
 								<th scope="col">Order #</th>
 								<th scope="col">Order Date</th>
 								<th scope="col">Amount</th>
