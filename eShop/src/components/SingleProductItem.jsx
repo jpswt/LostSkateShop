@@ -91,13 +91,16 @@ const SingleProductItem = ({ product }) => {
 								<div className="checkout">
 									<div className="counter">
 										<div
-											className="minus"
+											className="minus icons "
 											onClick={() => handleQuantity('dec')}
 										>
 											-
 										</div>
 										<div className="count">{quantity}</div>
-										<div className="plus" onClick={() => handleQuantity('inc')}>
+										<div
+											className="icons"
+											onClick={() => handleQuantity('inc')}
+										>
 											+
 										</div>
 									</div>
