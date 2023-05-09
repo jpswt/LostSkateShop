@@ -9,8 +9,8 @@ import { resetCart } from '../redux/cartRedux';
 import '../scss/styles/Navbar.css';
 
 const Navbar = () => {
+	const [width, setWidth] = useState(window.innerWidth);
 	const [toggle, setToggle] = useState(false);
-	const [bodyScroll, setBodyScroll] = useState(true);
 	const auth = useSelector((state) => state.user);
 	const quantity = useSelector((state) => state.cart.quantity);
 	const cart = useSelector((state) => state.cart);
@@ -31,13 +31,25 @@ const Navbar = () => {
 		handleScroll();
 	}, [toggle]);
 
+	useEffect(() => {
+		const handleResize = () => setWidth(window.innerWidth);
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	return (
 		<div className="navbar">
 			<div className="navbar-container">
 				<div className="navbar-left">
-					<Link to="/">
-						<div className="title">lost skate shop</div>
-					</Link>
+					{width > 645 ? (
+						<Link to="/">
+							<div className="title">lost skate shop</div>
+						</Link>
+					) : (
+						<Link to="/">
+							<div className="title">LSS</div>
+						</Link>
+					)}
 				</div>
 				<div className="navbar-center">
 					<div className="product-links">

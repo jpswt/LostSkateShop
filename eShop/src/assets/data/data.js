@@ -2,7 +2,7 @@ export const headerContent = [
 	{
 		id: 1,
 		bg: 'https://images.unsplash.com/photo-1624069037382-0d6d4eaf7a31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1456&q=80',
-		title: 'EASTER SALE',
+		title: 'LABOR DAY SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
 	{
@@ -14,7 +14,7 @@ export const headerContent = [
 	{
 		id: 3,
 		bg: 'https://images.unsplash.com/photo-1574627562722-84254ee47c15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHNrYXRlYm9hcmQlMjB0cmlja3xlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60',
-		title: 'LABOR DAY SALE',
+		title: 'ARBOR DAY SALE',
 		description: `Don't miss our biggest sale yet. Get 40% off the newest gear.`,
 	},
 ];
