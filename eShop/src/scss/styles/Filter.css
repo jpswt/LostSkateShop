@@ -22,14 +22,25 @@
   outline: hsl(168, 99%, 24%);
 }
 
-@media (max-width: 700px) {
-  .filter .filter-container {
-    justify-content: space-around;
-  }
+@media (max-width: 975px) {
   .filter .filter-container .filter-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+  }
+}
+@media (max-width: 600px) {
+  .filter .filter-container {
+    align-items: center;
+    margin: 0 auto;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .filter .filter-container .filter-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .filter .filter-container .filter-item select {
+    width: 100%;
   }
 }/*# sourceMappingURL=Filter.css.map */
