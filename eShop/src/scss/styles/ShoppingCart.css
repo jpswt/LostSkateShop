@@ -56,7 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 0.5rem;
 }
 .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .decks-image {
   width: 100px;
@@ -109,6 +109,9 @@
 .shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-info .product-keys {
   font-weight: 600;
   margin-right: 8px;
+}
+.shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-info .non-product-key {
+  font-weight: 500;
 }
 .shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .quantity-container {
   display: flex;
@@ -240,11 +243,60 @@
   .shopping-container .bottom-container .cart-info .product-container {
     flex-direction: column;
   }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail {
+    flex: 1;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-height: 170px;
+    align-items: start;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .decks-image {
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .trucks-image {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .wheels-image {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bearings-image {
+    width: 80px;
+    height: 80px;
+    padding: 0 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .grip-image {
+    width: 100px;
+    height: 175px;
+    padding: 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bolts-image {
+    width: 95px;
+    height: 95px;
+    padding: 10px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .image-wrapper .bushings-image {
+    width: 95px;
+    height: 95px;
+    padding: 10px;
+  }
   .shopping-container .bottom-container .cart-info .product-container .product-detail .details-container {
     min-width: none;
-    width: 50%;
+    width: 90%;
+    padding-right: 0px;
+  }
+  .shopping-container .bottom-container .cart-info .product-container .product-detail .details-container .product-info {
+    width: 90%;
   }
   .shopping-container .bottom-container .cart-info .product-container .price-detail {
+    flex: 2;
     align-items: start;
     border-top: 1px solid hsla(0, 0%, 83%, 0.4);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

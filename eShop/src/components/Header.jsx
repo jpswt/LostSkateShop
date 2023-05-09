@@ -43,6 +43,7 @@ const Header = () => {
 						style={{
 							background: `url(${item.bg}) no-repeat center center `,
 							backgroundSize: 'cover',
+							transition: 'height 1000000s ease',
 						}}
 					>
 						<div className="text-container">

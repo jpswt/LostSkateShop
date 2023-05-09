@@ -113,12 +113,15 @@ const ShoppingCart = () => {
 									</div>
 									<div className="details-container">
 										<div className="product-info">
-											<span className="product-keys">Name:</span>
 											<span>{product.title}</span>
 										</div>
 										<div className="product-info">
-											<span className="product-keys">Manufacturer:</span>
-											<span>{product.manufacturer}</span>
+											<span className="product-keys">
+												Manufacturer:{' '}
+												<span className="non-product-key">
+													{product.manufacturer}
+												</span>
+											</span>
 										</div>
 										<div className="product-info">
 											<span className="product-keys">Dimensions:</span>

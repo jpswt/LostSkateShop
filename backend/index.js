@@ -5,7 +5,6 @@ const cors = require('cors');
 const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/user');
 const productsRoute = require('./routes/product');
-const cartRoute = require('./routes/shoppingCart');
 const orderRoute = require('./routes/order');
 const stripeRoute = require('./routes/stripe');
 const stripeWebHookRoute = require('./routes/stripeWebhook');
@@ -24,7 +23,6 @@ app.use(express.json());
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/products', productsRoute);
-app.use('/api/carts', cartRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/checkout', stripeRoute);
 

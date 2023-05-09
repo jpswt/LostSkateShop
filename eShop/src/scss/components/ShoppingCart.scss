@@ -23,16 +23,6 @@
 			padding: 8px 20px 8px 16px;
 			font-family: $bodyFont;
 		}
-
-		// .list-info {
-		// 	display: flex;
-
-		// 	.list-text {
-		// 		text-decoration: underline;
-		// 		font-family: $bodyFont;
-		// 		margin: 0 8px;
-		// 	}
-		// }
 	}
 
 	.bottom-container {
@@ -74,7 +64,7 @@
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						padding: 0.5rem 0.5rem 0.5rem 1rem;
+						padding: 0.5rem;
 
 						.decks-image {
 							width: 100px;
@@ -132,6 +122,10 @@
 							.product-keys {
 								font-weight: 600;
 								margin-right: 8px;
+							}
+
+							.non-product-key {
+								font-weight: 500;
 							}
 						}
 
@@ -298,13 +292,62 @@
 				.product-container {
 					flex-direction: column;
 					.product-detail {
+						flex: 1;
+						.image-wrapper {
+							min-width: fit-content;
+							min-height: 170px;
+							align-items: start;
+
+							.decks-image {
+								width: 100px;
+								height: 200px;
+								padding: 10px;
+							}
+							.trucks-image {
+								width: 80px;
+								height: 80px;
+								padding: 10px;
+							}
+							.wheels-image {
+								width: 80px;
+								height: 80px;
+								padding: 10px;
+							}
+							.bearings-image {
+								width: 80px;
+								height: 80px;
+								padding: 0 10px;
+							}
+							.grip-image {
+								width: 100px;
+								height: 175px;
+								padding: 10px;
+							}
+							.bolts-image {
+								width: 95px;
+								height: 95px;
+								padding: 10px;
+							}
+							.bushings-image {
+								width: 95px;
+								height: 95px;
+								padding: 10px;
+							}
+						}
 						.details-container {
 							min-width: none;
-							width: 50%;
+
+							width: 90%;
+							padding-right: 0px;
+
+							.product-info {
+								width: 90%;
+							}
 						}
 					}
 
 					.price-detail {
+						flex: 2;
 						align-items: start;
 						border-top: 1px solid hsla(0, 0%, 83%, 0.4);
 						box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
