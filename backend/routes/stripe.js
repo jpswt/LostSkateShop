@@ -51,7 +51,11 @@ router.post('/payment', async (req, res) => {
 		success_url: `https://lostskateshop.onrender.com/success/${customer.metadata.userId}`,
 		cancel_url: `https://lostskateshop.onrender.com/cart`,
 	});
-	res.send({ url: session.url });
+	res.send(
+		JSON.stringify({
+			url: session.url,
+		})
+	);
 });
 
 module.exports = router;
