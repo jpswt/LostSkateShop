@@ -48,8 +48,8 @@ router.post('/payment', async (req, res) => {
 		customer: customer.id,
 		line_items,
 		mode: 'payment',
-		success_url: `https://lostskateshop.onrender.com/success/${customer.metadata.userId}`,
-		cancel_url: `https://lostskateshop.onrender.com/cart`,
+		success_url: `https://www.lostskateshop.onrender.com/success/${customer.metadata.userId}`,
+		cancel_url: `https://www.lostskateshop.onrender.com/cart`,
 	});
 	res.send({ url: session.url });
 });
