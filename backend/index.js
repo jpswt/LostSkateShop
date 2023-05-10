@@ -16,16 +16,20 @@ mongoose
 	.then(console.log('Connected to MongoDB'))
 	.catch((err) => console.error(err));
 
-app.use(
-	cors({
-		origin: [
-			'https://lostskateshop.onrender.com',
-			'https://lostskateshop.onrender.com/cart',
-			'https://dashboard.stripe.com/',
-			'https://checkout.stripe.com/',
-		],
-	})
-);
+app.use(cors());
+
+app.options('*', cors());
+
+// app.use(
+// 	cors({
+// 		origin: [
+// 			'https://lostskateshop.onrender.com',
+// 			'https://lostskateshop.onrender.com/cart',
+// 			'https://dashboard.stripe.com/',
+// 			'https://checkout.stripe.com/',
+// 		],
+// 	})
+// );
 app.use('/api/stripe', stripeWebHookRoute);
 app.use(express.json());
 
