@@ -30,7 +30,7 @@ app.use(
 
 app.use('/api/stripe', stripeWebHookRoute);
 
-app.use(express.json());
+// app.use(express.json());
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
