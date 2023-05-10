@@ -20,17 +20,7 @@ app.use(cors());
 
 app.options('*', cors());
 
-// app.use(
-// 	cors({
-// 		origin: [
-// 			'https://lostskateshop.onrender.com',
-// 			'https://lostskateshop.onrender.com/cart',
-// 			'https://dashboard.stripe.com/',
-// 			'https://checkout.stripe.com/',
-// 		],
-// 	})
-// );
-app.use('/api/stripe', express.raw({ type: '*/*' }), stripeWebHookRoute);
+app.use('/api/stripe', stripeWebHookRoute, express.raw({ type: '*/*' }));
 
 app.use(express.json());
 
