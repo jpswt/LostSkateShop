@@ -18,7 +18,10 @@ mongoose
 
 app.use(
 	cors({
-		origin: ['https://lostskateshop.onrender.com'],
+		origin: [
+			'https://lostskateshop.onrender.com',
+			'https://lostskateshop.onrender.com/cart',
+		],
 	})
 );
 app.use('/api/stripe', stripeWebHookRoute);
