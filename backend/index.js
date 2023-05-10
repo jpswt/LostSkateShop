@@ -20,7 +20,15 @@ app.use(cors());
 
 app.options('*', cors());
 
-app.use('/api/stripe', stripeWebHookRoute, express.raw({ type: '*/*' }));
+app.use(
+	express.json({
+		verify: (req, res, buf) => {
+			req.rawBody = buf;
+		},
+	})
+);
+
+app.use('/api/stripe', stripeWebHookRoute);
 
 app.use(express.json());
 
