@@ -21,15 +21,15 @@ app.use(cors());
 app.options('*', cors());
 
 app.use('/api/stripe', stripeWebHookRoute);
-app.use((req, res, next) => {
-	if (req.originalUrl === '/api/stripe/webhook') {
-		next();
-	} else {
-		express.json()(req, res, next);
-	}
-});
+// app.use((req, res, next) => {
+// 	if (req.originalUrl === '/api/stripe/webhook') {
+// 		next();
+// 	} else {
+// 		express.json()(req, res, next);
+// 	}
+// });
 
-// app.use(express.json());
+app.use(express.json());
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
