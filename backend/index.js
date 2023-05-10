@@ -21,6 +21,8 @@ app.use(
 		origin: [
 			'https://lostskateshop.onrender.com',
 			'https://lostskateshop.onrender.com/cart',
+			'https://dashboard.stripe.com/',
+			'https://checkout.stripe.com/',
 		],
 	})
 );

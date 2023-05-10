@@ -49,7 +49,7 @@ router.post('/payment', async (req, res) => {
 		line_items,
 		mode: 'payment',
 		success_url: `https://lostskateshop.onrender.com/success/${customer.metadata.userId}`,
-		cancel_url: `https://lostskateshop.onrender.com/cart`,
+		cancel_url: 'https://lostskateshop.onrender.com/cart',
 	});
 	res.send({ url: session.url });
 });
