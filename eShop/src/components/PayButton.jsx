@@ -11,7 +11,7 @@ const PayButton = ({ products }) => {
 	const handleCheckOut = () => {
 		if (cart) {
 			axios
-				.post(`${import.meta.env.VITE_DB_URI}/checkout/payment`, {
+				.post(`https://lost-skate-shop-api.onrender.com/api/checkout/payment`, {
 					userId: auth.currentUser.id,
 					products,
 				})

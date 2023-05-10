@@ -4,13 +4,6 @@ const stripe = require('stripe')(process.env.STRIPE_API_KEY);
 const Order = require('../models/Order');
 
 const createOrder = async (customer, data, lineItems) => {
-	// const products = Items.map((item) => {
-	// 	return {
-	// 		productId: item.id,
-	// 		quantity: item.cartQuantity,
-	// 	};
-	// });
-
 	const newOrder = new Order({
 		userId: customer.metadata.userId,
 		customerId: data.customer,
