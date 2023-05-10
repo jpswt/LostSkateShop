@@ -18,22 +18,20 @@ mongoose
 
 app.use(cors());
 
-app.options('*', cors());
-
-app.use(
-	express.json({
-		// Because Stripe needs the raw body, we compute it but only when hitting the Stripe callback URL.
-		verify: function (req, res, buf) {
-			var url = req.originalUrl;
-			if (url.startsWith('/api/stripe')) {
-				req.rawBody = buf.toString();
-			}
-		},
-	})
-);
+// app.use(
+// 	express.json({
+// 		// Because Stripe needs the raw body, we compute it but only when hitting the Stripe callback URL.
+// 		verify: function (req, res, buf) {
+// 			var url = req.originalUrl;
+// 			if (url.startsWith('/api/stripe')) {
+// 				req.rawBody = buf.toString();
+// 			}
+// 		},
+// 	})
+// );
 app.use('/api/stripe', stripeWebHookRoute);
 
-// app.use(express.json());
+app.use(express.json());
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
