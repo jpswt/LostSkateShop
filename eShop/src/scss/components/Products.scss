@@ -1,26 +1,26 @@
 @use '../abstracts/' as *;
 
-.loading {
-	height: 100vh;
-	color: red;
-}
+// .loading {
+// 	height: 100vh;
+// 	color: #ff0000;
+// }
 
-.trending {
-	background-color: $bgColor;
-	padding-left: 16px;
-	font-size: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+// .trending {
+// 	background-color: $bgColor;
+// 	padding-left: 16px;
+// 	font-size: 20px;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
 
-	h2 {
-		margin: 0;
-		color: $fontDarkColor;
-		font-family: $bodyFont;
-		font-weight: bold;
-		text-align: center;
-	}
-}
+// 	h2 {
+// 		margin: 0;
+// 		color: $fontDarkColor;
+// 		font-family: $bodyFont;
+// 		font-weight: bold;
+// 		text-align: center;
+// 	}
+// }
 
 .wrapper {
 	min-height: 100vh;
@@ -32,5 +32,11 @@
 		gap: 10px;
 		background-color: $bgColor;
 		justify-content: center;
+
+		.no-items {
+			h2 {
+				text-align: center;
+			}
+		}
 	}
 }

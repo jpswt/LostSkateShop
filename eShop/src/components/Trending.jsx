@@ -1,5 +1,4 @@
 import '../scss/styles/Trending.css';
-import { popProducts } from '../assets/data/data';
 import ProductItems from './ProductItems';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
