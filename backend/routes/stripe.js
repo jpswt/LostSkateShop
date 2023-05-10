@@ -51,7 +51,7 @@ router.post('/payment', async (req, res) => {
 		success_url: `${process.env.CLIENT_URL}/success/${customer.metadata.userId}`,
 		cancel_url: `${process.env.CLIENT_URL}/cart`,
 	});
-	res.json({ url: session.url });
+	res.send({ url: session.url });
 });
 
 module.exports = router;
