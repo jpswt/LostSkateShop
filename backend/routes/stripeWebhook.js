@@ -28,7 +28,7 @@ const endpointSecret =
 
 router.post(
 	'/webhook',
-	// express.raw({ type: 'application/json' }),
+	express.raw({ type: 'application/json' }),
 	(request, response) => {
 		let data;
 		let eventType;
