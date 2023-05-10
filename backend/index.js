@@ -20,13 +20,18 @@ app.use(cors());
 
 app.options('*', cors());
 
-app.use((req, res, next) => {
-	if (req.originalUrl === '/api/stripe/webhook') {
-		app.use('/api/stripe', stripeWebHookRoute);
-	} else {
-		express.json()(req, res, next);
-	}
-});
+app.use(
+	express.json({
+		// Because Stripe needs the raw body, we compute it but only when hitting the Stripe callback URL.
+		verify: function (req, res, buf) {
+			var url = req.originalUrl;
+			if (url.startsWith('/api/stripe')) {
+				req.rawBody = buf.toString();
+			}
+		},
+	})
+);
+app.use('/api/stripe', stripeWebHookRoute);
 
 // app.use(express.json());
 
