@@ -20,15 +20,15 @@ app.use(cors());
 
 app.options('*', cors());
 
+app.use('/api/stripe', stripeWebHookRoute);
 app.use(
 	express.json({
+		limit: '5mb',
 		verify: (req, res, buf) => {
-			req.rawBody = buf;
+			req.rawBody = buf.toString();
 		},
 	})
 );
-
-app.use('/api/stripe', stripeWebHookRoute);
 
 // app.use(express.json());
 
