@@ -68,7 +68,7 @@ router.post(
 				.catch((err) => console.log(err.message));
 		}
 
-		response.json().end();
+		response.send().end();
 	}
 );
 
