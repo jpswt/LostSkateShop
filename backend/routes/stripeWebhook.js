@@ -48,6 +48,8 @@ router.post(
 		data = event.data.object;
 		eventType = event.type;
 
+		console.log('success', event.id);
+
 		// Handle the event
 
 		if (eventType === 'checkout.session.completed') {

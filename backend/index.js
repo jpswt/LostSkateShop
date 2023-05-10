@@ -22,12 +22,11 @@ app.options('*', cors());
 
 app.use((req, res, next) => {
 	if (req.originalUrl === '/api/stripe/webhook') {
-		next();
+		app.use('/api/stripe', stripeWebHookRoute);
 	} else {
 		express.json()(req, res, next);
 	}
 });
-app.use('/api/stripe', stripeWebHookRoute);
 
 // app.use(express.json());
 
