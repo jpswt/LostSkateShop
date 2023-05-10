@@ -19,8 +19,8 @@ mongoose
 app.use(
 	cors({
 		origin: [
-			'https://checkout.stripe.com/',
-			'https://lostskateshop.onrender.com/',
+			'https://checkout.stripe.com',
+			'https://lostskateshop.onrender.com',
 		],
 	})
 );
