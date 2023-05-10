@@ -21,7 +21,7 @@ app.use(cors());
 app.options('*', cors());
 
 app.use((req, res, next) => {
-	if (req.originalUrl === '/webhook') {
+	if (req.originalUrl === '/api/stripe/webhook') {
 		next();
 	} else {
 		express.json()(req, res, next);
