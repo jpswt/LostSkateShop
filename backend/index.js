@@ -16,7 +16,14 @@ mongoose
 	.then(console.log('Connected to MongoDB'))
 	.catch((err) => console.error(err));
 
-app.use(cors());
+app.use(
+	cors({
+		origin: [
+			'https://checkout.stripe.com/',
+			'https://lostskateshop.onrender.com/',
+		],
+	})
+);
 app.use('/api/stripe', stripeWebHookRoute);
 app.use(express.json());
 
