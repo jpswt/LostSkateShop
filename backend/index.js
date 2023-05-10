@@ -30,7 +30,7 @@ app.options('*', cors());
 // 		],
 // 	})
 // );
-app.use('/api/stripe', stripeWebHookRoute);
+app.use('/api/stripe', express.raw({ type: '*/*' }), stripeWebHookRoute);
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
