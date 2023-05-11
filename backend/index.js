@@ -17,7 +17,6 @@ mongoose
 	.catch((err) => console.error(err));
 
 app.use(cors());
-app.options('*', cors());
 
 app.use('/api/stripe', stripeWebHookRoute);
 app.use((req, res, next) => {
@@ -26,6 +25,20 @@ app.use((req, res, next) => {
 	} else {
 		express.json()(req, res, next); // ONLY do express.json() if the received request is NOT a WebHook from Stripe.
 	}
+});
+app.options('*', cors());
+
+app.use(function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header(
+		'Access-Control-Allow-Methods',
+		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+	);
+	res.header(
+		'Access-Control-Allow-Headers',
+		'Content-Type, Content-Length, Authorization, Accept, X-Requested-With'
+	);
+	next();
 });
 
 // app.use(express.json());
