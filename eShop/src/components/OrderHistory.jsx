@@ -32,7 +32,9 @@ const OrderHistory = () => {
 			<div className="order-history">
 				<table>
 					<caption>
-						{auth?.currentUser?.username.toUpperCase()}'s Order History
+						{auth?.currentUser?.username.charAt(0).toUpperCase() +
+							auth?.currentUser?.username.slice(1)}
+						's Order History
 					</caption>
 					<thead>
 						<tr>
