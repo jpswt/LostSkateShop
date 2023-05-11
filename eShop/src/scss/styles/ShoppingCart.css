@@ -216,6 +216,25 @@
   border: none;
   cursor: pointer;
 }
+.shopping-container .bottom-container .summary-container .btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.shopping-container .bottom-container .summary-container .btn-container .shopping-btn {
+  padding: 8px 20px 8px 16px;
+  width: 200px;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(168, 99%, 24%);
+  border: 0;
+  color: hsl(0, 0%, 96%);
+  cursor: pointer;
+}
+.shopping-container .bottom-container .summary-container .btn-container .active {
+  background-color: hsl(0, 0%, 58%);
+}
 
 @media (max-width: 1045px) {
   .shopping-container .bottom-container {

@@ -1,1 +1,1 @@
-{"version":3,"sources":["../components/PayButton.scss","../abstracts/_colors.scss","PayButton.css"],"names":[],"mappings":"AACA;EACC,WAAA;EACA,aAAA;EACA,oCCDa;EDEb,sBCEW;EDDX,YAAA;EACA,eAAA;AEAD","file":"PayButton.css"}
+{"version":3,"sources":["../components/PayButton.scss","../abstracts/_colors.scss","PayButton.css"],"names":[],"mappings":"AACA;EACC,WAAA;EACA,aAAA;EACA,oCCDa;EDEb,sBCEW;EDDX,YAAA;EACA,eAAA;AEAD;;AFGA;EACC,iCCTgB;ACSjB","file":"PayButton.css"}

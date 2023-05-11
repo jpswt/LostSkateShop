@@ -31,7 +31,10 @@ const PayButton = ({ products }) => {
 					CHECKOUT
 				</button>
 			) : (
-				<button className="checkout-btn" onClick={() => navigate('/login')}>
+				<button
+					className="checkout-btn logged-out"
+					onClick={() => navigate('/login')}
+				>
 					LOGIN TO CHECKOUT
 				</button>
 			)}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { addProduct, increaseCart, decreaseCart } from '../redux/cartRedux';
+import { increaseCart, decreaseCart, resetCart } from '../redux/cartRedux';
 import { useNavigate } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import PayButton from './PayButton';
@@ -12,6 +12,7 @@ const KEY = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
 const ShoppingCart = () => {
 	const cart = useSelector((state) => state.cart);
+	const auth = useSelector((state) => state.user);
 	const [quantity, setQuantity] = useState(1);
 	const [stripeToken, setStripeToken] = useState(null);
 	const navigate = useNavigate();
@@ -42,8 +43,12 @@ const ShoppingCart = () => {
 
 	const totalPrice = Number(handleShipping()) + Number(subTotalPrice());
 
-	const onToken = (token) => {
-		setStripeToken(token);
+	// const onToken = (token) => {
+	// 	setStripeToken(token);
+	// };
+
+	const handlePrevLocation = () => {
+		navigate(-1);
 	};
 
 	useEffect(() => {
@@ -71,14 +76,6 @@ const ShoppingCart = () => {
 	return (
 		<div className="shopping-container">
 			<h1>SHOPPING CART</h1>
-			{/* <div className="top-container">
-				<button className="shopping-btn">BACK TO SHOPPING</button>
-				<div className="list-info">
-					<p className="list-text"> Shopping Cart (0)</p>
-					<p className="list-text"> Wishlist</p>
-				</div>
-				<button className="shopping-btn">CHECKOUT</button>
-			</div> */}
 			<div className="bottom-container">
 				{cart.products.length === 0 ? (
 					<div className="no-cart">No Items in Cart</div>
@@ -87,7 +84,6 @@ const ShoppingCart = () => {
 						{cart.products.map((product) => (
 							<div className="product-container" key={product._id}>
 								<div className="product-detail">
-									{/* <img className="product-image" src={product.img} alt="" /> */}
 									<div className="image-wrapper">
 										<img
 											className={
@@ -201,11 +197,24 @@ const ShoppingCart = () => {
 					</div>
 
 					<PayButton products={cart.products} />
-					{/* <div className="checkout">
-							<button className="check-now-btn" type="submit">
-								CHECKOUT NOW
-							</button>
-						</div> */}
+					<div className="btn-container">
+						<button
+							onClick={() => dispatch(resetCart())}
+							className={
+								!auth.currentUser ? 'shopping-btn' : 'shopping-btn active'
+							}
+						>
+							Clear Cart
+						</button>
+						<button
+							onClick={handlePrevLocation}
+							className={
+								!auth.currentUser ? 'shopping-btn' : 'shopping-btn active'
+							}
+						>
+							Back to Shopping
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

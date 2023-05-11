@@ -5,4 +5,8 @@
   color: hsl(0, 0%, 96%);
   border: none;
   cursor: pointer;
+}
+
+.logged-out {
+  background-color: hsl(0, 0%, 58%);
 }/*# sourceMappingURL=PayButton.css.map */
