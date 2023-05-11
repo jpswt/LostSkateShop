@@ -10,12 +10,14 @@ const SuccessMsg = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	console.log(location);
 	const [order, setOrder] = useState([]);
+	const auth = useSelector((state) => state.user.currentUser);
+	console.log('here is auth', auth);
 
 	useEffect(() => {
 		const getOrder = async () => {
 			setIsLoading(true);
 			try {
-				const response = await userRequest.get(`/orders/${userId}`);
+				const response = await userRequest.get(`/orders/${auth?.id}`);
 				setOrder(response.data);
 			} catch (err) {
 				console.log(err.message);
