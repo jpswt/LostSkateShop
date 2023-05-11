@@ -76,9 +76,9 @@ const Register = () => {
 								/>
 								<button className="submit-btn">Sign Up</button>
 								<div className="login">
-									Already a member?{' '}
+									Returning Customer?{' '}
 									<Link to="/login">
-										<span className="reg-link">Sign in</span>
+										<span className="reg-link">Sign in here!</span>
 									</Link>
 								</div>
 							</form>

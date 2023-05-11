@@ -75,10 +75,19 @@ const ShoppingCart = () => {
 
 	return (
 		<div className="shopping-container">
-			<h1>SHOPPING CART</h1>
 			<div className="bottom-container">
 				{cart.products.length === 0 ? (
-					<div className="no-cart">No Items in Cart</div>
+					<div className="no-cart">
+						<i class="fa-solid fa-cart-shopping fa-4x"></i>
+						<h2>NO ITEMS IN CART</h2>
+						<h3>
+							Click{' '}
+							<span onClick={handlePrevLocation} className="continue-shop">
+								here
+							</span>{' '}
+							to continue shopping.
+						</h3>
+					</div>
 				) : (
 					<div className="cart-info">
 						{cart.products.map((product) => (
