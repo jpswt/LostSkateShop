@@ -1,4 +1,4 @@
-![066_6000x4072_all-free-download com](https://github.com/jpswt/LostSkateShop/assets/94721942/7312b9e3-369d-418e-87b3-9a8d42e60289)
+![066_6000x4072_all-free-download com (1)](https://github.com/jpswt/LostSkateShop/assets/94721942/fe665a2d-c5c0-4af8-a83c-60e7923adf05)
 
 # Lost Skateboard Shop
 
