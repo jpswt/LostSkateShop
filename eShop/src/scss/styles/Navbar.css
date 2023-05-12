@@ -197,7 +197,7 @@ body {
   .navbar .navbar-container .navbar-right .toggle-btn {
     display: block;
     cursor: pointer;
-    z-index: 999;
+    z-index: 1001;
     min-width: 28px;
   }
 }/*# sourceMappingURL=Navbar.css.map */
