@@ -11,7 +11,7 @@ const Header = () => {
 	useEffect(() => {
 		const elementCount = ElementRef.current.childNodes.length;
 		setSlideCount(elementCount);
-		console.log(elementCount);
+		// console.log(elementCount);
 	}, []);
 
 	const updateIndex = (newIndex) => {

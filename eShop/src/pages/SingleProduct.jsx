@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 const SingleProduct = () => {
 	const location = useLocation();
 	const productID = location.pathname.split('/')[2];
-	console.log(productID);
+	// console.log(productID);
 
 	const [product, setProduct] = useState({});
 	const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +28,7 @@ const SingleProduct = () => {
 		getProduct();
 	}, [productID]);
 
-	console.log(product);
+	// console.log(product);
 
 	if (isLoading) {
 		<h2>Loading...</h2>;

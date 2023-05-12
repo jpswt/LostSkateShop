@@ -9,7 +9,7 @@ router.post('/payment', async (req, res) => {
 			// cart: JSON.stringify(req.body.products),
 		},
 	});
-	console.log(customer);
+	// console.log(customer);
 	const line_items = req.body.products.map((product) => {
 		return {
 			price_data: {

@@ -16,8 +16,8 @@ const Register = () => {
 		password: '',
 	});
 
-	console.log(auth);
-	console.log(user);
+	// console.log(auth);
+	// console.log(user);
 
 	useEffect(() => {
 		if (auth.currentUser) {

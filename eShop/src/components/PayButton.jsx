@@ -22,7 +22,7 @@ const PayButton = ({ products }) => {
 				})
 				.catch((err) => console.log(err.message));
 		}
-		console.log(JSON.parse(localStorage.getItem('products')).length);
+		// console.log(JSON.parse(localStorage.getItem('products')).length);
 	};
 	return (
 		<>

@@ -81,8 +81,8 @@ const ProductList = () => {
 		getProducts();
 	}, [category, filters]);
 
-	console.log('Options', options);
-	console.log('Sort', sort);
+	// console.log('Options', options);
+	// console.log('Sort', sort);
 
 	useEffect(() => {
 		category &&

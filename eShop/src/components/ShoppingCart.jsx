@@ -65,7 +65,7 @@ const ShoppingCart = () => {
 					}
 				);
 				navigate('/success', { data: response.data });
-				console.log(response.data);
+				// console.log(response.data);
 			} catch (err) {
 				console.log(err);
 			}

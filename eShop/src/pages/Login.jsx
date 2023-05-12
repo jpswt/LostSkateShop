@@ -18,7 +18,7 @@ const Login = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1045;
 
-	console.log(user);
+	// console.log(user);
 
 	useEffect(() => {
 		if (auth.currentUser) {
@@ -29,7 +29,7 @@ const Login = () => {
 		} else {
 			setError('');
 		}
-		console.log(auth.error);
+		// console.log(auth.error);
 	}, [auth]);
 
 	useEffect(() => {

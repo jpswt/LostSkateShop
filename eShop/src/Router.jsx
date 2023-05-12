@@ -14,7 +14,7 @@ import Account from './pages/Account';
 
 const Router = () => {
 	const user = useSelector((state) => state.user.currentUser);
-	console.log(user);
+	// console.log(user);
 
 	return (
 		<Routes>

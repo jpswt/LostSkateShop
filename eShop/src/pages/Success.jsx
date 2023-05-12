@@ -11,7 +11,7 @@ const Success = () => {
 	const cart = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 	const location = useLocation();
-	console.log(location);
+	// console.log(location);
 
 	useEffect(() => {
 		dispatch(resetCart());

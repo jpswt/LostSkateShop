@@ -21,7 +21,7 @@ const Pay = () => {
 						amount: 2000,
 					}
 				);
-				console.log(response.data);
+				// console.log(response.data);
 			} catch (err) {
 				console.log(err);
 			}

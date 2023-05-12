@@ -11,7 +11,7 @@ const OrderHistory = () => {
 	const userId = location.pathname.split('/')[2];
 	const [orders, setOrders] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	console.log('order', auth);
+	// console.log('order', auth);
 
 	useEffect(() => {
 		const getOrders = async () => {
@@ -25,7 +25,7 @@ const OrderHistory = () => {
 		getOrders();
 	}, [auth]);
 
-	console.log('Here is the order', orders);
+	// console.log('Here is the order', orders);
 
 	return (
 		<div className="order-container">

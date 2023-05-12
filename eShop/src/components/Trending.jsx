@@ -34,7 +34,7 @@ const Trending = ({ category, filters, sort }) => {
 			);
 	}, [products, category, filters]);
 
-	console.log(products);
+	// console.log(products);
 	return (
 		<>
 			<div className="trending">

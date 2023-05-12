@@ -8,10 +8,10 @@ const SuccessMsg = () => {
 	const location = useLocation();
 	const userId = location.pathname.split('/')[2];
 	const [isLoading, setIsLoading] = useState(false);
-	console.log(location);
+	// console.log(location);
 	const [order, setOrder] = useState([]);
 	const auth = useSelector((state) => state.user.currentUser);
-	console.log('here is auth', auth);
+	// console.log('here is auth', auth);
 
 	useEffect(() => {
 		const getOrder = async () => {
@@ -26,7 +26,7 @@ const SuccessMsg = () => {
 		};
 		getOrder();
 	}, [userId]);
-	console.log(order);
+	// console.log(order);
 
 	const displayAmt = order?.amount / 100;
 	const shippingRate = 5.99;

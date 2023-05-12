@@ -16,7 +16,7 @@ const Navbar = () => {
 	const cart = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 
-	console.log('navbar', auth);
+	// console.log('navbar', auth);
 
 	const handleToggle = () => {
 		setToggle(!toggle);
