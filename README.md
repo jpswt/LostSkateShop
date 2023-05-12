@@ -1,3 +1,5 @@
+![066_6000x4072_all-free-download com](https://github.com/jpswt/LostSkateShop/assets/94721942/7312b9e3-369d-418e-87b3-9a8d42e60289)
+
 # Lost Skateboard Shop
 
 This application was created with Vite React. 
