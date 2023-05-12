@@ -122,7 +122,7 @@ const Navbar = () => {
 
 					<ul
 						className={
-							width < 400
+							width < 800
 								? toggle
 									? 'mobile-links ios-active'
 									: 'mobile-links'
