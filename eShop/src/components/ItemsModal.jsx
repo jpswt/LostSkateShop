@@ -32,6 +32,7 @@ const ItemsModal = ({ item }) => {
 				onClose={handleClose}
 				aria-labelledby="modal-modal-title"
 				aria-describedby="modal-modal-description"
+				className="modal-body"
 			>
 				<Box className="box">
 					{item?.products?.map((product, index) => {

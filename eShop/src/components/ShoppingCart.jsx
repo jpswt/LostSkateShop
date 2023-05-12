@@ -27,7 +27,7 @@ const ShoppingCart = () => {
 		}
 	};
 
-	console.log(cart.products);
+	// console.log(cart.products);
 
 	const subTotalPrice = () => {
 		let subtotal = 0;
@@ -78,7 +78,7 @@ const ShoppingCart = () => {
 			<div className="bottom-container">
 				{cart.products.length === 0 ? (
 					<div className="no-cart">
-						<i class="fa-solid fa-cart-shopping fa-4x"></i>
+						<i className="fa-solid fa-cart-shopping fa-4x"></i>
 						<h2>NO ITEMS IN CART</h2>
 						<h3>
 							Click{' '}

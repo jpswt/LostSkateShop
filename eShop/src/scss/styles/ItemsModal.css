@@ -1,55 +1,62 @@
-.box {
+.modal-body {
+  min-height: 240px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow-y: auto;
+  margin-top: 200px;
+}
+.modal-body .box {
   position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
   width: 400;
   background-color: #f0f0f0;
   border: 1px solid #000;
   padding: 20px;
   width: min(80%, 480px);
-  min-height: 240px h2;
+  min-height: 240pxh2;
   min-height-font-size: 20px;
+  overflow-y: auto;
 }
-.box .line-item {
+.modal-body .box .line-item {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   background-color: hsl(168, 99%, 24%);
   padding: 8px 8px;
   color: #f1f1f1;
 }
-.box h2 {
+.modal-body .box h2 {
   font-size: 18px;
   padding-left: 8px;
   margin-top: 4px;
   font-weight: 600;
 }
-.box p {
+.modal-body .box p {
   margin: 0;
   margin-bottom: 8px;
   padding: 0 8px;
 }
-.box .shipping {
+.modal-body .box .shipping {
   margin: 0;
   padding: 0;
 }
-.box .shipping .ship-item {
+.modal-body .box .shipping .ship-item {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   background-color: hsl(168, 99%, 24%);
   color: #f1f1f1;
   padding: 6px 8px;
 }
-.box .shipping .costs {
+.modal-body .box .shipping .costs {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
   margin-top: 8px;
 }
-.box .shipping .costs .ship-cost {
+.modal-body .box .shipping .costs .ship-cost {
   padding: 0 8px;
 }
-.box .price {
+.modal-body .box .price {
   padding-left: 16px;
 }/*# sourceMappingURL=ItemsModal.css.map */
