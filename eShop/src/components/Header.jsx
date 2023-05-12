@@ -1,6 +1,7 @@
 import '../scss/styles/Header.css';
 import { useRef, useEffect, useState } from 'react';
 import { headerContent } from '../assets/data/data';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 	const [slideIndex, setSlideIndex] = useState(0);
@@ -49,7 +50,9 @@ const Header = () => {
 						<div className="text-container">
 							<h2>{item.title}</h2>
 							<p>{item.description}</p>
-							<button>Show Me</button>
+							<Link to="/register">
+								<button>Get Started</button>
+							</Link>
 						</div>
 					</div>
 				))}

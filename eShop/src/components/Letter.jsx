@@ -5,7 +5,7 @@ const Letter = () => {
 	return (
 		<div className="letter-container">
 			<div className="title">
-				<h2>Newsletter</h2>
+				<h2>SUBSCRIBE</h2>
 			</div>
 			<div className="description">
 				<h3>
