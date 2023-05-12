@@ -184,7 +184,7 @@ body {
     font-size: small;
   }
   .navbar .navbar-container .navbar-right .active {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 75px);
   }
   .navbar .navbar-container .navbar-right .mobile-cart {
     display: flex;
@@ -199,5 +199,10 @@ body {
     cursor: pointer;
     z-index: 1001;
     min-width: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .navbar .navbar-container .navbar-right .ios-active {
+    height: calc(100vh - 180px);
   }
 }/*# sourceMappingURL=Navbar.css.map */

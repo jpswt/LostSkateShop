@@ -225,7 +225,7 @@ body {
 				}
 
 				.active {
-					height: calc(100vh - 100px);
+					height: calc(100vh - 75px);
 				}
 
 				.mobile-cart {
@@ -244,6 +244,18 @@ body {
 					cursor: pointer;
 					z-index: 1001;
 					min-width: 28px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.navbar {
+		.navbar-container {
+			.navbar-right {
+				.ios-active {
+					height: calc(100vh - 180px);
 				}
 			}
 		}

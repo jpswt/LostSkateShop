@@ -121,7 +121,15 @@ const Navbar = () => {
 					</ul>
 
 					<ul
-						className={toggle ? 'mobile-links active' : 'mobile-links'}
+						className={
+							width < 400
+								? toggle
+									? 'mobile-links ios-active'
+									: 'mobile-links'
+								: toggle
+								? 'mobile-links active '
+								: 'mobile-links'
+						}
 						onClick={handleToggle}
 					>
 						<Link to="/products/decks">
