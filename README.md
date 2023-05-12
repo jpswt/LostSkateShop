@@ -59,7 +59,7 @@ This is a MERN stack e-commerce site for skateboard products and accessories.  A
 
 Lost Skate Shop homepage which provides access for users to view trending gear and signup for to become a member. 
 
-<img width="1503" alt="Screenshot 2023-05-11 at 8 48 16 AM" src="https://github.com/jpswt/NoteForNote/assets/94721942/569df271-351d-4e50-8d65-539777cc7a19">
+<img width="1506" alt="Screenshot 2023-05-11 at 10 29 29 PM" src="https://github.com/jpswt/LostSkateShop/assets/94721942/90da8093-378e-4c1a-a30e-9578203bd9c0">
 <img width="1495" alt="Screenshot 2023-05-11 at 8 48 59 AM" src="https://github.com/jpswt/NoteForNote/assets/94721942/6c5aea0c-8e26-49e5-b50c-b4ac19a0a17e">
 
 ## Product Gallery Page
