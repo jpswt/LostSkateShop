@@ -2,7 +2,7 @@
 
 This application was created with Vite React. 
 
-This is a MERN stack e-commerce site for skateboard gear.  A user can view browse through all of the products and get details about individual products.  If they want to purchase the item, it can be added to the cart and viewed in the cart.  Users must sign up and be logged in order to purchase itesm through the Stripe checkout.  
+This is a MERN stack e-commerce site for skateboard products and accessories.  A user can view browse through all of the product, as well as views details about individual products.  Items can be added, viewed and purchased from the shopping cart page.  Users must sign up and be logged in order to purchase products through the Stripe checkout.  
 
 ## Requirements
 
