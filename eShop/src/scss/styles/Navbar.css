@@ -184,7 +184,7 @@ body {
     font-size: small;
   }
   .navbar .navbar-container .navbar-right .active {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 100px);
   }
   .navbar .navbar-container .navbar-right .mobile-cart {
     display: flex;
