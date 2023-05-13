@@ -337,6 +337,9 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+  .shopping-container .bottom-container .summary-container {
+    padding: 0 8px 8px;
+  }
   .shopping-container .bottom-container .summary-container .check-now-btn {
     width: 80%;
   }
