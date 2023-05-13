@@ -260,15 +260,15 @@
 					cursor: pointer;
 				}
 
-				.shopping-btn {
-					width: 40%;
-					padding: 12px;
-					margin-top: 16px;
-					background-color: $secondaryColor;
-					color: $fontColor;
-					border: none;
-					cursor: pointer;
-				}
+				// .shopping-btn {
+				// 	width: 40%;
+				// 	padding: 12px;
+				// 	margin-top: 16px;
+				// 	background-color: $secondaryColor;
+				// 	color: $fontColor;
+				// 	border: none;
+				// 	cursor: pointer;
+				// }
 			}
 
 			.btn-container {
@@ -279,8 +279,8 @@
 				margin-top: 8px;
 
 				.shopping-btn {
-					padding: 8px 20px 8px 16px;
-					width: 200px;
+					padding: 8px;
+					width: 160px;
 					font-family: $bodyFont;
 					background-color: $accentColor;
 					border: 0;

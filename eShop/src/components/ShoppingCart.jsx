@@ -4,7 +4,6 @@ import { increaseCart, decreaseCart, resetCart } from '../redux/cartRedux';
 import { useNavigate } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import PayButton from './PayButton';
-import StripeCheckout from 'react-stripe-checkout';
 import { removeProduct } from '../redux/cartRedux';
 import '../scss/styles/ShoppingCart.css';
 
