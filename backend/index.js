@@ -43,6 +43,8 @@ app.options('*', cors());
 
 // app.use(express.json());
 
+app.use('/api/auth', authRoute);
+app.use('/api/users', usersRoute);
 app.use(function (req, res, next) {
 	if (req.path.length > 1 && /\/$/.test(req.path)) {
 		var query = req.url.slice(req.path.length);
@@ -51,9 +53,6 @@ app.use(function (req, res, next) {
 		next();
 	}
 });
-
-app.use('/api/auth', authRoute);
-app.use('/api/users', usersRoute);
 app.use('/api/products', productsRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/checkout', stripeRoute);
