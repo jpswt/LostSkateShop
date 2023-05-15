@@ -343,4 +343,13 @@
   .shopping-container .bottom-container .summary-container .check-now-btn {
     width: 80%;
   }
+  .shopping-container .bottom-container .summary-container .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .shopping-container .bottom-container .summary-container .btn-container .shopping-btn {
+    padding: 12px 0px;
+    width: 100%;
+  }
 }/*# sourceMappingURL=ShoppingCart.css.map */

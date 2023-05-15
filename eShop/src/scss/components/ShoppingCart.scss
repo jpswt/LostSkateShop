@@ -411,6 +411,16 @@
 				.check-now-btn {
 					width: 80%;
 				}
+
+				.btn-container {
+					display: flex;
+					flex-direction: column;
+					gap: 8px;
+					.shopping-btn {
+						padding: 12px 0px;
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
