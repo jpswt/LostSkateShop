@@ -4,7 +4,7 @@ import jwtDecode from 'jwt-decode';
 import { publicRequest, userRequest } from '../request';
 
 const initialState = {
-	token: localStorage.getItem('token'),
+	token: sessionStorage.getItem('token'),
 	currentUser: null,
 	isFetching: false,
 	error: false,
@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk(
 	async (user) => {
 		try {
 			const token = await publicRequest.post('/auth/register', user);
-			localStorage.setItem('token', token.data);
+			sessionStorage.setItem('token', token.data);
 			return token.data;
 		} catch (error) {
 			console.log(error.response.data);
@@ -26,7 +26,7 @@ export const registerUser = createAsyncThunk(
 export const loginUser = createAsyncThunk('user/loginUser', async (user) => {
 	try {
 		const token = await publicRequest.post(`/auth/login`, user);
-		localStorage.setItem('token', token.data);
+		sessionStorage.setItem('token', token.data);
 		return token.data;
 	} catch (error) {
 		console.log(error.response.data);
@@ -50,7 +50,7 @@ const userSlice = createSlice({
 			}
 		},
 		logoutUser(state, action) {
-			localStorage.removeItem('token');
+			sessionStorage.removeItem('token');
 			return {
 				...state,
 				currentUser: null,
