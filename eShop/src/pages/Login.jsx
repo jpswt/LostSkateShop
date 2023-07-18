@@ -82,6 +82,13 @@ const Login = () => {
 									</Link>
 								</div>
 								{error ? <div className="error">{error}</div> : null}
+								<div style={{ background: 'lightgray', padding: '0 1rem' }}>
+									<p style={{ textAlign: 'center', fontWeight: 'bold' }}>
+										Demo
+									</p>
+									<p>email: testuser@gmail.com</p>
+									<p>password: D3m0PwD@1 </p>
+								</div>
 							</form>
 						</div>
 					</>
